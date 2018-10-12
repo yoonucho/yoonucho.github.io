@@ -1,0 +1,196 @@
+/* layout */
+/* body {background:rgba(255, 255, 255,0.3)} */
+#header {height: 83px;background: #E5E5E3;}
+#gnb {float:right}
+main {background:rgba(244,229,189,0.2);}
+#about_me {color:#4A8391;margin-bottom:3rem;} 
+#portfolio {color:#ED908C}
+#snippet {color:#A1CEAB}
+#skills {color:#ee9b97;}
+#contact {color:#494438}
+#footer {background: #9e9e9e;}
+
+/* 공통레이아웃 */
+h3 {padding:3.5rem 0;font-size:2rem;text-align: center}
+h3:after {display:block;padding-top:10px;border-bottom:1px solid;content:"";color:inherit}
+/* container */
+.container {position: relative;max-width:1200px;height:100%;margin:0 auto;}
+
+/* section layout */
+.container > section {min-height: 300px}
+section > div {max-width:1100px;min-height:100%;margin:0 auto}
+
+/* header */
+.header {position: relative;top:30px;}
+.header:after {border:1px solid #4A8391}
+h1 {float:left}
+
+/* nav */
+.gnb:after{display:block;line-height:0;clear:both;content:""}
+.gnb li {float:left;margin-right:20px}
+.gnb li:last-child {margin-right:0}
+.gnb li a{display:block;padding:5px;font-weight: 600}
+.gnb li a:hover{color:#4A8391;border-bottom:2px solid #4A8391}
+.gnb_btn {display:none}
+
+/* intro */
+.tag_text {padding:20px}
+.tag_text:nth-child(n+3){text-align: right}
+.tag_text:nth-child(2){margin-left: 3rem;}
+.tag_text:nth-child(3){margin-right: 3rem;}
+.tag{color:#181612;font-size:13px;font-style: italic}
+.me {width:270px;margin:0 auto}
+.me:after {width:350px;height:350px;padding: 3% 2%;border-radius: 50%;border: 1px solid #F4E5BD;content: ""}
+.intro_title{position: relative;max-width:296px;margin:0 auto;padding:2rem 0;color:#615b4b;font-size: 2rem;line-height: 1.3}
+.intro_title span{display:block;}
+.intro_title strong{padding-left: 55px;}
+
+
+/* about_me */
+.about_me {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center}
+.about_me .box {margin:0 2rem;-webkit-box-flex:2;-ms-flex:2;flex:2}
+.about_me .box p {color:#4A8391;white-space: pre-line}
+.about_me figure {max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;align-self: flex-end;padding:3rem 0}
+
+/* timeline */
+.time_line {color:#4A8391;margin-top: 11rem;}
+.time_line ol {display:-webkit-box;display:-ms-flexbox;display:flex;}
+.time_line ol:before {position: absolute;display:block;width:3rem;height:3px;background: #A1CEAB; content:""}
+.time_line ol:after {position: absolute;display:block;width:47rem;height:3px;background: #A1CEAB; content:""}
+#time_line h4 {margin:2rem 0 1rem}
+.time_line li {position: relative;display:inline-block;width:12rem;margin-right:3%}
+
+.time_line li:after { position: absolute; top:-4px; left:50%; transform:translateX(-50%);width:10px; height:10px; content:""; width: 10px; height: 10px; border-radius: 50%; background:#A1CEAB; content: ""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
+
+
+.time_line .time_box { position: relative; top:1.5rem;min-height:6rem;padding:1rem 1rem; background: #D2E5C5; border-radius:30px /10px; -webkit-border-radius:30px /10px; -moz-border-radius:30px /10px; -ms-border-radius:30px /10px; -o-border-radius:30px /10px; }
+.time_line li:nth-child(odd) .time_box {top:-9.5rem}
+.time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;transform: translateY(-50%) rotate(45deg);content: ' '}
+.time_line li:nth-child(odd) .time_box:after {top:unset;bottom:-20px;}
+.time_line .time_box span {display:block;font-size:1.5rem}
+.time_box em {font-size:2rem}
+
+/* portfolio */
+.tab {position: relative}
+.tab .tab_list:after {display:block;clear:both;content: "";line-height: 0}
+.tab .tab_list  li {float:left}
+.tab .tab_list > li {width:25%;height:60px;-webkit-box-sizing: border-box;box-sizing: border-box}
+.tab .tab_list  li.active button{border:none;background: #ED908C;color:#fff}
+.tab .tab_list button {display:block;width:100%;height:100%;border:2px solid #ee9b97;cursor: pointer;border-radius:20px 0;background: #fff; font-size: 1.2rem;font-weight: 600;}
+
+/* grid와 float의 혼합 레이아웃 */
+/* grid가 현재 ie에서는 제대로 지원이 되지 않아서 float로 대체함. */
+.tab_contents {width:100%;height:100%;display:none}
+.tab .tab_contents ul{text-align:center;display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 10px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.tab_contents {display:block;margin-top:2rem}
+.tab_contents ul:after {display:block;line-height:0;clear:both;content: ""}
+.tab .tab_contents li {position: relative;text-align: center;display:inline-block;margin:0 0.2rem 2% 0}
+.tab_contents li:nth-child(3n) {margin-right:0;} 
+.tab .tab_contents li a {display:block;width:360px;}
+.tab_contents li a img {width:100%;height:300px;-o-object-fit: cover;object-fit: cover;-o-object-position: 0 0;object-position: 0 0}
+
+/* 오버레이 */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab .tab_contents li a:hover .overlay {
+  height: 100%;
+}
+
+.overlay .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:100%;
+  color: #fff;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* snippet */
+.snippet {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-ms-flex-wrap: wrap;flex-wrap: wrap}
+.snippet .flex_box {-webkit-box-flex:1;-ms-flex:1;flex:1;text-align: center} 
+.snippet button {display:inline-block;width:200px;height: 200px;padding: 5%;border-radius: 50%;background:#A1CEAB;cursor: pointer;font-size: 1.2rem;font-weight: 600;color:#757575}
+.snippet button:hover {background: #4A8391;color:#fff}
+.snippet .modal {}
+/* .snippet .modal.show {display:block} */
+/* .snippet .modal p {width:100%;height:100%;} */
+
+/* 모달 */
+.modal > div {
+	position: absolute;
+    top: 25%;
+    left: 50%;
+	overflow: auto;
+    width: 100%;
+	max-width:1200px; 
+    height: 50%; 
+	padding: 2%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	border: 16px solid #333;
+	background-color: white;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box	
+} 
+
+.modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+ .modal {
+	position: fixed;
+	z-index:9999;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0
+	;width:100%;
+	height:100%;
+	padding:2%;;
+    background: rgba(0, 0, 0, 0.8);
+    opacity:0;
+    /* opacity:1; */
+    -webkit-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+/* .snippet .modal {display:none} */
+.snippet button:focus +.modal { opacity:1;pointer-events: auto;}
+
+.modal .close {position: absolute;bottom:0;font-size: 3rem}
+.modal .close {display:none}
+
+/* Skills & Experience */
+.skills {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;margin-bottom:4rem;color:#615b4b;}
+.skills figure {position: relative;height:14rem;-webkit-box-flex:1;-ms-flex:1;flex:1;text-align: center}
+.skills figure img {position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+.skills figure figcaption {position: absolute;width:100%;bottom:-30px;font-weight: 600}
+.skills_text {min-height:100%;padding:1%;color:#615b4b;font-size:1.2rem} 
+.skills_text p {white-space: pre-wrap}
+
+/* contact */
+.contact {text-align: center;background:url(../img/yoonu.png) no-repeat 0 100%;background-size:contain}
+.contact ul {width:21rem;margin:0 auto;font-size:1.2rem;text-align: left}
+.contact li {margin-bottom:0.5rem}
+.contact li:last-child {margin-bottom:0}
+
+/* footer */
+.footer address {padding:27px 0;text-align:center}
+.footer address > a{display: inline-block;vertical-align: middle}
