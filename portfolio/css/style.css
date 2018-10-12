@@ -49,7 +49,7 @@ h1 {float:left}
 /* about_me */
 .about_me {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center}
 .about_me .box {margin:0 2rem;-webkit-box-flex:2;-ms-flex:2;flex:2}
-.about_me .box p {color:#4A8391;white-space: pre-line}
+.about_me .box p {color:#4A8391;white-space: pre-line;letter-spacing: -1px}
 .about_me figure {max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;align-self: flex-end;padding:3rem 0}
 
 /* timeline */
