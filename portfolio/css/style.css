@@ -56,7 +56,7 @@ h1 {float:left}
 .time_line {color:#4A8391;margin-top: 11rem;}
 .time_line ol {display:-webkit-box;display:-ms-flexbox;display:flex;}
 .time_line ol:before {position: absolute;display:block;width:3rem;height:3px;background: #A1CEAB; content:""}
-.time_line ol:after {position: absolute;display:block;width:47rem;height:3px;background: #A1CEAB; content:""}
+.time_line ol:after { position: absolute; left:38%; transform:translateX(-50%); display:block; width:47rem; height:3px; background: #A1CEAB; content:""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
 #time_line h4 {margin:2rem 0 1rem}
 .time_line li {position: relative;display:inline-block;width:12rem;margin-right:3%}
 
@@ -66,7 +66,7 @@ h1 {float:left}
 .time_line .time_box { position: relative; top:1.5rem;min-height:6rem;padding:1rem 1rem; background: #D2E5C5; border-radius:30px /10px; -webkit-border-radius:30px /10px; -moz-border-radius:30px /10px; -ms-border-radius:30px /10px; -o-border-radius:30px /10px; }
 .time_line li:nth-child(odd) .time_box {top:-9.5rem;left:3rem}
 .time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;transform: translateY(-50%) rotate(45deg);content: ' '}
-.time_line li:nth-child(odd) .time_box:after {top:unset;bottom:-20px;}
+.time_line li:nth-child(odd) .time_box:after {top:100%;bottom:-20px;}
 .time_line .time_box span {display:block;font-size:1.5rem}
 .time_box em {font-size:2rem}
 
