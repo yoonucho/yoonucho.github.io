@@ -66,7 +66,11 @@ h1 {float:left}
 .time_line li:nth-child(odd) .time_box {top:-9.5rem;left:3rem}
 .time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;transform: translateY(-50%) rotate(45deg);content: ' '}
 .time_line li:nth-child(odd) .time_box:after {top:100%;bottom:-20px;}
+<<<<<<< HEAD
 .time_line .time_box  p {letter-spacing: -1px}
+=======
+.time_lime p {letter-spacing: -1px}
+>>>>>>> fc9e3b77e8f13991d58b2f42864fbdd0deb8690d
 .time_line .time_box span {display:block;font-size:1.5rem}
 .time_box em {font-size:2rem}
 
