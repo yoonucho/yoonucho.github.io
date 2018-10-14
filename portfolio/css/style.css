@@ -50,7 +50,7 @@ h1 {float:left}
 .about_me {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center}
 .about_me .box {margin:0 2rem;-webkit-box-flex:2;-ms-flex:2;flex:2}
 .about_me .box p {color:#4A8391;white-space: pre-line;}
-.about_me figure {max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;align-self: flex-end;padding:3rem 0}
+.about_me figure {max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-item-align: end;align-self: flex-end;padding:3rem 0}
 
 /* timeline */
 .time_line {color:#4A8391;margin-top: 11rem;}
@@ -64,7 +64,7 @@ h1 {float:left}
 
 .time_line .time_box { position: relative; top:1.5rem;min-height:6rem;padding:1rem 1rem; background: #D2E5C5; border-radius:30px /10px; -webkit-border-radius:30px /10px; -moz-border-radius:30px /10px; -ms-border-radius:30px /10px; -o-border-radius:30px /10px; }
 .time_line li:nth-child(odd) .time_box {top:-9.5rem;left:3rem}
-.time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;transform: translateY(-50%) rotate(45deg);content: ' '}
+.time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;-webkit-transform: translateY(-50%) rotate(45deg);transform: translateY(-50%) rotate(45deg);content: ' '}
 .time_line li:nth-child(odd) .time_box:after {top:100%;bottom:-20px;}
 .time_line .time_box  p {letter-spacing: -1px}
 .time_line .time_box span {display:block;font-size:1.5rem}
@@ -84,9 +84,9 @@ h1 {float:left}
 .tab .tab_contents ul{text-align:center;display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 10px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 .tab_contents {display:block;margin-top:2rem}
 .tab_contents ul:after {display:block;line-height:0;clear:both;content: ""}
-.tab .tab_contents li {position: relative;text-align: center;display:inline-block;margin:0 0.2rem 2% 0}
+.tab .tab_contents li {position: relative;display:inline-block;margin:0 0.2rem 2% 0}
 .tab_contents li:nth-child(3n) {margin-right:0;} 
-.tab .tab_contents li a {display:block;width:360px;}
+.tab .tab_contents li a {display:block;width:100%;min-width:22.5rem}
 .tab_contents li a img {width:100%;height:300px;-o-object-fit: cover;object-fit: cover;-o-object-position: 0 0;object-position: 0 0}
 
 /* 오버레이 */
@@ -178,10 +178,11 @@ h1 {float:left}
 .modal .close {display:none}
 
 /* Skills & Experience */
-.skills {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;margin-bottom:4rem;color:#615b4b;}
-.skills figure {position: relative;;height:14rem;-webkit-box-flex:1;-ms-flex:1;flex:1;text-align: center}
-.skills figure:nth-child(4) {max-width:9rem}
-.skills figure img {position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+.skills {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:space-between;margin-bottom:4rem;color:#615b4b;-webkit-box-orient :horizontal;-webkit-box-direction :normal;-ms-flex-flow :row wrap;flex-flow :row wrap;}
+.skills figure {position: relative;width:20%;height:14rem;text-align: center;}
+
+.skills figure img { position: absolute;left:0;right:0;top:50%;margin-left:auto;margin-right:auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); }
+/* .skills figure:nth-child(4) img {padding:0 2rem;-webkit-box-sizing:border-box;box-sizing:border-box} */
 .skills figure figcaption {position: absolute;width:100%;bottom:-30px;font-weight: 600}
 .skills_text {min-height:100%;padding:1%;color:#615b4b;font-size:1.2rem} 
 .skills_text p {white-space: pre-wrap}
@@ -195,3 +196,41 @@ h1 {float:left}
 /* footer */
 .footer address {padding:27px 0 20px;text-align:center}
 .footer address > a{display: inline-block;vertical-align: middle}
+
+/* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
+@media only screen and (max-width:1280px) {
+	
+}
+
+@media only screen and (max-width:1024px) {
+	.row {padding:1rem}
+	/* aboutme */
+	.about_me .box {margin: 0;}
+	/* portpolio*/
+	
+	.tab .tab_contents li{margin:0 0 2%}
+	.tab .tab_contents li a {min-width:100%}
+}
+
+@media only screen and (max-width:960px) {
+	/* portpolio*/
+	.tab .tab_contents li a {}
+	/* skills */
+	.skills figure {width:33.33%;margin-bottom:2rem}
+	.skills figure:nth-child(4n) {margin-bottom:0}
+}
+
+@media only screen and (max-width:768px) {
+
+}
+
+@media only screen and (max-width:600px) {
+
+}
+
+@media only screen and (max-width:480px) {
+
+}
+@media only screen and (max-width:320px) {
+
+}
