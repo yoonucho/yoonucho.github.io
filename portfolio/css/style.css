@@ -239,7 +239,7 @@ h1 {float:left}
 	/* portpolio*/
 	.tab .tab_list > li {min-width:50%}
 	.tab .tab_list > li:nth-child(-n+2) {margin-bottom:2%}
-	.tab .tab_list button { border-radius:0 20px ; -webkit-border-radius:0 20px ; -moz-border-radius:0 20px ; -ms-border-radius:0 20px ; -o-border-radius:0 20px ; }
+	.tab .tab_list button { border-radius:0 20px; }
 	.tab .tab_contents ul {grid-template-columns: repeat(1, 1fr);}
 
 	/* skills */
