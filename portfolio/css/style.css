@@ -21,7 +21,8 @@ h3:after {display:block;padding-top:10px;border-bottom:1px solid;content:"";colo
 section > div {max-width:1100px;min-height:100%;margin:0 auto}
 
 /* header */
-.header {position: relative;top:30px;}
+.header {position: relative;z-index:999;top:30px;}
+.header.mobile {display:none}
 .header:after {display:inline-block;line-height: 0;clear:both;content:"";border:1px solid #4A8391}
 h1 {float:left}
 
@@ -196,7 +197,7 @@ h1 {float:left}
 .footer address {padding:27px 0 20px;text-align:center}
 .footer address > a{display: inline-block;vertical-align: middle}
 
-/* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
+/* mediaquery 320 / 480 / 640 / 768 / 960 / 1024 / 1280 */
 @media only screen and (max-width:1280px) {
 	
 }
@@ -254,6 +255,16 @@ h1 {float:left}
 }
 
 @media only screen and (max-width:640px) {
+	/* header */
+	.header.mobile {display:block}
+	.mobile.active {position: fixed;z-index: 10;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,.5)}
+	.mobile .gnb { display:none; position: absolute; top: 0; bottom: 0; right: 0; padding: 57px 40px 25px; background: #ED908C; box-sizing: border-box; transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -moz-transition:all 0.2s ease-in; -ms-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; }
+	.mobile.active .gnb {display: block}
+	.gnb li {display:block;float:none;margin:0 0 2rem}
+	.gnb li a {font-size:2rem;color:#fff}
+	.gnb li a:hover {border-bottom:none}
+	.gnb_btn {display:block;font-size: 2rem}
+
 	/* aboutme */
 	#about_me {padding-bottom:0;}
 	.about_me .box {flex:none}
