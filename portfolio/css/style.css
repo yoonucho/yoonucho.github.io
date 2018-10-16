@@ -22,7 +22,7 @@ section > div {max-width:1100px;min-height:100%;margin:0 auto}
 
 /* header */
 .header {position: relative;top:30px;}
-.header:after {border:1px solid #4A8391}
+.header:after {display:inline-block;line-height: 0;clear:both;content:"";border:1px solid #4A8391}
 h1 {float:left}
 
 /* nav */
@@ -47,10 +47,10 @@ h1 {float:left}
 
 
 /* about_me */
-.about_me {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center}
+.about_me {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-flow: row wrap;flex-flow: row wrap}
 .about_me .box {margin:0 2rem;-webkit-box-flex:2;-ms-flex:2;flex:2}
 .about_me .box p {color:#4A8391;white-space: pre-line;}
-.about_me figure {max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-item-align: end;align-self: flex-end;padding:3rem 0}
+.about_me figure {position: relative;max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-item-align: end;align-self: flex-end;padding:3rem 0}
 
 /* timeline */
 .time_line {color:#4A8391;margin-top: 11rem;}
@@ -58,7 +58,7 @@ h1 {float:left}
 .time_line ol:before {position: absolute;display:block;width:3rem;height:3px;background: #A1CEAB; content:""}
 .time_line ol:after { position: absolute; left:38%; transform:translateX(-50%); display:block; width:47rem; height:3px; background: #A1CEAB; content:""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
 #time_line h4 {margin:2rem 0 1rem}
-.time_line li {position: relative;display:inline-block;width:12rem;margin-right:3%}
+.time_line li {position: relative;display:inline-block;min-width:10rem;width:10rem}
 .time_line li:after { position: absolute; top:-4px; left:50%; transform:translateX(-50%);width:10px; height:10px; content:""; width: 10px; height: 10px; border-radius: 50%; background:#A1CEAB; content: ""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
 
 
@@ -203,9 +203,12 @@ h1 {float:left}
 }
 
 @media only screen and (max-width:1024px) {
-	.row {padding:1rem}
+	.row {top:0;padding:1rem}
 	/* aboutme */
-	.about_me .box {margin: 0;}
+	.about_me .box {margin: 0;width:58%}
+	
+
+
 	/* portpolio*/
 	
 	.tab .tab_contents li{margin:0 0 2%}
@@ -213,6 +216,11 @@ h1 {float:left}
 }
 
 @media only screen and (max-width:960px) {
+	/* aboutme */
+	.about_me .box {width:100%}
+	.time_line ol:before {width:98%}
+	.about_me figure {display:none}
+
 	/* portpolio*/
 	.tab .tab_contents li a {}
 	/* skills */
