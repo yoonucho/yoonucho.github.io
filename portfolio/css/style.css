@@ -210,6 +210,7 @@ h1 {float:left}
 
 	/* portpolio*/
 	.tab .tab_contents li{margin:0 0 2%}
+	.tab .tab_contents li a {min-width:unset;max-width:unset}
 	
 }
 
@@ -220,6 +221,8 @@ h1 {float:left}
 	.about_me figure {display:none}
 
 	/* portpolio*/
+	/* portpolio*/
+	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
 	
 
 	/* skills */
@@ -229,7 +232,7 @@ h1 {float:left}
 
 @media only screen and (max-width:768px) {
 	/* portpolio*/
-	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
+	/* .tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);} */
 
 	/* snippet */
 	.snippet .flex_box {flex:none;min-width:50%;}
@@ -242,6 +245,7 @@ h1 {float:left}
 	.tab .tab_list > li:nth-child(-n+2) {margin-bottom:2%}
 	.tab .tab_list button { border-radius:0 20px; }
 	.tab .tab_contents ul {grid-template-columns: repeat(1, 1fr);}
+	.tab .tab_contents li a {min-width:100%}
 
 	/* skills */
 	.skills figure {min-width:50%}
