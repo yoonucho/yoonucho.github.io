@@ -25,7 +25,7 @@ dl,ul,ol,menu,li{list-style:none}
 body,th,td,input,select,textarea,button{font-family:"나눔 고딕","Nanum Gothic",'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222;line-height: 1.5}
 
 /* 링크 초기화 */
-a{color:#222;text-decoration:none;transition: color 0.3s ease}
+a{ color:#222; text-decoration:none; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -o-transition: all 0.3s ease; }
 a:hover{color:#118eff;text-decoration:none;}
 a:active{background-color:transparent}
 

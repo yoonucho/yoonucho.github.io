@@ -10,7 +10,7 @@ main {background:rgba(244,229,189,0.2);}
 #contact {color:#494438;padding-bottom: 3rem;}
 #footer {background: #9e9e9e;}
 
-/* 공통레이아웃 */
+/* 공통 */
 h3 {padding:3.5rem 0;font-size:2rem;text-align: center}
 h3:after {display:block;padding-top:10px;border-bottom:1px solid;content:"";color:inherit}
 /* container */
@@ -49,20 +49,20 @@ h1 {float:left}
 .about_me {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-flow: row wrap;flex-flow: row wrap}
 .about_me .box {margin:0 2rem;-webkit-box-flex:2;-ms-flex:2;flex:2}
 .about_me .box p {color:#4A8391;white-space: pre-line;}
-.about_me figure {position: relative;max-width:300px;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-item-align: end;align-self: flex-end;padding:3rem 0}
+.about_me figure {-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-item-align: end;align-self: flex-end;padding:3rem 0;opacity:1;transition: opacity .25s ease-in-out;}
 
 /* timeline */
 .time_line {color:#4A8391;margin-top: 11rem;}
 .time_line ol {display:-webkit-box;display:-ms-flexbox;display:flex;}
-.time_line ol:before {position: absolute;display:block;width:3rem;height:3px;background: #A1CEAB; content:""}
-.time_line ol:after { position: absolute; left:38%; transform:translateX(-50%); display:block; width:47rem; height:3px; background: #A1CEAB; content:""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
+/* .time_line ol:before {position: absolute;display:block;width:3rem;height:3px;background: #A1CEAB; content:""} */
+.time_line ol:after { display:block; position: absolute; left:0;right:0;max-width:48rem;height:3px; background: #A1CEAB; content:""}
 #time_line h4 {margin:2rem 0 1rem}
 .time_line li {position: relative;display:inline-block;min-width:10rem;width:10rem}
 .time_line li:after { position: absolute; top:-4px; left:50%; transform:translateX(-50%);width:10px; height:10px; content:""; width: 10px; height: 10px; border-radius: 50%; background:#A1CEAB; content: ""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
 
 
-.time_line .time_box { position: relative; top:1.5rem;min-height:6rem;padding:1rem 1rem; background: #D2E5C5; border-radius:30px /10px; -webkit-border-radius:30px /10px; -moz-border-radius:30px /10px; -ms-border-radius:30px /10px; -o-border-radius:30px /10px; }
-.time_line li:nth-child(odd) .time_box {top:-9.5rem;left:3rem}
+.time_line .time_box { position: relative; top:1.5rem;min-height:6rem;padding:1rem 1rem; background: #D2E5C5; border-radius:30px /10px; -webkit-border-radius:30px /10px; -moz-border-radius:30px /10px; -ms-border-radius:30px /10px; -o-border-radius:30px /10px;box-shadow: 5px 4px 8px 0px rgba(50, 50, 50, 0.75);}
+.time_line li:nth-child(odd) .time_box {top:-9.5rem;left:3rem;box-shadow: 5px -4px 8px 0px rgba(50, 50, 50, 0.75);}
 .time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;-webkit-transform: translateY(-50%) rotate(45deg);transform: translateY(-50%) rotate(45deg);content: ' '}
 .time_line li:nth-child(odd) .time_box:after {top:100%;bottom:-20px;}
 .time_line .time_box  p {letter-spacing: -1px}
@@ -205,9 +205,8 @@ h1 {float:left}
 	.row {top:0;padding:1rem}
 	/* aboutme */
 	.about_me .box {margin: 0;width:58%}
+	.time_line ol::after {max-width:42rem}
 	
-
-
 	/* portpolio*/
 	.tab .tab_contents li{margin:0 0 2%}
 	.tab .tab_contents li a {min-width:unset;max-width:unset}
@@ -216,11 +215,9 @@ h1 {float:left}
 
 @media only screen and (max-width:960px) {
 	/* aboutme */
-	.about_me .box {width:100%}
-	.time_line ol:before {width:98%}
-	.about_me figure {display:none}
-
-	/* portpolio*/
+	/* .about_me .box {width:100%}
+	.time_line ol:before {width:98%} */
+	
 	/* portpolio*/
 	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
 	
@@ -231,7 +228,21 @@ h1 {float:left}
 	.skills figure:nth-child(4n) {margin-bottom:0}
 }
 
+@media only screen and (max-width:959px) and (min-width:769px) {
+	/* about_me  */
+	.about_me figure {max-width:18rem}
+	
+}
+
 @media only screen and (max-width:768px) {
+	/* about_me  */
+	.about_me .box {width:100%}
+	.time_line ol:after {max-width:100%;opacity:1;justify-content: space-between; transition:opacity .3s ease-in; -webkit-transition:opacity .3s ease-in; -moz-transition:opacity .3s ease-in; -ms-transition:opacity .3s ease-in; -o-transition:opacity .3s ease-in; }
+	.time_line li {min-width: 9rem;}
+	.time_line li:after {left:55%;transition:opacity .3s ease-in;}
+	.time_line li .time_box {width:auto}
+	.time_line .time_box p {font-size:0.9rem}
+	.about_me figure { opacity: 0;}
 
 	/* portpolio*/
 	/* .tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);} */
@@ -242,9 +253,19 @@ h1 {float:left}
 	/* .snippet button {width:25rem;height:25rem} */
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:640px) {
 	/* aboutme */
 	#about_me {padding-bottom:0;}
+	.about_me .box {flex:none}
+	.time_line {margin-top:0}
+	.time_line ol {flex-flow:row wrap;align-items: center}
+	.time_line ol:after {opacity:0;}
+	.time_line li {display:block;min-width:100%;margin-bottom:1rem;}
+	.time_line li:after {opacity:0;}
+	.time_line li .time_box {position: static;text-align:center;box-shadow: none;padding:0.5rem 0}
+	.time_line li:nth-child(odd) .time_box {box-shadow: none}
+	.time_line .time_box:after {display:none} 
+	.time_line .time_box p {letter-spacing: 0;font-size:120%;}
 
 	/* portpolio*/
 	.tab .tab_list > li {min-width:50%}
@@ -270,7 +291,7 @@ h1 {float:left}
 @media only screen and (max-width:480px) {
 		/* 공통  */
 	h3 {padding:10% 0}
-	
+
 	/* contact */
 	.contact {background: none}
 	.contact ul {padding-left:0;}
