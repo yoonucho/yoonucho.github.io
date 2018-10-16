@@ -40,7 +40,6 @@ h1 {float:left}
 .tag_text:nth-child(3){margin-right: 3rem;}
 .tag{color:#181612;font-size:13px;font-style: italic}
 .me {width:270px;margin:0 auto}
-.me:after {width:350px;height:350px;padding: 3% 2%;border-radius: 50%;border: 1px solid #F4E5BD;content: ""}
 .intro_title{position: relative;max-width:296px;margin:0 auto;padding:2rem 0;color:#615b4b;font-size: 2rem;line-height: 1.3}
 .intro_title span{display:block;}
 .intro_title strong{padding-left: 55px;}
@@ -232,6 +231,7 @@ h1 {float:left}
 	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
 	.tab .tab_contents li:last-child {width:100%}
 	/* snippet */
+	.snippet .flex_box {flex:none;min-width:50%;}
 	/* .snippet button {width:25rem;height:25rem} */
 }
 
