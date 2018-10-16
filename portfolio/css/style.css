@@ -229,7 +229,7 @@ h1 {float:left}
 @media only screen and (max-width:768px) {
 	/* portpolio*/
 	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
-	.tab .tab_contents li:last-child {width:100%}
+	
 	/* snippet */
 	.snippet .flex_box {flex:none;min-width:50%;}
 	/* .snippet button {width:25rem;height:25rem} */
