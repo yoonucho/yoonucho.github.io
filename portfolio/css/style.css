@@ -229,14 +229,29 @@ h1 {float:left}
 @media only screen and (max-width:768px) {
 	/* portpolio*/
 	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
-	
+
 	/* snippet */
 	.snippet .flex_box {flex:none;min-width:50%;}
 	/* .snippet button {width:25rem;height:25rem} */
 }
 
 @media only screen and (max-width:600px) {
+	/* portpolio*/
+	.tab .tab_list > li {min-width:50%}
+	.tab .tab_list > li:nth-child(-n+2) {margin-bottom:2%}
+	.tab .tab_list button { border-radius:0 20px ; -webkit-border-radius:0 20px ; -moz-border-radius:0 20px ; -ms-border-radius:0 20px ; -o-border-radius:0 20px ; }
+	.tab .tab_contents ul {grid-template-columns: repeat(1, 1fr);}
 
+	/* skills */
+	.skills figure {min-width:50%}
+	.skills figure:last-child {min-width:100%}
+
+	/* snippet */
+	.snippet .flex_box {flex:none;min-width:100%;}
+
+	/* contant */
+	.contact ul {padding-left:26%}
+	
 }
 
 @media only screen and (max-width:480px) {
