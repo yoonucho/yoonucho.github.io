@@ -120,7 +120,7 @@ h1 {float:left}
 }
 
 /* snippet */
-.snippet {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-ms-flex-wrap: wrap;flex-wrap: wrap}
+.snippet {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-ms-flex-wrap: wrap}
 .snippet .flex_box {-webkit-box-flex:1;-ms-flex:1;flex:1;text-align: center} 
 .snippet button {display:inline-block;width:12.5rem;height: 12.5rem;margin-bottom: 1rem;padding: 5%;border-radius: 50%;background:#A1CEAB;cursor: pointer;font-size: 1.2rem;font-weight: 600;color:#757575}
 .snippet button:hover {background: #4A8391;color:#fff}
@@ -224,22 +224,28 @@ h1 {float:left}
 	/* portpolio*/
 	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
 	
-
+	/* snippet */
+	.snippet button{width:11.5rem;height:11.5rem}
 	/* skills */
 	.skills figure {width:33.33%;margin-bottom:2rem}
 	.skills figure:nth-child(4n) {margin-bottom:0}
 }
 
 @media only screen and (max-width:768px) {
+
 	/* portpolio*/
 	/* .tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);} */
 
 	/* snippet */
+	.snippet {flex-flow: row wrap}
 	.snippet .flex_box {flex:none;min-width:50%;}
 	/* .snippet button {width:25rem;height:25rem} */
 }
 
 @media only screen and (max-width:600px) {
+	/* aboutme */
+	#about_me {padding-bottom:0;}
+
 	/* portpolio*/
 	.tab .tab_list > li {min-width:50%}
 	.tab .tab_list > li:nth-child(-n+2) {margin-bottom:2%}
@@ -256,13 +262,21 @@ h1 {float:left}
 	.snippet .flex_box {flex:none;min-width:100%;}
 
 	/* contant */
-	.contact ul {padding-left:26%}
+	#contact {padding-bottom: 0;}
+	.contact ul {padding-left:26%;}
 	
 }
 
 @media only screen and (max-width:480px) {
-
+		/* 공통  */
+	h3 {padding:10% 0}
+	
+	/* contact */
+	.contact {background: none}
+	.contact ul {padding-left:0;}
 }
 @media only screen and (max-width:320px) {
-
+	/* contant */
+	
+	
 }
