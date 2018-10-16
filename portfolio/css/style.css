@@ -22,8 +22,8 @@ section > div {max-width:1100px;min-height:100%;margin:0 auto}
 
 /* header */
 .header {position: relative;z-index:999;top:30px;}
-.header.mobile {display:none}
-.header:after {display:inline-block;line-height: 0;clear:both;content:"";border:1px solid #4A8391}
+.header {display:block}
+.header:after {display:inline-block;line-height: 0;clear:both;content:""}
 h1 {float:left}
 
 /* nav */
