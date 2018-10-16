@@ -247,6 +247,7 @@ h1 {float:left}
 	.skills figure:last-child {min-width:100%}
 
 	/* snippet */
+	#snippet {padding-bottom:0}
 	.snippet .flex_box {flex:none;min-width:100%;}
 
 	/* contant */
