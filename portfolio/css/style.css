@@ -210,7 +210,7 @@ h1 {float:left}
 
 	/* portpolio*/
 	.tab .tab_contents li{margin:0 0 2%}
-	.tab .tab_contents li a {min-width:100%}
+	/* .tab .tab_contents li a {min-width:100%} */
 }
 
 @media only screen and (max-width:960px) {
