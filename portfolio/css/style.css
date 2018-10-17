@@ -265,7 +265,7 @@ h1 {float:left}
 	.gnb li {display:block;float:none;margin:0 0 2rem}
 	.gnb li a {font-size:2rem;color:#fff}
 	.gnb li a:hover {border-bottom:none}
-	.gnb_btn {display:block;font-size: 2rem;color:#494438}
+	.gnb_btn {display:block;background:none;font-size: 2rem;color:#494438;line-height:1;cursor: pointer;}
 	.gnb_btn .fa {vertical-align:top}
 
 	/* aboutme */
