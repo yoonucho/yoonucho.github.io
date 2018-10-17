@@ -32,7 +32,7 @@ h1 {float:left}
 .gnb li:last-child {margin-right:0}
 .gnb li a{display:block;padding:5px;font-weight: 600}
 .gnb li a:hover{color:#4A8391;border-bottom:2px solid #4A8391}
-.gnb_btn {display:none}
+.gnb_btn {display:none;position: relative;}
 
 /* intro */
 .tag_text {padding:20px}
@@ -153,7 +153,7 @@ h1 {float:left}
 }
  .modal {
 	position: fixed;
-	z-index:9999;
+	z-index:9998;
 	top:0;
 	left:0;
 	right:0;
@@ -256,14 +256,17 @@ h1 {float:left}
 
 @media only screen and (max-width:640px) {
 	/* header */
+	#header {height: auto;margin-top:-3px;}
 	.header.mobile {display:block}
-	.mobile.active {position: fixed;z-index: 10;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,.5)}
+	.mobile.active {position: fixed;z-index: 9999;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,.5)}
 	.mobile .gnb { display:none; position: absolute; top: 0; bottom: 0; right: 0; padding: 57px 40px 25px; background: #ED908C; box-sizing: border-box; transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -moz-transition:all 0.2s ease-in; -ms-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; }
 	.mobile.active .gnb {display: block}
+	.mobile.active .gnb_btn {font-size:2.5rem;color:#fff}
 	.gnb li {display:block;float:none;margin:0 0 2rem}
 	.gnb li a {font-size:2rem;color:#fff}
 	.gnb li a:hover {border-bottom:none}
-	.gnb_btn {display:block;font-size: 2rem}
+	.gnb_btn {display:block;font-size: 2rem;color:#494438}
+	.gnb_btn .fa {vertical-align:top}
 
 	/* aboutme */
 	#about_me {padding-bottom:0;}
