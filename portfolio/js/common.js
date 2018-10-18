@@ -2,6 +2,7 @@ $(document).ready(function () {
 	menuOpen();
 	btnClick();
 	btnClose();
+	tab();
 	btnTop();	
 })
 
@@ -21,8 +22,34 @@ function menuOpen() {
 
 // portfolio 탭
 
+function tab() {
+	$(".tab_list li.web").on("click",function () {
+		alert("클릭!")
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".tab_contents li.web").addClass("active");
+		// $(".tab_contents li").not(".web").css({"display":"none"});
+	});
+}
+// function tab() {
+// 	$(".tab_list li.web").on("click",function () {
+// 		alert("클릭!")
+// 		$(this).addClass("active").siblings().removeClass("active");
+// 		$(".tab_contents li.web").addClass("active");
+// 		$(".tab_contents li").not(".web").css({"display":"none"});
+// 	});
+// }
 
 
+
+
+
+
+		// if ($(".tab_list li").hasClass("active")) {
+		// 	$(".tab_contents li").removeClass("active");
+		// }
+		// else {
+		// 	$(".tab_contents li").addClass("active");
+		// }
 
 // snippet 버튼 클릭시 모달창 열림, 닫힘
 function btnClick(){
