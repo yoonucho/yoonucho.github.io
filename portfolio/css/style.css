@@ -21,9 +21,9 @@ h3:after {display:block;padding-top:10px;border-bottom:1px solid;content:"";colo
 section > div {max-width:1100px;min-height:100%;margin:0 auto}
 
 /* header */
-.header {position: relative;z-index:999;top:30px;}
+.header {position: relative;z-index:999;top:22px;}
 .header {display:block}
-.header:after {display:inline-block;line-height: 0;clear:both;content:""}
+.header:after {display:block;line-height: 0;clear:both;content:""}
 h1 {float:left}
 
 /* nav */
@@ -60,15 +60,13 @@ h1 {float:left}
 #time_line h4 {margin:2rem 0 1rem}
 .time_line li {position: relative;display:inline-block;min-width:10rem;width:10rem}
 .time_line li:after { position: absolute; top:-4px; left:50%; transform:translateX(-50%);width:10px; height:10px; content:""; width: 10px; height: 10px; border-radius: 50%; background:#A1CEAB; content: ""; -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); }
-
-
 .time_line .time_box { position: relative;z-index:99; top:1.5rem;min-height:6rem;padding:1rem 1rem; background: #D2E5C5; border-radius:30px /10px; -webkit-border-radius:30px /10px; -moz-border-radius:30px /10px; -ms-border-radius:30px /10px; -o-border-radius:30px /10px;box-shadow: 5px 4px 8px 0px rgba(50, 50, 50, 0.75);}
 .time_line li:nth-child(odd) .time_box {top:-9.5rem;left:3rem;box-shadow: 5px -4px 8px 0px rgba(50, 50, 50, 0.75);}
 .time_line .time_box:after {position: absolute;top:0;left:3rem;z-index: -1;;width: 20px;height: 20px;background:inherit;-webkit-transform: translateY(-50%) rotate(45deg);transform: translateY(-50%) rotate(45deg);content: ' '}
 .time_line li:nth-child(odd) .time_box:after {top:100%;bottom:-20px;}
 .time_line .time_box  p {letter-spacing: -1px}
 .time_line .time_box span {display:block;font-size:1.5rem}
-.time_box em {font-size:2rem}
+/* .time_box em {font-size:1.5rem} */
 
 /* portfolio */
 .tab {position: relative}
@@ -203,6 +201,7 @@ h1 {float:left}
 }
 
 @media only screen and (max-width:1024px) {
+	#header {height: auto;}
 	.row {top:0;padding:1rem}
 	/* aboutme */
 	.about_me .box {margin: 0;width:58%}
@@ -211,6 +210,9 @@ h1 {float:left}
 	/* portpolio*/
 	.tab .tab_contents li{margin:0 0 2%}
 	.tab .tab_contents li a {min-width:unset;max-width:unset}
+
+	/* footer */
+	.footer address {padding: 0}
 	
 }
 
@@ -242,6 +244,7 @@ h1 {float:left}
 	.time_line li {min-width: 9rem;}
 	.time_line li:after {left:55%;transition:opacity .3s ease-in;}
 	.time_line li .time_box {width:auto}
+	.time_line .time_box span {font-size:1.4rem;}
 	.time_line .time_box p {font-size:0.9rem}
 	.about_me figure { opacity: 0;}
 
@@ -256,7 +259,7 @@ h1 {float:left}
 
 @media only screen and (max-width:640px) {
 	/* header */
-	#header {height: auto;margin-top:-3px;}
+	#header {margin-top:-3px;}
 	.header.mobile {display:block}
 	.mobile.active {position: fixed;z-index: 9999;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,.5)}
 	.mobile .gnb { display:none; position: absolute; top: 0; bottom: 0; right: 0; padding: 57px 40px 25px; background: #ED908C; box-sizing: border-box; transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -moz-transition:all 0.2s ease-in; -ms-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; }
@@ -278,7 +281,8 @@ h1 {float:left}
 	.time_line li:after {opacity:0;}
 	.time_line li .time_box {position: static;text-align:center;box-shadow: none;padding:0.5rem 0}
 	.time_line li:nth-child(odd) .time_box {box-shadow: none}
-	.time_line .time_box:after {display:none} 
+	.time_line .time_box:after {display:none}
+	.time_line .time_box span {font-size:2rem;} 
 	.time_line .time_box p {letter-spacing: 0;font-size:120%;}
 
 	/* portpolio*/
@@ -299,6 +303,8 @@ h1 {float:left}
 	/* contant */
 	#contact {padding-bottom: 0;}
 	.contact ul {padding-left:26%;}
+
+
 	
 }
 
