@@ -1,5 +1,5 @@
 /* layout */
-/* body {background:rgba(255, 255, 255,0.3)} */
+body {position: relative;}
 #header {height: 83px;background: #E5E5E3;}
 #gnb {float:right}
 main {background:rgba(244,229,189,0.2);}
@@ -8,7 +8,7 @@ main {background:rgba(244,229,189,0.2);}
 #snippet {color:#A1CEAB;padding-bottom: 3rem;}
 #skills {color:#ee9b97;}
 #contact {color:#494438;padding-bottom: 3rem;}
-#footer {background: #9e9e9e;}
+#footer {background: #E5E5E3;}
 
 /* 공통 */
 h3 {padding:3.5rem 0;font-size:2rem;text-align: center}
@@ -194,6 +194,32 @@ h1 {float:left}
 /* footer */
 .footer address {padding:27px 0 20px;text-align:center}
 .footer address > a{display: inline-block;vertical-align: middle}
+
+/* 위로가기 버튼 */
+.btn_wrap {position: absolute;right:2rem;width:4rem;margin-top:-4.5rem;text-align: center}
+.btn_wrap > span {display:block;color:#494438;font-size:1rem;font-weight: 600}
+.btn_top {width: 3rem; height: 3rem; background: #a1ceab;border:1px solid #494438;border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; font-size:1.5rem;color:#fff;cursor: pointer ; }
+/* animation */
+.btn_wrap {
+   animation: movement 1000ms ease 0ms infinite alternate;
+   -webkit-animation: movement 1000ms ease 0ms infinite alternate;
+}
+
+@keyframes movement {
+  from {
+    transform: scale(1) translateY(0px) rotateX(0deg);
+  }
+  to {
+    transform: scale(1) translateY(-5px) rotateX(0deg);
+    -webkit-transform: scale(1) translateY(-5px) rotateX(0deg);
+    -moz-transform: scale(1) translateY(-5px) rotateX(0deg);
+    -ms-transform: scale(1) translateY(-5px) rotateX(0deg);
+    -o-transform: scale(1) translateY(-5px) rotateX(0deg);
+}
+}
+
+
+
 
 /* mediaquery 320 / 480 / 640 / 768 / 960 / 1024 / 1280 */
 @media only screen and (max-width:1280px) {

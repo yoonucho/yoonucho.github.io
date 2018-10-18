@@ -1,5 +1,6 @@
 $(document).ready(function () {
-	menuOpen();	
+	menuOpen();
+	btnTop();	
 })
 
 // 헤더 모바일  gnb메뉴 클릭이벤트
@@ -18,3 +19,19 @@ function menuOpen() {
 	});
 }
 
+
+/* 맨위로 가기 */
+function btnTop() {
+	// $(window).scroll(function () {
+	// 	if ($(this).scrollTop() > 55) {
+	// 		$('.btn_top').fadeIn();
+	// 	} else {
+	// 		$('.btn_top').fadeOut();
+	// 	}
+	// });
+
+	$(".btn_top").on("click", function () {
+		$('body,html').animate({ scrollTop: 0 }, 400);
+		return false;
+	});
+};
