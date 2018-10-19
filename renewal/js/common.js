@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	aLink();
 	menuOpen();
 	btnClick();
 	btnClose();
@@ -6,6 +7,15 @@ $(document).ready(function () {
 	btnTop();	
 })
 
+// 앵커 클릭할때 스크롤 부드럽게
+function aLink() {
+	$("a").on("click",function() {
+		$("html, body").animate({
+			scrollTop:$($.attr(this,"href")).offset().top
+		},500);
+	return false;
+	})
+}
 // 헤더 모바일  gnb메뉴 클릭이벤트
 function menuOpen() {
 	$(".gnb_btn").on("click", function () {
@@ -49,7 +59,7 @@ function btnClick(){
 }
 function btnClose(){
 	$(".btn_close").on("click", function(){
-		$(this).parents(".modal").fadeOut();
+		$(this).parents(".modal").fadeOut(50);
 	});
 }
 
