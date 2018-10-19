@@ -1,0 +1,130 @@
+﻿@charset "utf-8";
+/* Malgun Web Standard Team KKS */
+
+/* 단락 :: [컨텐츠 공통] */
+.section{position:relative;zoom:1}
+.section:after{display:block;clear:both;content:''}
+.section.v10{margin-bottom:10px}
+.section.v20{margin-bottom:20px}
+.section.v25{margin-bottom:25px}
+.section.v30{margin-bottom:30px}
+.section.v35{margin-bottom:35px}
+
+/* 컨텐츠 공통 */
+#wrap{position:relative;min-width:320px;max-width:640px}
+
+/* header */
+.header{position:relative}
+
+/* 국어 만점의 기술 전격 공개  */
+/* 수능만점 엠블럼 */
+
+/* 2.5배율 */
+/* .header_emblem{display:inline-block;position:absolute;top:39%;left:50%;width:76px;height:100%;margin-left:-38px;background:url(../img/header_emblem.png )no-repeat;background-size:76px auto;animation:emblem_rotation 4s 1.5s infinite}
+.emblem_text{display:inline-block;position:absolute;top:48px;left:50%;width:32px;height:100%;margin-left:-16px;background:url(../img/emblem_text.png)no-repeat;background-size:32px auto;text-indent:-999em}
+.emblem_circle{position:absolute;top:36px;left:6px;overflow:hidden;width:62px;height:62px;border-radius:50%;text-indent:-999em}
+.emblem_circle:after{position:absolute;top:50%;left:50%;display:inline-block;width:140px;height:140px;margin-left:-70px;margin-top:-70px;background:linear-gradient(-45deg, rgba(255,255,255,0) 45%, rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);background-size:200%;content:'';animation:shine 4s 3.5s infinite} */
+
+.header_emblem{display:inline-block;position:absolute;top:39%;left:50%;width:63px;height:87px;margin-left:-32px;background:url(../img/header_emblem.png )no-repeat;background-size:63px auto;animation:emblem_rotation 4s 1.5s infinite}
+.emblem_text{display:inline-block;position:absolute;top:38px;left:50%;width:27px;height:38px;margin-left:-14px;background:url(../img/emblem_text.png)no-repeat;background-size:27px auto;text-indent:-999em}
+.emblem_circle{position:absolute;top:30px;left:4px;overflow:hidden;width:53px;height:49px;border-radius:50%;text-indent:-999em}
+.emblem_circle:after{position:absolute;top:50%;left:50%;display:inline-block;width:140px;height:140px;margin-left:-70px;margin-top:-70px;background:linear-gradient(-45deg, rgba(255,255,255,0) 45%, rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);background-size:200%;content:'';animation:shine 4s 3.5s infinite}
+
+/* 엠블럼 애니매이션 */
+@keyframes emblem_rotation{
+    0% {transform: rotateY(0deg)}
+    15% {transform: rotateY(180deg)}
+    30% {transform: rotateY(360deg)}
+    100% {transform: rotateY(360deg)}
+}
+
+/* 엠블럼 빛나는 애니매이션 */
+@keyframes shine{
+   0%{background-position:100%}
+    50%{background-position:-100%}
+    100% {background-position:-100%}
+}
+/* 수능 당락의 열쇠 국어! 국어에 대한 고민 전격 해결을 위해<국어의 기술> 이해황 저자와 수능 만점자가 만났다! */
+.intro_evt1{}
+.intro_evt1_inner{position:relative}
+.intro_evt1_inner h3{text-align:center}
+
+/* 수능만점자의 Secret 비법 공개 */
+.intro_evt2{}
+.intro_evt2_inner{position:relative}
+.intro_evt2_inner .video_lst{overflow:hidden;padding-top:61%}
+
+/* 동영상 리스트 */
+.video_wrap{position:relative}
+.video_lst{padding:16px;background:#303030}
+.video_lst li{float:left;width:48%;height:88px;margin-bottom:9px}
+.video_lst li:nth-child(n+3):nth-child(-n+4){margin-bottom:0}
+/* .video_lst li:nth-last-child(2){margin-bottom:0} */
+.video_lst li:nth-child(odd){margin-right:9px}
+.video_lst li>a{display:block;width:100%;height:100%;;text-indent:-999em}
+/* .video_lst li>a{display:block;width:100%;height:100%;border-radius:10px 0 10px;text-indent:-999em} */
+.video_lst li.on .img_wrap{display:block;position:absolute;left:0;top:0;width:100%}
+.video_lst li.on:first-child .img_wrap{display:block}
+.img_wrap{display:none}
+.img_wrap.on{display:block} 
+/* 썸네일 이미지 */
+.video_lst .temp1>a{background:url(../img/temp1_s.png) no-repeat;background-size:100%}
+.video_lst .temp1.on>a{background:url(../img/temp1_s_on.png) no-repeat;background-size:100%;transition: .5s ease}
+
+.video_lst .temp2>a{background:url(../img/temp2_s.png) no-repeat;background-size:100%}
+.video_lst .temp2.on>a{background:url(../img/temp2_s_on.png) no-repeat;background-size:100%;transition: .5s ease}
+
+.video_lst .temp3>a{background:url(../img/temp3_s.png) no-repeat;background-size:100%}
+.video_lst .temp3.on>a{background:url(../img/temp3_s_on.png) no-repeat;background-size:100%;transition: .5s ease}
+
+.video_lst .temp4>a{background:url(../img/temp4_s.png) no-repeat;background-size:100%}
+.video_lst .temp4.on>a{background:url(../img/temp4_s_on.png) no-repeat;background-size:100%;transition: .5s ease}
+
+/* 이해황저자의 국어공부법 sns공유하기 */
+.intro_evt3{}
+.intro_evt3_inne{}
+
+/* 공부 의지 불끈 댓글 작성하면, 수능 만점자 강력 추천  */
+.intro_evt4 {margin-top:-1px;background: #fff}
+.intro_evt4 .evt4_text{padding:20px 56px 0}
+.intro_evt4_inner{}
+.intro_evt4 .textarea_wrap{padding:12px 16px 18px;background: #fff;text-align: center}
+.intro_evt4 textarea{padding:11px 10px;border:0;background:#f2f2f2;color:#222}
+.reply_lst li{position:relative;padding:6px 16px;border-top:1px solid #e4e4e4;color:#222}
+.reply_lst li span{font-size:12px;color:#999}
+.reply_lst li .date{margin-left:5px}
+ /* 내글 삭제 */
+ .ico_delete{position:absolute;bottom:12px;right:16px;display:block;width:20px;height:20px;background:url(../img/ico_close.png) no-repeat;background-size:20px auto;text-indent:-999em}
+
+/* 더보기 */
+.text_more a{display:block;margin:-1px 0 1px;padding:10px 0 8px;border-top:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;background:#fff;font-size:12px;text-align:center}
+.ico_view_more{display:inline-block;width:11px;height:7px;margin-left:10px;background: url(../img/ico_view_more.png) no-repeat;background-size:11px auto;text-indent: -999em;vertical-align:middle}
+ 
+/* 알아두세요 */
+.intro_evt5{position:relative}
+
+/* 등록완료 */
+.btn_wrap{width:100%;text-align:center}
+.btn_reg{display:inline-block;width:60px;height:40px;margin-left:-2px;background:url(../img/btn_reg.png) no-repeat;background-size:60px auto;text-indent:-999em;vertical-align:middle}
+
+/* 맨위로 */
+.loc_top{display:none;position:fixed;right:16px;bottom:13px;z-index:200}
+.btn_top{display:block;position:relative;width:38px;height:38px;background:url(../img/btn_top.png) no-repeat;background-size: 38px auto;text-indent:-999em}
+
+/* 미디어쿼리 */
+
+/* 412px이상 */
+@media all and (min-width:412px) {
+	/* .intro_evt2_inner .video_lst{padding-top:63%} */
+	.video_lst li{height:103px}
+}
+
+/* 375미만 */
+@media all and (max-width:375px) {
+	.video_lst li{height:93px}
+}
+
+/* 화면 회전시 */
+ @media  all and (min-width:321px) and (orientation: landscape) {
+	 .video_lst li{height:165px}
+ } 
