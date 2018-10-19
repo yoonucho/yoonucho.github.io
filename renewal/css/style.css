@@ -9,6 +9,33 @@ main {padding-top:10rem;background:rgba(244,229,189,0.2);}
 #skills {color:#ee9b97;}
 #contact {color:#494438;padding-bottom: 3rem;}
 #footer {background: #E5E5E3;}
+/* 로딩 */
+#loading {position:fixed;z-index:99;top:0;left:0;display:block;width:100%;height:100%;background: rgba(0, 0, 0, 0.9);text-align: center}
+#loading_box {position: absolute;z-index:100;top:50%;left:50%;width:6rem}
+#loading_box > img {display:inline-block;width:4rem}
+#loading_box > p {font-size:2rem;color:#fff}
+
+/* 로딩 animation */
+#loading_box { animation: loading 1000ms ease 0ms infinite alternate; -webkit-animation: loading 1000ms ease 0ms infinite alternate;
+}
+
+@keyframes loading {
+  from {
+    transform:translateY(0px);
+    -webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    -ms-transform:translateY(0px);
+    -o-transform:translateY(0px);
+}
+  to {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+	}
+}
+
 
 /* 공통 */
 h3 {padding:3.5rem 0;font-size:2rem;text-align: center}
@@ -30,8 +57,13 @@ h1 {float:left}
 .gnb:after{display:block;line-height:0;clear:both;content:""}
 .gnb li {float:left;margin-right:20px}
 .gnb li:last-child {margin-right:0}
-.gnb li a{display:block;padding:5px;font-weight: 600}
-.gnb li a:hover{color:#4A8391;border-bottom:2px solid #4A8391}
+.gnb li a{display:block;position: relative;padding:5px;font-weight: 600}
+.gnb li a:before{content: ""; position: absolute;bottom: 0;left: 0;width: 0;height: 2px;background: #4A8391;-webkit-transition: 0.3s;-moz-transition: 0.3s;transition: 0.3s;}
+.gnb li a:hover {color:#4A8391}
+.gnb li a:hover:before{width:100%}
+.gnb li a:hover:after{width:100%}
+.gnb li.active a{color:#4A8391}
+.gnb li.active a:before{width:100%}
 .gnb_btn {display:none;position: relative;}
 
 /* intro */
@@ -210,7 +242,10 @@ h1 {float:left}
 @keyframes movement {
   from {
     transform:translateY(0px);
-   
+    -webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    -ms-transform:translateY(0px);
+    -o-transform:translateY(0px);
 }
   to {
     transform: translateY(-5px);

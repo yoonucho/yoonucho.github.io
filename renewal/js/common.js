@@ -1,3 +1,9 @@
+// 로딩 이미지
+$(window).on("load",function() {
+	$("#loading").hide(500);
+});
+
+
 $(document).ready(function () {
 	aLink();
 	menuOpen();
@@ -9,17 +15,39 @@ $(document).ready(function () {
 
 // 앵커 클릭할때 스크롤 부드럽게
 function aLink() {
-	$("a").on("click",function() {
+	$("#gnb li a").on("click",function() {
 		$("html, body").animate({
 			scrollTop:$($.attr(this,"href")).offset().top
-		},500);
-	return false;
-	})
+		}, 500)
+		$(this).parent().addClass("active").siblings().removeClass("active");
+		return false;	
+	});
 }
+
+// 스크롤 내릴때 active 
+
+// $(window).scroll(function () {
+// 	var height = $(document).scrollTop();
+// 	if (height > 0 && height < 1249) {
+// 		$('.nav_wrap .menu').removeClass('on');
+// 	} else if (height > 1250 && height < 2639) {
+// 		$('.nav_wrap .menu').removeClass('on');
+// 		$('.menu1').addClass('on');
+// 	}
+// 	else if (height > 2670 && height < 3875) {
+// 		$('.nav_wrap .menu').removeClass('on');
+// 		$('.menu2').addClass('on');
+// 	}
+// 	else if (height > 3450) {
+// 		$('.nav_wrap .menu').removeClass('on');
+// 		$('.menu3').addClass('on');
+// 	}
+// });
+
+
 // 헤더 모바일  gnb메뉴 클릭이벤트
 function menuOpen() {
 	$(".gnb_btn").on("click", function () {
-
 		$("i", this).toggleClass("fa-times fa-bars ");
 		if ($(".header.mobile").hasClass("active")) {
 			$(".header.mobile").removeClass("active");
