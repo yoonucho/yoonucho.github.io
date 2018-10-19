@@ -3,6 +3,17 @@ $(window).on("load",function() {
 	$("#loading").hide(500);
 });
 
+// 스크롤 내릴때 gnb메뉴 active 
+$(window).on("scroll",function() {
+	$("#contents section").each(function() {
+		if($(window).scrollTop() >= $(this).offset().top - 100){
+			var id = $(this).attr("id");
+			$("#gnb li a").parent().removeClass("active");
+			$("#gnb li a[href=#" + id +"]").parent().addClass("active");
+			
+		}
+	});
+});
 
 $(document).ready(function () {
 	aLink();
@@ -23,26 +34,6 @@ function aLink() {
 		return false;	
 	});
 }
-
-// 스크롤 내릴때 active 
-
-// $(window).scroll(function () {
-// 	var height = $(document).scrollTop();
-// 	if (height > 0 && height < 1249) {
-// 		$('.nav_wrap .menu').removeClass('on');
-// 	} else if (height > 1250 && height < 2639) {
-// 		$('.nav_wrap .menu').removeClass('on');
-// 		$('.menu1').addClass('on');
-// 	}
-// 	else if (height > 2670 && height < 3875) {
-// 		$('.nav_wrap .menu').removeClass('on');
-// 		$('.menu2').addClass('on');
-// 	}
-// 	else if (height > 3450) {
-// 		$('.nav_wrap .menu').removeClass('on');
-// 		$('.menu3').addClass('on');
-// 	}
-// });
 
 
 // 헤더 모바일  gnb메뉴 클릭이벤트

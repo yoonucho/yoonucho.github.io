@@ -6,7 +6,7 @@ main {padding-top:10rem;background:rgba(244,229,189,0.2);}
 #about_me {color:#4A8391;padding-bottom:3rem;} 
 #portfolio {color:#ED908C}
 #snippet {color:#A1CEAB;padding-bottom: 3rem;}
-#skills {color:#ee9b97;}
+#skills {color:#ee9b97;padding-bottom: 3rem;}
 #contact {color:#494438;padding-bottom: 3rem;}
 #footer {background: #E5E5E3;}
 /* 로딩 */
@@ -58,7 +58,7 @@ h1 {float:left}
 .gnb li {float:left;margin-right:20px}
 .gnb li:last-child {margin-right:0}
 .gnb li a{display:block;position: relative;padding:5px;font-weight: 600}
-.gnb li a:before{content: ""; position: absolute;bottom: 0;left: 0;width: 0;height: 2px;background: #4A8391;-webkit-transition: 0.3s;-moz-transition: 0.3s;transition: 0.3s;}
+.gnb li a:before{ content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #4A8391; -webkit-transition: 0.2s; -moz-transition: 0.2s; transition: 0.2s; -ms-transition: 0.2s; -o-transition: 0.2s; }
 .gnb li a:hover {color:#4A8391}
 .gnb li a:hover:before{width:100%}
 .gnb li a:hover:after{width:100%}
