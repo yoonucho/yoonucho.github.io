@@ -285,7 +285,7 @@ h1 {float:left}
 
 @media only screen and (max-width:640px) {
 	/* header */
-	#header {position: static;margin-top:-3px;}
+	#header {margin-top:-3px;}
 	.header.mobile {display:block}
 	.mobile.active {position: fixed;z-index: 9999;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,.5)}
 	.mobile .gnb { display:none; position: absolute; top: 0; bottom: 0; right: 0; padding: 57px 40px 25px; background: #ED908C; box-sizing: border-box; transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -moz-transition:all 0.2s ease-in; -ms-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; }
@@ -296,8 +296,7 @@ h1 {float:left}
 	.gnb li a:hover {border-bottom:none}
 	.gnb_btn {display:block;background:none;font-size: 2rem;color:#494438;line-height:1;cursor: pointer;}
 	.gnb_btn .fa {vertical-align:top}
-	/* main */
-	main {padding-top:0;}
+	
 	/* aboutme */
 	#about_me {padding-bottom:0;}
 	.about_me .box {flex:none}
