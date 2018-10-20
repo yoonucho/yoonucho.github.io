@@ -1,12 +1,13 @@
 // 로딩 이미지
-$(window).on("load",function() {
-	$("#loading").hide(500);
-});
+var timer = setTimeout(function() {
+	$("#loading").fadeOut(800);
+	clearTimeout(timer);
+},1,000);
 
 // 스크롤 내릴때 gnb메뉴 active 
 $(window).on("scroll",function() {
 	$("#contents section").each(function() {
-		if($(window).scrollTop() >= $(this).offset().top - 100){
+		if($(window).scrollTop() >= $(this).offset().top - 200){
 			var id = $(this).attr("id");
 			$("#gnb li a").parent().removeClass("active");
 			$("#gnb li a[href=#" + id +"]").parent().addClass("active");
