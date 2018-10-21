@@ -1,30 +1,39 @@
 
-// 로딩 이미지
-var timer = setTimeout(function() {
-	$("#loading").fadeOut(800);
-	clearTimeout(timer);
-},1,000);
-
 // 스크롤 내릴때 gnb메뉴 active 
-$(window).on("scroll",function() {
-	$("#contents section").each(function() {
-		if($(window).scrollTop() >= $(this).offset().top - 200){
-			var id = $(this).attr("id");
-			$("#gnb li a").parent().removeClass("active");
-			$("#gnb li a[href=#" + id +"]").parent().addClass("active");
-			
-		}
-	});
+$(window).on("load scroll",function() {
+	loadingImg();
+	scrollTop();
+
 });
 
 $(document).ready(function () {
 	aLink();
 	menuOpen();
 	btnClick();
-	btnClose();
+	// btnClose();
 	tab();
 	btnTop();	
 })
+
+// 로딩 이미지
+function loadingImg() {
+	var timer = setTimeout(function () {
+	$("#loading").fadeOut(800);
+	clearTimeout(timer);
+	}, 1,000);
+}
+
+// 스크롤 내릴때 gnb메뉴 active 
+function scrollTop() {
+	$("#contents .row > section").each(function () {
+		if ($(window).scrollTop() >= $(this).offset().top - 200) {
+			// $(this).fadeIn(2,000);
+			var id = $(this).attr("id");
+			$("#gnb li a").parent().removeClass("active");
+			$("#gnb li a[href=#" + id + "]").parent().addClass("active");
+		}
+	});
+}
 
 // 앵커 클릭할때 스크롤 부드럽게
 function aLink() {
@@ -36,7 +45,6 @@ function aLink() {
 		return false;	
 	});
 }
-
 
 // 헤더 모바일  gnb메뉴 클릭이벤트
 function menuOpen() {
@@ -75,14 +83,13 @@ function tab() {
 function btnClick(){
 	$(".btn_click").on("click", function () {
 		$(this).addClass("active").next().css({"display":"block"});
-
 	});
-}
-function btnClose(){
+
 	$(".btn_close").on("click", function(){
 		$(this).parents(".modal").fadeOut(50);
 	});
 }
+
 
 /* 맨위로 가기 */
 function btnTop() {
