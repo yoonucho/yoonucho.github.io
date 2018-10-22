@@ -389,7 +389,7 @@ input.input_type1{height:25px;padding:0 5px}
 
 /* 희망우체통 당첨자 상세 */
 .hope_postbox_winner{text-align:center;padding:20px 16px}
-.hope_postbox_winner h4{position:relative;height:28px;margin:0 44px 12px;background:url(../img/bg_ribbon.png) repeat-x;background-size:100%;font-size:13px;color:#fff;line-height:30px}
+.hope_postbox_winner h4{position:relative;height:28px;margin:0 44px 12px;background:url(../img/bg_ribbon.png) repeat-x;font-size:13px;color:#fff;line-height:30px}
 .hope_postbox_winner h4:before{position:absolute;left:-16px;width:31px;height:32px;background:url(../img/bg_ribbon-before.png) no-repeat;content:'';background-size:100%}
 .hope_postbox_winner h4:after{position:absolute;right:-16px;width:31px;height:32px;background:url(../img/bg_ribbon-after.png) no-repeat;content:'';background-size:100%}
 .banner_box{margin-bottom:12px;padding:10px 44px 8px;border:1px solid #e4e4e4;border-radius:7px;background:#f8f8f8;text-align:left}
