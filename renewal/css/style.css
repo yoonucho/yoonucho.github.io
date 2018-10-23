@@ -11,12 +11,12 @@ main {padding-top:10rem;background:rgba(244,229,189,0.2);}
 #skills {color:#ee9b97;padding-bottom: 3rem;}
 #contact {color:#494438;padding-bottom: 3rem}
 #footer {background: #E5E5E3;}
+
 /* 로딩 */
 #loading {position:fixed;z-index:99;top:0;left:0;display:block;width:100%;height:100%;background: rgba(0, 0, 0, 0.9);text-align: center}
 #loading_box {position: absolute;z-index:100;top:50%;left:50%;width:6rem;margin-left:-3rem}
 #loading_box > img {display:inline-block;width:4rem}
 #loading_box > p {font-size:2rem;color:#fff}
-
 /* 로딩 animation */
 #loading_box { animation: loading 1000ms ease 0ms infinite alternate; -webkit-animation: loading 1000ms ease 0ms infinite alternate;
 }
@@ -37,7 +37,6 @@ main {padding-top:10rem;background:rgba(244,229,189,0.2);}
     -o-transform: translateY(-5px);
 	}
 }
-
 
 /* 공통 */
 h3 {padding:3.5rem 0;font-size:2rem;text-align: center}
@@ -106,7 +105,6 @@ h1 {float:left}
 	}
 }
 
-
 .intro_title{position: relative;padding:2rem 0; color:#615b4b; font-size: 2rem; line-height: 1.3 }
 .intro_title .slideY{display:block; margin-left: 25rem;opacity: 0;}
 .intro_title .slideX{display:block;opacity: 0;}
@@ -115,7 +113,7 @@ h1 {float:left}
 /* 텍스트 애니메이션 */
 .slideY { animation:slideY 0.5s 1s ease-in forwards; -webkit-animation:slideY 0.5s 1s ease-in forwards; }
 @keyframes slideY {
-	0% { transform:translateY(-30px); opacity:0; -webkit-transform:translateY(-30px); -moz-transform:translateY(-30px); -ms-transform:translateY(-30px); -o-transform:translateY(-30px); }
+	0% { transform:translateY(-60px); opacity:0; -webkit-transform:translateY(-60px); -moz-transform:translateY(-60px); -ms-transform:translateY(-60px); -o-transform:translateY(-60px); }
 	100% {transform:translateY(0); opacity:1; -webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); -o-transform:translateY(0); }
 }
 
@@ -141,7 +139,6 @@ h1 {float:left}
 /* timeline */
 .time_line {color:#4A8391;margin-top: 11rem;}
 .time_line ol {display:-webkit-box;display:-ms-flexbox;display:flex;}
-/* .time_line ol:before {position: absolute;display:block;width:3rem;height:3px;background: #A1CEAB; content:""} */
 .time_line ol:after { display:block; position: absolute; left:0;right:0;max-width:48rem;height:3px; background: #A1CEAB; content:""}
 #time_line h4 {margin:2rem 0 1rem}
 .time_line li {position: relative;display:inline-block;min-width:10rem;width:10rem}
@@ -152,7 +149,6 @@ h1 {float:left}
 .time_line li:nth-child(odd) .time_box:after {top:100%;bottom:-20px;}
 .time_line .time_box  p {letter-spacing: -1px}
 .time_line .time_box span {display:block;font-size:1.5rem}
-/* .time_box em {font-size:1.5rem} */
 
 /* portfolio */
 .tab {position: relative}
@@ -163,11 +159,11 @@ h1 {float:left}
 .tab .tab_list button { display:block; width:100%; height:100%; border:2px solid #ee9b97; cursor: pointer; border-radius:20px 0; background: #fff; font-size: 1.2rem; font-weight: 600; transition:.2s ease-in ; -webkit-transition:.2s ease-in ; -moz-transition:.2s ease-in ; -ms-transition:.2s ease-in ; -o-transition:.2s ease-in ; }
 
 /* grid와 float의 혼합 레이아웃 */
-/* grid가 현재 ie에서는 제대로 지원이 되지 않아서 float로 대체함. */
+/* grid가 현재 ie에서는 제대로 지원이 되지 않아서 ie에서는 float로 대체함. */
 .tab_contents {width:100%;height:100%;display:none}
-.tab .tab_contents ul{text-align:center;display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 10px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.tab .tab_contents ul{text-align:center;display:grid;grid-template-columns: repeat(3, 1fr);grid-gap: 10px}
 .tab_contents {display:block;margin-top:2rem}
-.tab .tab_contents li {position: relative;display:inline-block;margin:0 0.2rem 2% 0}
+.tab .tab_contents li {position: relative;display:inline-block;margin:0 0.2rem 2% 0;max-width:20rem}
 .tab_contents li:nth-child(3n) {margin-right:0;}
 .tab .tab_contents li > a { display:block; width:100%; min-width:20rem; max-width:22.5rem }
 .tab_contents li > a img {width:100%;height:300px;-o-object-fit: cover;object-fit: cover;-o-object-position: 0 0;object-position: 0 0}
@@ -204,15 +200,11 @@ h1 {float:left}
   text-align: center;
 }
 
-.overlay .text p > a {} 
 /* snippet */
 .snippet {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-ms-flex-wrap: wrap}
 .snippet .flex_box {-webkit-box-flex:1;-ms-flex:1;flex:1;text-align: center} 
 .snippet .btn_click {display:inline-block;width:12.5rem;height: 12.5rem;margin-bottom: 1rem;padding: 5%;border-radius: 50%;background:#A1CEAB;cursor: pointer;font-size: 1.2rem;font-weight: 600;color:#757575}
 .snippet .btn_click:hover {background: #4A8391;color:#fff}
-.snippet .modal {}
-/* .snippet .modal.show {display:block} */
-/* .snippet .modal p {width:100%;height:100%;} */
 
 /* 모달 */
  .modal {
@@ -257,19 +249,14 @@ h1 {float:left}
 	height:100%;
 }
 
-/* .snippet .modal {display:none} */
 .snippet .btn_click.active +.modal {opacity:1;pointer-events: auto;}
-/* .snippet button:focus +.modal { opacity:1;pointer-events: auto;} */
 .modal h4 {font-size:2rem;color:#333;line-height:1.6}
 .modal .btn_close {position: absolute;top:0;right:0;display:block;padding:1% 2%;background:none;font-size: 2rem;cursor: pointer;}
-/* .modal .close {display:none} */
 
 /* Skills & Experience */
 .skills {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:space-between;margin-bottom:4rem;color:#615b4b;-webkit-box-orient :horizontal;-webkit-box-direction :normal;-ms-flex-flow :row wrap;flex-flow :row wrap;}
 .skills figure {position: relative;width:20%;height:14rem;text-align: center;}
-
 .skills figure img { position: absolute;left:0;right:0;top:50%;margin-left:auto;margin-right:auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); }
-/* .skills figure:nth-child(4) img {padding:0 2rem;-webkit-box-sizing:border-box;box-sizing:border-box} */
 .skills figure figcaption {position: absolute;width:100%;bottom:-30px;font-weight: 600}
 .skills_text {min-height:100%;padding:1%;color:#615b4b;font-size:1.2rem} 
 .skills_text p {white-space: pre-wrap}
@@ -288,6 +275,7 @@ h1 {float:left}
 .btn_wrap {position: absolute;right:2rem;width:4rem;margin-top:-4.5rem;text-align: center}
 .btn_wrap > span {display:block;color:#494438;font-size:1rem;font-weight: 600}
 .btn_wrap .btn_top {width: 3rem; height: 3rem; background: #a1ceab;border:1px solid #494438;border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; font-size:1.5rem;color:#fff;cursor: pointer ; }
+
 /* animation */
 .btn_wrap {
    animation: movement 1000ms ease 0ms infinite alternate;
@@ -334,9 +322,7 @@ h1 {float:left}
 	
 }
 
-@media only screen and (max-width:960px) {
-	/* aboutme */
-	
+@media only screen and (max-width:960px) {	
 	/* portfolio*/
 	.tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);}
 	
@@ -355,15 +341,12 @@ h1 {float:left}
 
 @media only screen and (max-width:768px) {
 	/* intro */
-	.intro_title {max-width: 18rem;margin: 0 auto;}
-	.intro_title .slideY {margin-left:0}
-	.intro_title .slideX2{margin-left: 0;}
-	 @keyframes slideX {
-		0% {opacity:0 }
-		100% {margin-left: 0;opacity:1}
-	}
-	
+	.intro_title { opacity:0; max-width: 20rem; margin: 0 auto; animation:slideY 0.7s 1s ease-in forwards; -webkit-animation:slideY 0.7s 1s ease-in forwards; }
+	.intro_title .slideY {opacity:1;margin-left:0;animation:none; -webkit-animation:none;}
+	.intro_title .slideX { opacity:1; animation:none; -webkit-animation:none; }
+	.intro_title .slideX2{ opacity:1; margin-left: 0; animation:none; -webkit-animation:none; }
 
+	
 	/* about_me  */
 	.about_me .box {width:100%}
 	.time_line ol:after {max-width:100%;opacity:1;justify-content: space-between; transition:opacity .3s ease-in; -webkit-transition:opacity .3s ease-in; -moz-transition:opacity .3s ease-in; -ms-transition:opacity .3s ease-in; -o-transition:opacity .3s ease-in; }
@@ -374,13 +357,9 @@ h1 {float:left}
 	.time_line .time_box p {font-size:0.9rem}
 	.about_me figure { opacity: 0;}
 
-	/* portpolio*/
-	/* .tab .tab_contents ul {grid-template-columns: repeat(2, 1fr);} */
-
 	/* snippet */
 	.snippet {flex-flow: row wrap}
 	.snippet .flex_box {flex:none;min-width:50%;}
-	/* .snippet button {width:25rem;height:25rem} */
 }
 
 @media only screen and (max-width:640px) {

@@ -3,7 +3,7 @@
 /* Font Style */
 @font-face {
 	font-family:'나눔 고딕';
-	src:url('../fonts/NanumGothic.eot');
+	src:url('../fonts/NanumGothic.eot?#iefix')format('embedded-opentype');
 	src:local('나눔 고딕'), url('../fonts/NanumGothic.woff') format('woff');
 	src:local('나눔 고딕'), url('../fonts/NanumGothic.woff2') format('woff2');
 
