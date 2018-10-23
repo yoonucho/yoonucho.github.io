@@ -156,7 +156,7 @@ h1 {float:left}
 .tab .tab_list  li {float:left}
 .tab .tab_list > li {width:25%;height:60px;-webkit-box-sizing: border-box;box-sizing: border-box}
 .tab .tab_list  li.active button{border:none;background: #ED908C;color:#fff}
-.tab .tab_list button { display:block; width:100%; height:100%; border:2px solid #ee9b97; cursor: pointer; border-radius:20px 0; background: #fff; font-size: 1.2rem; font-weight: 600; transition:.2s ease-in ; -webkit-transition:.2s ease-in ; -moz-transition:.2s ease-in ; -ms-transition:.2s ease-in ; -o-transition:.2s ease-in ; }
+.tab .tab_list button { display:block; width:100%; height:100%; border:2px solid #ee9b97; cursor: pointer; border-radius:20px 0; background: #fff; font-size: 1.2rem; font-weight: 600; line-height:55px;transition:.2s ease-in ; -webkit-transition:.2s ease-in ; -moz-transition:.2s ease-in ; -ms-transition:.2s ease-in ; -o-transition:.2s ease-in ; }
 
 /* grid와 float의 혼합 레이아웃 */
 /* grid가 현재 ie에서는 제대로 지원이 되지 않아서 ie에서는 float로 대체함. */
