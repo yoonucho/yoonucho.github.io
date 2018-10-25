@@ -1,0 +1,8 @@
+/* layout */
+#window {}
+
+/* main */
+
+.window {position: relative;width:350px;height: 400px;margin: 14rem auto;background: #D2E5C5;border-radius: 50% 50% 0 0;border:5px solid #4A8391}
+.window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%)  ; }
+.window .window_inner:before{ position: absolute;top:0; left:50%;height:100%;border:2px solid #4A8391; content:"";transform:translateX(-50%) ; -webkit-transform:translateX(-50%) ; -moz-transform:translateX(-50%) ; -ms-transform:translateX(-50%) ; -o-transform:translateX(-50%) ; box-sizing: border-box}
