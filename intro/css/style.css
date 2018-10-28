@@ -1,5 +1,6 @@
 /* layout */
 #window {}
+#window2{display:flex;justify-content: center;align-items: center}
 
 /* main */
 
@@ -9,3 +10,13 @@
 .window .window_inner:after { position: absolute; width:100%; height:100%; background: linear-gradient(#D2E5C5 50%, #4A8391 50%); background-size:100% 1rem; border-radius:50% 50% 0 0; content: ""; -webkit-border-radius:50% 50% 0 0; -moz-border-radius:50% 50% 0 0; -ms-border-radius:50% 50% 0 0; -o-border-radius:50% 50% 0 0; }
 
 
+.window_half {width:175px; height: 200px; background: #000; border: solid #4A8391;border-width: 5px 0 0 5px; border-radius:100% 0 0 0 ; -webkit-border-radius:100% 0 0 0 ; -moz-border-radius:100% 0 0 0 ; -ms-border-radius:100% 0 0 0 ; -o-border-radius:100% 0 0 0 ; }
+
+.window_half2 { border-width:5px 5px 0 0;border-radius: 0 100% 0 0 ; -webkit-border-radius: 0 100% 0 0 ; -moz-border-radius: 0 100% 0 0 ; -ms-border-radius: 0 100% 0 0 ; -o-border-radius: 0 100% 0 0 ; }
+
+.window_half3 {border-width:0 0 5px 5px; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0; -ms-border-radius:0; -o-border-radius:0; }
+
+.window_half3:last-child {border-width: 0 5px 5px 0}
+
+
+/*name duration timing-function delay iteration-count direction fill-mode play-state*/
