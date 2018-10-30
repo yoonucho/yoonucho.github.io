@@ -334,8 +334,7 @@ h1 {float:left}
 
 @media only screen and (max-width:959px) and (min-width:769px) {
 	/* about_me  */
-	.about_me figure {max-width:18rem}
-	
+	.about_me figure {max-width:18rem}	
 }
 
 @media only screen and (max-width:768px) {

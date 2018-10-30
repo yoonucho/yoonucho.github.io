@@ -26,29 +26,65 @@
 <body>
 	<header></header>
 	<main>
-		<section id ="window">
-			<div class="window">
-				<div class="window_inner"></div>
-			</div>
-		</section>
-		<section id ="window2">
-			<section class="piece">
-				<div class="window_half">
-					<div class="window_inner"></div>
-				</div>
-				<div class="window_half window_half3">
-					<div class="window_inner"></div>
+		<section class="layout">
+			<section id="window">
+				<div class="window">
+					<div class="window_inner">
+						<figure class="me">
+							<img src="img/yoonu_head.png" alt="me">
+						</figure>
+					</div>
 				</div>
 			</section>
-			<section class="piece">
-				<div class="window_half window_half2">
-					<div class="window_inner"></div>
-				</div>
-				<div class="window_half window_half3">
-					<div class="window_inner"></div>
-				</div>
+			<section id="window2">
+				<section class="piece active_left">
+					<div class="window_half">
+						<div class="window_inner"></div>
+					</div>
+					<div class="window_half window_half3">
+						<div class="window_inner"></div>
+					</div>
+				</section>
+				<section></section>
+				<section class="piece active_right">
+					<div class="window_half window_half2">
+						<div class="window_inner"></div>
+					</div>
+					<div class="window_half window_half4">
+						<div class="window_inner"></div>
+					</div>
+				</section>
 			</section>
 		</section>
+		<section class="layout">
+			<section id ="window3">
+				<div class="window">
+					<div class="window_inner">
+						<figure class="me">
+							<img src="img/yoonu_head2.png" alt="me">
+						</figure>
+					</div>
+				</div>
+			</section>
+			<section id ="window4">
+				<section class="piece active_left">
+					<div class="window_half">
+						<div class="window_inner"></div>
+					</div>
+					<div class="window_half window_half3">
+						<div class="window_inner"></div>
+					</div>
+				</section>
+				<section class="piece active_right">
+					<div class="window_half window_half2">
+						<div class="window_inner"></div>
+					</div>
+					<div class="window_half window_half4">
+						<div class="window_inner"></div>
+					</div>
+				</section>
+			</section>
+		</section>		
 	</main>
 	<footer></footer>
 	<!-- <style>
@@ -65,5 +101,16 @@
 			<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a>
 		</p>
 	</div> -->
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script>
+		$(document).ready (function() {
+			$(".piece").click(function() {
+				// alert("열렸다잉");
+				$(this).toggleClass("open");
+			}) 
+		});
+	
+	</script>
 </body>
 </html>
