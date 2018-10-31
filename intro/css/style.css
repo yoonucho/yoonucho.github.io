@@ -73,7 +73,7 @@ body {background-color: silver;
 		-moz-transform:rotateY(10deg) ;
 		-ms-transform:rotateY(10deg) ;
 		-o-transform:rotateY(10deg) ;
-}
+	}
 
 	100% {
 		transform:rotateY(15deg);
@@ -81,11 +81,35 @@ body {background-color: silver;
 		-moz-transform:rotateY(15deg);
 		-ms-transform:rotateY(15deg);
 		-o-transform:rotateY(15deg);
+	}
+
+}
+
+@keyframes openWindow {
+	0% {
+		transform:rotateY(120deg) ;
+		-webkit-transform:rotateY(120deg) ;
+		-moz-transform:rotateY(120deg) ;
+		-ms-transform:rotateY(120deg) ;
+		-o-transform:rotateY(120deg) ;
+}
+
+	100% {
+		transform:rotateY(110deg);
+		-webkit-transform:rotateY(110deg);
+		-moz-transform:rotateY(110deg);
+		-ms-transform:rotateY(110deg);
+		-o-transform:rotateY(110deg);
 }
 
 }
+
 /* 오른쪽 창문 열렸을때 */
-.open.active_right { transform:rotateY(120deg) ; -webkit-transform:rotateY(120deg) ; -moz-transform:rotateY(120deg) ; -ms-transform:rotateY(120deg) ; -o-transform:rotateY(120deg) ; }
+#window2 .active_right:focus { animation:openWindow 2s 1s ease-in forwards; -webkit-animation:openWindow 2s 1s ease-in forwards; }
+#window2 .open.active_right { animation:openWindow 2s 1s ease-in forwards; -webkit-animation:openWindow 2s 1s ease-in forwards; }
+
+.open.active_right {transform:rotateY(120deg) ; -webkit-transform:rotateY(120deg) ; -moz-transform:rotateY(120deg) ; -ms-transform:rotateY(120deg) ; -o-transform:rotateY(120deg)}
+
 .piece:first-child {border-right:3px solid #4A8391;transform-origin: left center;}
 .piece:last-child {border-left:3px solid #4A8391;transform-origin: right center;}
 
