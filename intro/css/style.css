@@ -1,5 +1,5 @@
 /* layout */
-body {background: url(../img/bg_brick.jpg) repeat;}
+body {background: url(../img/bg_brick.jpg) repeat;background-size:50% 50%}
 #window2,#window4{display:flex;padding:3rem 0;justify-content: center;align-items: center}
 
 /* main */
