@@ -1,17 +1,19 @@
 /* layout */
+
+/* 벽돌배경 */
 body {background-color: silver;
 	background-image: linear-gradient(335deg, #eee 23px, transparent 23px),
 	linear-gradient(155deg, #f2f2f2 23px, transparent 23px),
 	linear-gradient(335deg, #eee 23px, transparent 23px),
 	linear-gradient(155deg, #f2f2f2 23px, transparent 23px);
-	background-size: 58px 58px;background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;}
+	background-size: 58px 58px;background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px}
 #window2,#window4{display:flex;padding:3rem 0;justify-content: center;align-items: center}
 
 /* main */
 .layout {display:inline-block;position:relative;top:8rem;width:49%;perspective:600px}
-.window {position:absolute;z-index:0;top:50%;left:50%;width:356px;height: 394px; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%); -moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%); perspective: none;}
-.window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%); backface-visibility:hidden  ; -webkit-backface-visibility:hidden  ; }
-.window .window_inner .me { position: relative; margin-top: 5.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate; opacity:1; }
+.window {position:absolute;z-index:0;top:50%;left:50%;width:356px;height: 394px; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%); perspective: none;}
+.window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%) }
+.window .window_inner .me { position: relative; margin-top: 5.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
 .layout:last-child .window_inner .me {margin-top:5rem;margin-left:2rem;}
 .layout:last-child .window_inner .me img{width:90%}
 
@@ -32,7 +34,6 @@ body {background-color: silver;
 		-ms-transform: rotate(0deg)	;
 		-o-transform: rotate(0deg)	;
 	}
-
 
 	100% {
 		transform:rotate(10deg);
@@ -59,8 +60,15 @@ body {background-color: silver;
 .window_half:last-child {top:-0.5rem}
 .window_half:after {position:absolute;width:100%; height:100%; border-radius:inherit;background: linear-gradient(#D2E5C5 50%, #4A8391 50%); background-size:100% 1rem; content:""; -webkit-border-radius:inherit; -moz-border-radius:inherit; -ms-border-radius:inherit; -o-border-radius:inherit; }
 
+/* 왼쪽창문 닫혔을때 */
+.active_left { transform:rotateY(-25deg) ; -webkit-transform:rotateY(-25deg) ; -moz-transform:rotateY(-25deg) ; -ms-transform:rotateY(-25deg) ; -o-transform:rotateY(-25deg) ; }
+
 /* 왼쪽창문 열렸을때 */
-.open.active_left { transform:rotateY(-120deg) ; -webkit-transform:rotateY(-120deg) ; -moz-transform:rotateY(-120deg) ; -ms-transform:rotateY(-120deg) ; -o-transform:rotateY(-120deg) ; }
+.open.active_left {transform:rotateY(-120deg) ; -webkit-transform:rotateY(-120deg) ; -moz-transform:rotateY(-120deg) ; -ms-transform:rotateY(-120deg) ; -o-transform:rotateY(-120deg) ; }
+
+
+/* 오른쪽 창문 닫혔을때 */
+.active_right { transform:rotateY(25deg) ; -webkit-transform:rotateY(25deg) ; -moz-transform:rotateY(25deg) ; -ms-transform:rotateY(25deg) ; -o-transform:rotateY(25deg) ; }
 /* 오른쪽 창문 열렸을때 */
 .open.active_right { transform:rotateY(120deg) ; -webkit-transform:rotateY(120deg) ; -moz-transform:rotateY(120deg) ; -ms-transform:rotateY(120deg) ; -o-transform:rotateY(120deg) ; }
 .piece:first-child {border-right:3px solid #4A8391;transform-origin: left center;}
