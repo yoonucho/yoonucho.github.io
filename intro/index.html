@@ -31,7 +31,9 @@
 				<div class="window">
 					<div class="window_inner">
 						<figure class="me">
-							<img src="img/yoonu_head.png" alt="me">
+							<a href="../renewal/index.html" target="_blank">
+								<img src="img/yoonu_head.png" alt="me"><span class="blind">2018년 포트폴리오</span>
+							</a>
 						</figure>
 					</div>
 				</div>
@@ -45,7 +47,6 @@
 						<div class="window_inner"></div>
 					</div>
 				</section>
-				<section></section>
 				<section class="piece active_right">
 					<div class="window_half window_half2">
 						<div class="window_inner"></div>
@@ -60,9 +61,13 @@
 			<section id ="window3">
 				<div class="window">
 					<div class="window_inner">
-						<figure class="me">
-							<img src="img/yoonu_head2.png" alt="me">
-						</figure>
+						<a href="https://yoonucho.gitlab.io/webPortfolio/index.html" target="_blank">
+							<figure class="me">
+								<a href="https://yoonucho.gitlab.io/webPortfolio/index.html">
+									<img src="img/yoonu_head2.png" alt="me"><span class="blind">2015년 포트폴리오</span>
+								</a>
+							</figure>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -106,8 +111,12 @@
 	<script>
 		$(document).ready (function() {
 			$(".piece").click(function() {
-				// alert("열렸다잉");
+				
 				$(this).toggleClass("open");
+				// if($(".piece").hasClass("open"))
+				// 	$(this).parent().prev().find(".window").css("z-index","99");
+				// else
+				// 	$(this).parent().prev().find(".window").css("z-index", "0");
 			}) 
 		});
 	
