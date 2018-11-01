@@ -2,11 +2,10 @@
 
 /* Font Style */
 /* @font-face {
-	font-family:'나눔 고딕';
-	src:url('../fonts/NanumGothic.eot?#iefix') format('embedded-opentype');
-	src:local('나눔 고딕'), url('../fonts/NanumGothic.woff') format('woff');
-	src:local('나눔 고딕'), url('../fonts/NanumGothic.woff2') format('woff2');
-
+	font-family:'lg';
+	src:url('../fonts/lg.eot?#iefix') format('embedded-opentype');
+	src:local('lg'), url('../fonts/lg.woff') format('woff');
+	
 } */
 
 /* 여백초기화 */
@@ -23,7 +22,7 @@ fieldset,img{border:0 none}
 dl,ul,ol,menu,li{list-style:none}
 
 /* 폰트 초기화 */
-body,th,td,input,select,textarea,button{font-family:"나눔 고딕","Nanum Gothic",'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222;line-height: 1.5}
+body,th,td,input,select,textarea,button{font-family:'Lato','Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222;line-height: 1.5}
 
 /* 링크 초기화 */
 a{ color:#222; text-decoration:none; transition: .3s ease; -webkit-transition: .3s ease; -moz-transition: .3s ease; -ms-transition: .3s ease; -o-transition: .3s ease; }

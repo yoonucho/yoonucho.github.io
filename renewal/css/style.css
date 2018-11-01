@@ -4,7 +4,6 @@ body {position: relative;}
 #gnb {float:right}
 main {padding-top:10rem;background:rgba(244,229,189,0.2);}
 
-/* #contents .row > #contact {opacity:1} */
 #about_me {color:#4A8391;padding-bottom:3rem;} 
 #portfolio {color:#ED908C}
 #snippet {color:#A1CEAB;padding-bottom: 3rem;}
@@ -17,8 +16,9 @@ main {padding-top:10rem;background:rgba(244,229,189,0.2);}
 #loading_box {position: absolute;z-index:100;top:50%;left:50%;width:6rem;margin-left:-3rem}
 #loading_box > img {display:inline-block;width:4rem}
 #loading_box > p {font-size:2rem;color:#fff}
+
 /* 로딩 animation */
-#loading_box { animation: loading 1000ms ease 0ms infinite alternate; -webkit-animation: loading 1000ms ease 0ms infinite alternate;
+#loading_box { animation: loading 1000ms ease 0s infinite alternate; -webkit-animation: loading 1000ms ease 0s infinite alternate;
 }
 
 @keyframes loading {
@@ -41,6 +41,7 @@ main {padding-top:10rem;background:rgba(244,229,189,0.2);}
 /* 공통 */
 h3 {padding:3.5rem 0;font-size:2rem;text-align: center}
 h3:after {display:block;padding-top:10px;border-bottom:1px solid;content:"";color:inherit}
+
 /* container */
 .container {position: relative;max-width:1200px;height:100%;margin:0 auto;}
 
