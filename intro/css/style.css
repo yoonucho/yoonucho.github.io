@@ -1,7 +1,7 @@
 /* layout */
 
 /* 벽돌배경 */
-body {width:100%;height:74vh;background-color: silver;
+body {width:100%;min-height:35vh;background-color: silver;
 	background-image: linear-gradient(335deg, #eee 23px, transparent 23px),
 	linear-gradient(155deg, #f2f2f2 23px, transparent 23px),
 	linear-gradient(335deg, #eee 23px, transparent 23px),
@@ -10,10 +10,11 @@ body {width:100%;height:74vh;background-color: silver;
 main {width:100%;height:100%}
 /* #window,#window2{display:flex;padding:3rem 0;justify-content: center;align-items: center} */
 /* container */
-.container {position: relative;max-width:1200px;height:100%;margin:0 auto}
+.container {position: relative;top:23rem;max-width:1200px;height:100%;margin:0 auto}
 
 /* header */
 header {text-align: center}
+header .container {top:0}
 h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inset #fff;*/
     box-shadow: 0 1px 0 #ccc,
 		 0 2px 0 #c9c9c9,
@@ -41,11 +42,11 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		 0 20px 20px rgba(0, 0, 0, .15);
 	}
 /* main */
-.layout {display:inline-block;position:relative;top:26rem;width:49%;perspective: 600px;}
-.window {position:absolute;z-index:0;top:50%;left:50%;width:17rem;height: 19rem; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);transform-style: preserve-3d;box-sizing:border-box}
+.layout {display:inline-block;position:relative;width:49%;perspective: 600px;}
+.window {position:relative;z-index:0;top:50%;left:50%;width:17rem;height: 19rem; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);transform-style: preserve-3d;box-sizing:border-box}
 .window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%)  }
-.window .window_inner .me { position: relative; margin-top: 5.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
-.layout:last-child .window_inner .me {margin-top:5rem;margin-left:2rem;}
+.window .window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
+.layout:last-child .window_inner .me {margin-top:4rem;margin-left:2rem;}
 .layout:last-child .window_inner .me img{width:90%}
 
 /* 캐릭터 헤드 애니메이션 */
@@ -161,8 +162,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 @media only screen and (max-width:1024px) {
-
-	
+	.layout {display:block;width:100%}
+	.layout:last-child {margin-top: 6rem;}
 }
 
 @media only screen and (max-width:960px) {	
