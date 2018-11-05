@@ -272,6 +272,11 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 	h1 {margin:0;padding:1rem;font-size:2rem}
 	.window_box {top:4rem}
+<<<<<<< HEAD
+=======
+	#window {margin-bottom:4rem}
+	
+>>>>>>> 10bb1d556e5be10ec2a818dee82bb23db26760ba
 }
 
 @media only screen and (max-width:480px) {
