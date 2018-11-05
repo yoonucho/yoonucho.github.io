@@ -59,9 +59,9 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 .window {position:absolute;;z-index:0;top:50%;left:50%;width:17rem;height: 100%; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-box-sizing:border-box;box-sizing:border-box}
 .window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%)  }
-.window .window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
-.window_box:last-child .window_inner .me {margin-top:4rem;margin-left:2rem;}
-.window_box:last-child .window_inner .me img{width:90%}
+.window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
+#window2 .window_inner .me {margin-top:4rem;margin-left:2rem;}
+#window2 .window_inner .me img{width:90%}
 
 /* 캐릭터 헤드 애니메이션 */
 @-webkit-keyframes rotateHead {
@@ -239,7 +239,11 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 @media only screen and (max-width:1024px) {
+	.row {padding:1rem}
+	h1 {display:block;margin:1rem 0;font-size:3rem;}
 	.window {width:16.5rem}
+	.window_inner .me {margin-top:4rem}
+	#window2 .window_inner .me {margin-top:5rem}
 	
 }
 
@@ -247,7 +251,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window {width:15.5rem}
 }
 
-@media only screen and (max-width:959px) and (min-width:769px){	
+@media only screen and (max-width:910px) and (min-width:769px){	
 	.window_box {top:5rem;width:100%;margin-bottom:6rem}
 
 }
@@ -256,9 +260,9 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	
 
 @media only screen and (max-width:768px) {
-	.window_box {top: 5rem;width:100%}
+	.window_box {top:5rem;width:100%}
 
-	#window1 {margin-bottom:6rem}
+	#window {margin-bottom:6rem}
 	
 
 }
@@ -266,16 +270,32 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 @media only screen and (max-width:640px) {
 
-
+	h1 {font-size:2rem}
 	
 
 }
 
 @media only screen and (max-width:480px) {
+	h1 { margin:0;padding:1rem;font-size: 1.5rem}
+	.window_box {top:1rem;height:70vw}
+	#window {margin-bottom:1rem}
+	.window {max-width:13rem;height:60vw}
+	.window .window_inner {overflow: hidden}
+	.window_inner .me {margin-top:3rem}
+	#window2 .window_inner .me {margin-top:4rem} 
+	.piece {height:100%}
+	.window_bar {font-size:1rem}
+}
+
+@media only screen and (max-width:360px) {
+	.window {max-width:12rem}
 
 }
 
 @media only screen and (max-width:320px) {
-
+	.window {max-width:12rem;width: 11rem}
+	.window_inner .me {margin-top:2rem}
+	#window2 .window_inner .me {margin:2rem 0 0 1rem} 
+	
 	
 }
