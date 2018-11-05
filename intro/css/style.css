@@ -278,7 +278,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:480px) {
 	h1 { font-size: 1.5rem}
 	.window_box {height:70vw}
-	#window {top:1rem;margin-bottom:1rem}
+	#window {top:0;margin-bottom:0}
 	.window {max-width:13rem;height:60vw}
 	.window .window_inner {overflow: hidden}
 	.window_inner .me {margin-top:3rem}
