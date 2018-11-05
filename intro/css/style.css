@@ -284,7 +284,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window_inner .me {margin-top:3rem}
 	#window2 .window_inner .me {margin-top:4rem} 
 	.piece {height:100%}
-	.window_bar {font-size:1rem}
+	.window_bar {font-size:1rem;line-height:5vh}
 }
 
 @media only screen and (max-width:360px) {
@@ -295,7 +295,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:320px) {
 	.window {max-width:12rem;width: 11rem}
 	.window_inner .me {margin-top:2rem}
-	#window2 .window_inner .me {margin:2rem 0 0 1rem} 
+	#window2 .window_inner .me {margin:2rem 0 0 1rem}
+	.window_bar {line-height:6vh} 
 	
 	
 }
