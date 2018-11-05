@@ -240,8 +240,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 @media only screen and (max-width:1024px) {
 	.row {padding:1rem}
-	h1 {display:block;margin:1rem 0;font-size:3rem;}
-	.window {width:16.5rem}
+	h1 { display:block; margin:1rem 0; font-size:3rem; transition: .3s ease-in; -webkit-transition: .3s ease-in; -moz-transition: .3s ease-in; -ms-transition: .3s ease-in; -o-transition: .3s ease-in; }
+	.window {width:16.5rem;transition: .3s ease;}
 	.window_inner .me {margin-top:4rem}
 	#window2 .window_inner .me {margin-top:5rem}
 	
@@ -271,6 +271,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:640px) {
 
 	h1 {margin:0;padding:1rem;font-size:2rem}
+	#window {margin-bottom:3rem}
 	
 }
 
