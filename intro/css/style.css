@@ -247,12 +247,19 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window {width:15.5rem}
 }
 
+@media only screen and (max-width:959px) and (min-width:769px){	
+	.window_box {top:5rem;width:100%;margin-bottom:6rem}
+
+}
+
 
 	
 
 @media only screen and (max-width:768px) {
+	.window_box {top: 5rem;width:100%}
+
 	#window1 {margin-bottom:6rem}
-	.window_box {top:5rem;width:100%}
+	
 
 }
 
@@ -271,4 +278,4 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:320px) {
 
 	
-}}
+}
