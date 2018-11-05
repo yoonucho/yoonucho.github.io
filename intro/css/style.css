@@ -270,13 +270,12 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 @media only screen and (max-width:640px) {
 
-	h1 {font-size:2rem}
+	h1 {margin:0;padding:1rem;font-size:2rem}
 	
-
 }
 
 @media only screen and (max-width:480px) {
-	h1 { margin:0;padding:1rem;font-size: 1.5rem}
+	h1 { font-size: 1.5rem}
 	.window_box {top:1rem;height:70vw}
 	#window {margin-bottom:1rem}
 	.window {max-width:13rem;height:60vw}
