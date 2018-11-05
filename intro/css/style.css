@@ -57,8 +57,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 /* main */
 .window_box{position: relative;top:15rem;width:50%;height:19rem;perspective:600px;-webkit-perspective: 600px}
 
-.window {position:absolute;;z-index:0;top:50%;left:50%;width:17rem;height: 100%; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-box-sizing:border-box;box-sizing:border-box}
-.window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%)  }
+.window { position:absolute; z-index:0; top:50%; left:0;right:0;width:17rem; height: 100%;margin:0 auto; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.window .window_inner {position:absolute; top:1rem; left:0; right:0; bottom:0; width: 90%; height: 90%; margin:0 auto;background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391;box-sizing:border-box }
 .window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
 #window2 .window_inner .me {margin-top:4rem;margin-left:2rem;}
 #window2 .window_inner .me img{width:90%}
