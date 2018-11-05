@@ -9,7 +9,7 @@ body {width:100%;height:74vh;background-color: silver;
 	background-size: 58px 58px;background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px}
 main {width:100%;height:100%}
 #flex_box {display:flex;flex-flow: row wrap}
-#window,#window2{width:100%;height:100%}
+
 /* container */
 .container {position: relative;max-width:1200px;height:100%;margin:0 auto}
 
@@ -55,12 +55,13 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		 0 20px 20px rgba(0, 0, 0, .15);
 	}
 /* main */
-.layout {position:relative;top:20rem;width:50%;height:19rem;-webkit-perspective: 600px;perspective: 600px;}
+.window_box{position: relative;top:15rem;width:50%;height:19rem;perspective:600px;-webkit-perspective: 600px}
+
 .window {position:absolute;;z-index:0;top:50%;left:50%;width:17rem;height: 100%; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-box-sizing:border-box;box-sizing:border-box}
 .window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%)  }
 .window .window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
-.layout:last-child .window_inner .me {margin-top:4rem;margin-left:2rem;}
-.layout:last-child .window_inner .me img{width:90%}
+.window_box:last-child .window_inner .me {margin-top:4rem;margin-left:2rem;}
+.window_box:last-child .window_inner .me img{width:90%}
 
 /* 캐릭터 헤드 애니메이션 */
 @-webkit-keyframes rotateHead {
@@ -238,23 +239,23 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 @media only screen and (max-width:1024px) {
-	.layout {top:10rem}
+	.window {width:16.5rem}
 	
 }
 
 @media only screen and (max-width:960px) {	
-
+	.window {width:15.5rem}
 }
-
-@media only screen and (max-width:959px) and (min-width:769px) {
-	
-
-@media only screen and (max-width:768px) {
 
 
 	
 
+@media only screen and (max-width:768px) {
+	#window1 {margin-bottom:6rem}
+	.window_box {top:5rem;width:100%}
+
 }
+
 
 @media only screen and (max-width:640px) {
 
