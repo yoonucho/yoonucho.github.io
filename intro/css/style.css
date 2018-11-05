@@ -1,22 +1,35 @@
 /* layout */
 
 /* 벽돌배경 */
-body {width:100%;min-height:35vh;background-color: silver;
+body {width:100%;height:74vh;background-color: silver;
 	background-image: linear-gradient(335deg, #eee 23px, transparent 23px),
 	linear-gradient(155deg, #f2f2f2 23px, transparent 23px),
 	linear-gradient(335deg, #eee 23px, transparent 23px),
 	linear-gradient(155deg, #f2f2f2 23px, transparent 23px);
 	background-size: 58px 58px;background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px}
 main {width:100%;height:100%}
-/* #window,#window2{display:flex;padding:3rem 0;justify-content: center;align-items: center} */
+#flex_box {display:flex;flex-flow: row wrap}
+#window,#window2{width:100%;height:100%}
 /* container */
-.container {position: relative;top:23rem;max-width:1200px;height:100%;margin:0 auto}
+.container {position: relative;max-width:1200px;height:100%;margin:0 auto}
 
 /* header */
 header {text-align: center}
 header .container {top:0}
 h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inset #fff;*/
-    box-shadow: 0 1px 0 #ccc,
+    -webkit-box-shadow: 0 1px 0 #ccc,
+		 0 2px 0 #c9c9c9,
+		 0 3px 0 #bbb,
+		 0 4px 0 #b9b9b9,
+		 0 5px 0 #aaa,
+		 0 6px 1px rgba(0, 0, 0, .1),
+		 0 0 5px rgba(0, 0, 0, .1),
+		 0 1px 3px rgba(0, 0, 0, .3),
+		 0 3px 5px rgba(0, 0, 0, .2),
+		 0 5px 10px rgba(0, 0, 0, .25),
+		 0 10px 10px rgba(0, 0, 0, .2),
+		 0 20px 20px rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 0 #ccc,
 		 0 2px 0 #c9c9c9,
 		 0 3px 0 #bbb,
 		 0 4px 0 #b9b9b9,
@@ -42,14 +55,39 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		 0 20px 20px rgba(0, 0, 0, .15);
 	}
 /* main */
-.layout {display:inline-block;position:relative;width:49%;perspective: 600px;}
-.window {position:relative;z-index:0;top:50%;left:50%;width:17rem;height: 19rem; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);transform-style: preserve-3d;box-sizing:border-box}
+.layout {position:relative;top:20rem;width:50%;height:19rem;-webkit-perspective: 600px;perspective: 600px;}
+.window {position:absolute;;z-index:0;top:50%;left:50%;width:17rem;height: 100%; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translate(-50% ,-50%); -webkit-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%); -ms-transform: translate(-50% ,-50%); -o-transform: translate(-50% ,-50%);-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-box-sizing:border-box;box-sizing:border-box}
 .window .window_inner { position: absolute; top:50%; left:50%; right:0; bottom:0; width: 90%; height: 90%; background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform:translate(-50%,-50%)  ; -webkit-transform:translate(-50%,-50%)  ; -moz-transform:translate(-50%,-50%)  ; -ms-transform:translate(-50%,-50%)  ; -o-transform:translate(-50%,-50%)  }
 .window .window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
 .layout:last-child .window_inner .me {margin-top:4rem;margin-left:2rem;}
 .layout:last-child .window_inner .me img{width:90%}
 
 /* 캐릭터 헤드 애니메이션 */
+@-webkit-keyframes rotateHead {
+	0%{
+		transform: rotate(-10deg)	;
+		-webkit-transform: rotate(-10deg)	;
+		-moz-transform: rotate(-10deg)	;
+		-ms-transform: rotate(-10deg)	;
+		-o-transform: rotate(-10deg)	;
+	}
+
+	50%{
+		transform: rotate(0deg)	;
+		-webkit-transform: rotate(0deg)	;
+		-moz-transform: rotate(0deg)	;
+		-ms-transform: rotate(0deg)	;
+		-o-transform: rotate(0deg)	;
+	}
+
+	100% {
+		transform:rotate(10deg);
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		-o-transform:rotate(10deg);
+	}
+}
 @keyframes rotateHead {
 	0%{
 		transform: rotate(-10deg)	;
@@ -77,12 +115,12 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 /* 창문 레이아웃 */
-.piece { position: absolute; top:-3px; width:50%; height:298px;border-bottom:5px solid #4A8391; cursor: pointer; transition: .5s ease;}
+.piece { position: absolute; top:-3px; width:50%; height:298px;border-bottom:5px solid #4A8391; cursor: pointer; -webkit-transition: .5s ease; transition: .5s ease;}
 .piece:after { position: absolute; width:100%; height:100%; border-radius:11rem 0 0 0;border: 5px solid #4A8391;
-    border-bottom:0;background: linear-gradient(#D2E5C5 50%, #4A8391 50%); background-size:100% 1rem; content:"" ; -webkit-border-radius:11rem 0 0 0; -moz-border-radius:11rem 0 0 0; -ms-border-radius:11rem 0 0 0; -o-border-radius:11rem 0 0 0; box-sizing:border-box}
-.active_left {left:-4px;border-right: 5px solid #4A8391;transform-origin: left center;}
+    border-bottom:0;background: linear-gradient(#D2E5C5 50%, #4A8391 50%); background-size:100% 1rem; content:"" ; -webkit-border-radius:11rem 0 0 0; -moz-border-radius:11rem 0 0 0; -ms-border-radius:11rem 0 0 0; -o-border-radius:11rem 0 0 0; -webkit-box-sizing:border-box; box-sizing:border-box}
+.active_left {left:-4px;border-right: 5px solid #4A8391;-webkit-transform-origin: left center;transform-origin: left center;}
 .active_left:after {border-right:0;}
-.active_right {right:-4px;border-left: 5px solid #4A8391;transform-origin: right center;}
+.active_right {right:-4px;border-left: 5px solid #4A8391;-webkit-transform-origin: right center;transform-origin: right center;}
 .active_right:after {border-left:0;border-radius:0 11rem 0 0; -webkit-border-radius:0 11rem 0 0; -moz-border-radius:0 11rem 0 0; -ms-border-radius:0 11rem 0 0; -o-border-radius:0 11rem 0 0; }
 
 
@@ -105,6 +143,25 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 /* 오른쪽 창문 닫혔을때 */
 #window .active_right { animation: closeWindow 2s linear 2s infinite alternate; -webkit-animation: closeWindow 2s linear 2s infinite alternate; }
 
+@-webkit-keyframes closeWindow {
+	0% {
+		transform:rotateY(10deg) ;
+		-webkit-transform:rotateY(10deg) ;
+		-moz-transform:rotateY(10deg) ;
+		-ms-transform:rotateY(10deg) ;
+		-o-transform:rotateY(10deg) ;
+	}
+
+	100% {
+		transform:rotateY(15deg);
+		-webkit-transform:rotateY(15deg);
+		-moz-transform:rotateY(15deg);
+		-ms-transform:rotateY(15deg);
+		-o-transform:rotateY(15deg);
+	}
+
+}
+
 @keyframes closeWindow {
 	0% {
 		transform:rotateY(10deg) ;
@@ -120,6 +177,25 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		-moz-transform:rotateY(15deg);
 		-ms-transform:rotateY(15deg);
 		-o-transform:rotateY(15deg);
+	}
+
+}
+
+@-webkit-keyframes openWindow {
+	0% {
+		transform:rotateY(120deg) ;
+		-webkit-transform:rotateY(120deg) ;
+		-moz-transform:rotateY(120deg) ;
+		-ms-transform:rotateY(120deg) ;
+		-o-transform:rotateY(120deg) ;
+	}
+
+	100% {
+		transform:rotateY(110deg);
+		-webkit-transform:rotateY(110deg);
+		-moz-transform:rotateY(110deg);
+		-ms-transform:rotateY(110deg);
+		-o-transform:rotateY(110deg);
 	}
 
 }
@@ -162,8 +238,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 @media only screen and (max-width:1024px) {
-	.layout {display:block;width:100%}
-	.layout:last-child {margin-top: 6rem;}
+	.layout {top:10rem}
+	
 }
 
 @media only screen and (max-width:960px) {	
@@ -194,4 +270,4 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:320px) {
 
 	
-}
+}}
