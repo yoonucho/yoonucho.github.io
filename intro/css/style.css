@@ -8,7 +8,6 @@ body {width:100%;height:74vh;background-color: silver;
 	linear-gradient(155deg, #f2f2f2 23px, transparent 23px);
 	background-size: 58px 58px;background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px}
 main {position: relative;width:100%;height:100%}
-/* main:after {position:absolute;bottom:-241px;z-index:2;width:100%;height:241px;background:url(../img/cloud_bg.png) no-repeat 0 0;background-size:contain;content: ""}	 */
 #flex_box {display:flex;flex-flow: row wrap}
 
 /* container */
@@ -236,8 +235,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 /* 구름 */
 /* .cloud_box {width:100%;height:100%;} */
-.cloud1{ position:absolute; width:934px; height:816px; background:url(../img/big_cloud1.png) center left / 50% no-repeat ; animation: upCloud  5s linear 1s forwards; -webkit-animation: upCloud  5s linear 1s forwards; }
-.cloud2{ position:absolute; right:0; width:843px; height:858px; background:url(../img/big_cloud2.png) center right / 50%  no-repeat; animation: upCloud  4s linear 3s forwards; -webkit-animation: upCloud  4s linear 3s forwards; }
+.cloud1{ position:absolute; width:934px; height:816px; background:url(../img/big_cloud1.png) center left / 50% no-repeat ; animation: upCloud  6s linear 1s forwards; -webkit-animation: upCloud  6s linear 1s forwards; }
+.cloud2{ position:absolute; right:0; width:843px; height:858px; background:url(../img/big_cloud2.png) center right / 50%  no-repeat; animation: upCloud  5s linear 3s forwards; -webkit-animation: upCloud  5s linear 3s forwards; }
 
 /* 구름 애니메이션 */
 @keyframes upCloud{
@@ -258,12 +257,14 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		top: -150%;
 	}
 }
-.clouds { animation:scaleCloud 2s linear infinite ; -webkit-animation:scaleCloud 2s linear infinite ; }
-.cloud3 {position: absolute;top:0; left:2rem;width:133px;height:52px;background:url(../img/cloud1.png) no-repeat;}
+.clouds { filter: drop-shadow(0 0 3px rgba(50, 50, 50, 0.75)); -webkit-filter: drop-shadow(0 0 3px rgba(50, 50, 50, 0.75));
+; animation:scaleCloud 5s linear infinite ; -webkit-animation:scaleCloud 5s linear infinite ; }
+/* .clouds:after {width:100%;height:100%;content:""} */
+.cloud3 {position: absolute;top:0; left:4rem;width:133px;height:52px;background:url(../img/cloud1.png) no-repeat;}
 .cloud4 {position: absolute;top:5rem;left:20rem;width:122px;height:48px;background:url(../img/cloud2.png) no-repeat;}
 .cloud5 {position: absolute;top:6em;right:40rem;width:169px;height:66px;background:url(../img/cloud3.png) no-repeat;}
 .cloud6 {position: absolute;top:5rem;right:20rem;width:73px;height:29px;background:url(../img/cloud4.png) no-repeat;}
-.cloud7 {position: absolute;top:0;right:2rem;width:109px;height:43px;background:url(../img/cloud5.png) no-repeat;}
+.cloud7 {position: absolute;top:0;right:4rem;width:109px;height:43px;background:url(../img/cloud5.png) no-repeat;}
 
 
 /* 작은 구름 애니메이션 */
