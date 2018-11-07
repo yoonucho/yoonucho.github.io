@@ -234,7 +234,6 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 .window_bar { position:absolute; left:50%; bottom:-19px; width: 100%; height:3.3rem; background:#D2E5C5; border-radius: 10px 10px 0 0; border:5px solid #4A8391;border-bottom:0; color:#4A8391; font-size:1.5rem;line-height:3.3rem; text-transform: uppercase; text-align: center; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%)}
 
 /* 구름 */
-/* .cloud_box {width:100%;height:100%;} */
 .cloud1{top:-100%;position:absolute;z-index:1;width:29rem; height:23rem; background:url(../img/big_cloud1.png) center left / 100% no-repeat ; transition: all .2s;animation: upCloud  6s linear 1s forwards; -webkit-animation: upCloud  6s linear 1s forwards; }
 .cloud2{position:absolute;top:-100%;z-index:1;right:0; width:26rem; height:26rem; background:url(../img/big_cloud2.png) center right / 100%  no-repeat; transition: all .2s;animation: upCloud  5s linear 3s forwards; -webkit-animation: upCloud  5s linear 3s forwards; }
 
@@ -275,7 +274,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		-moz-transform: scale(1.5);
 		-ms-transform: scale(1.5);
 		-o-transform: scale(1.5);
-}
+	}
 
 	50% {
 		transform: scale(1.2);
@@ -283,7 +282,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		-moz-transform: scale(1.2);
 		-ms-transform: scale(1.2);
 		-o-transform: scale(1.2);
-}
+	}
 
 	100% {
 		transform: scale(1.5);
@@ -291,7 +290,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 		-moz-transform: scale(1.5);
 		-ms-transform: scale(1.5);
 		-o-transform: scale(1.5);
-}
+	}
 }
 
 
@@ -305,30 +304,9 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window {width:16.5rem;transition: .3s ease;}
 	.window_inner .me {margin-top:4rem}
 	#window2 .window_inner .me {margin-top:5rem}
-	
-}
-
-@media only screen and (max-width:960px) {	
-	.window {width:15.5rem}
-}
-
-@media only screen and (max-width:910px) and (min-width:769px){	
-	.window_box {top:5rem;width:100%;margin-bottom:6rem}
-
-}
-
-
-	
-
-@media only screen and (max-width:768px) {
-	.window_box {top:5rem;width:100%}
-	#window {margin-bottom:6rem}
 	.cloud1,.cloud2 {top:100%;background-size:50%}
-	.cloud4,.cloud6 {display:none}
-	.cloud7 {top:5rem;left:unset;right:7rem}
-	.cloud8 {top:unset;bottom:-2rem}
-	.cloud10 {top:unset;bottom:-2.5rem}
-		/* 큰구름 애니메이션 */
+		
+	/* 큰구름 애니메이션 */
 	@keyframes upCloud{
 		0% {
 			top:100%;
@@ -343,6 +321,26 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 			top: -100%;
 		}
 	}
+	
+}
+
+@media only screen and (max-width:960px) {	
+	.window {width:15.5rem}
+}
+
+@media only screen and (max-width:910px) and (min-width:769px){	
+	.window_box {top:5rem;width:100%;margin-bottom:6rem}
+
+}
+
+
+@media only screen and (max-width:768px) {
+	.window_box {top:5rem;width:100%}
+	#window {margin-bottom:6rem}
+	.cloud4,.cloud6 {display:none}
+	.cloud7 {top:5rem;left:unset;right:7rem}
+	.cloud8 {top:unset;bottom:-2rem}
+	.cloud10 {top:unset;bottom:-2.5rem}
 
 }
 
