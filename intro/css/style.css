@@ -323,11 +323,26 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:768px) {
 	.window_box {top:5rem;width:100%}
 	#window {margin-bottom:6rem}
-	.cloud1,.cloud2 {background-size:50%}
+	.cloud1,.cloud2 {top:100%;background-size:50%}
 	.cloud4,.cloud6 {display:none}
 	.cloud7 {top:5rem;left:unset;right:7rem}
 	.cloud8 {top:unset;bottom:-2rem}
 	.cloud10 {top:unset;bottom:-2.5rem}
+		/* 큰구름 애니메이션 */
+	@keyframes upCloud{
+		0% {
+			top:100%;
+			
+		}
+
+		50% {
+			top: 40%;
+		}
+
+		100% {
+			top: -100%;
+		}
+	}
 
 }
 
@@ -337,7 +352,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	h1 {margin:0;padding:1rem;font-size:2rem}
 	.window_box {top:3rem}
 	#window {top:2rem;margin-bottom:4rem}
-}
+	}
 
 @media only screen and (max-width:480px) {
 	h1 { font-size: 1.5rem}
