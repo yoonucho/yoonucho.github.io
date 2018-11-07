@@ -297,7 +297,6 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 /* mediaquery 320 / 480 / 640 / 768 / 960 / 1024 / 1280 */
 @media only screen and (max-width:1280px) {
-	
 }
 
 @media only screen and (max-width:1024px) {
@@ -373,9 +372,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 /* 화면 회전시 */
-
-
-  @media  all and (min-width:321px) and (orientation: landscape) {
+  @media  all and (max-height:768px) and (orientation: landscape) {
 	 .cloud1,.cloud2 {display:none}
 	 .cloud8,.cloud10 {bottom:-32rem}
  } 
