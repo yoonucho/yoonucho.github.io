@@ -301,6 +301,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 @media only screen and (max-width:1024px) {
 	.row {padding:1rem}
 	h1 { display:block; margin:1rem 0; font-size:3rem; transition: .3s ease-in; -webkit-transition: .3s ease-in; -moz-transition: .3s ease-in; -ms-transition: .3s ease-in; -o-transition: .3s ease-in; }
+	.window_box {position:static;margin-top:15rem}
 	.window {width:16.5rem;transition: .3s ease;}
 	.window_inner .me {margin-top:4rem}
 	#window2 .window_inner .me {margin-top:5rem}
@@ -329,13 +330,13 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 }
 
 @media only screen and (max-width:910px) and (min-width:769px){	
-	.window_box {top:5rem;width:100%;margin-bottom:6rem}
+	.window_box {top:5rem;width:100%;margin-top:0;margin-bottom:6rem}
 
 }
 
 
 @media only screen and (max-width:768px) {
-	.window_box {top:5rem;width:100%}
+	.window_box {top:5rem;width:100%;margin-top:0}
 	#window {margin-bottom:6rem}
 	.cloud4,.cloud6 {display:none}
 	.cloud7 {top:5rem;left:unset;right:7rem}
