@@ -327,7 +327,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.cloud1,.cloud2 {background-size:50%}
 	.cloud4,.cloud6 {display:none}
 	.cloud7 {top:5rem;left:unset;right:7rem}
-	.cloud8 {top:24rem}
+	.cloud8 {top:unset;bottom:0}
 	.cloud10 {top:unset;bottom:0}
 
 }
@@ -352,8 +352,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window_bar {font-size:1rem;line-height:5vh}
 	.cloud1,.cloud2{display:none}
 	.cloud4 {display:none}
-	.cloud8 {top:unset;left:11rem;bottom:-6rem}
-	.cloud10 {top:unset;right:unset;left:4rem;bottom:-6rem}
+	.cloud8 {left:11rem;bottom:-6rem}
+	.cloud10 {right:unset;left:4rem;bottom:-6rem}
 }
 
 @media only screen and (max-width:360px) {
