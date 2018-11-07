@@ -347,7 +347,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window {max-width:13rem;height:60vw}
 	.window .window_inner {overflow: hidden}
 	.window_inner .me {margin-top:3rem}
-	#window2 .window_inner .me {margin-top:4rem} 
+	#window2 .window_inner .me {margin-top:3rem} 
 	.piece {height:100%}
 	.window_bar {font-size:1rem;line-height:5vh}
 	.cloud1,.cloud2{display:none}
