@@ -370,5 +370,10 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.cloud8 {left:7rem;bottom:-4rem}
 	.cloud10 {left:3rem;bottom:-4rem}
 	
-	
 }
+
+/* 화면 회전시 */
+ @media  all and (min-width:321px) and (orientation: landscape) {
+	 .cloud1,.cloud2 {display:none}
+	 .cloud8,.cloud10 {bottom:-29rem}
+ } 
