@@ -298,6 +298,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 /* mediaquery 320 / 480 / 640 / 768 / 960 / 1024 / 1280 */
 @media only screen and (max-width:1280px) {
+	.clouds { transition: all 2s ease; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; -o-transition: all 2s ease; }
 	.cloud6 {top:1rem;right:9rem}
 	.cloud7 {left:3rem}
 	.cloud10 {right:3rem}
@@ -345,14 +346,14 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 
 
 @media only screen and (max-width:768px) {
-	.window_box {top:5rem;width:100%;margin-top:0}
+	.window_box {position:relative;top:5rem;width:100%;margin-top:0}
 	#window {margin-bottom:6rem}
-	.cloud3 {top:18rem;left:14rem}
+	.cloud3 {top:21rem;left:12rem}
 	.cloud4,.cloud6 {display:none}
 	.cloud7 {top:5rem;left:7rem;right:7rem}
-	.cloud8 {top:unset;bottom:-2rem}
+	.cloud8 {top:unset;bottom:-2.5rem;left:6rem;}
 	.cloud9 {top:-2rem;right:7rem}
-	.cloud10 {top:unset;bottom:-2.5rem}
+	.cloud10 {top:unset;bottom:-2.5rem;right:6rem}
 
 }
 
@@ -362,6 +363,7 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	h1 {margin:0;padding:1rem;font-size:2rem}
 	.window_box {top:3rem}
 	#window {top:2rem;margin-bottom:4rem}
+	.cloud9 {top:-1rem;}
 	}
 
 @media only screen and (max-width:480px) {
@@ -376,13 +378,16 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window_bar {font-size:1rem;line-height:5vh}
 	.cloud1,.cloud2{display:none}
 	.cloud4 {display:none}
-	.cloud8 {left:11rem;bottom:-6rem}
+	.cloud7 {left:3rem}
+	.cloud8 {left:10rem;bottom:-6rem}
+	.cloud9 {display:none}
 	.cloud10 {right:unset;left:4rem;bottom:-6rem}
 }
 
 @media only screen and (max-width:360px) {
 	.window {max-width:12rem}
 	.cloud8 {left:9rem}
+	.cloud8, .cloud10 {bottom:-5rem}
 
 }
 
@@ -391,7 +396,8 @@ h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inse
 	.window_inner .me {margin-top:2rem}
 	#window2 .window_inner .me {margin:2rem 0 0 1rem}
 	.window_bar {line-height:6vh} 
-	.cloud8 {left:7rem;bottom:-4rem}
+	.cloud3 {display:none}
+	.cloud8 {left:6.5rem;bottom:-4rem}
 	.cloud10 {left:3rem;bottom:-4rem}
 	
 }
