@@ -73,7 +73,7 @@ h1 {float:left}
 .tag_text:nth-child(n+3){text-align: right}
 .tag_text:nth-child(2){margin-left: 3rem;}
 .tag_text:nth-child(3){margin-right: 3rem;}
-.tag{color:#181612;font-size:13px;font-style: italic}
+.tag{color:#181612;font-size:13px}
 .me { width:270px; margin:0 auto ; opacity:0;animation: intro-head 2000ms linear 0.5s infinite alternate; -webkit-animation: intro-head 2000ms linear 0.5s infinite alternate; }
 
 /* 애니메이션 */
