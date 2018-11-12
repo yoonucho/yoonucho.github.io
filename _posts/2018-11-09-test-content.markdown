@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Example content"
-date:   
+title:  "이슈노트 1"
+date:  2018-11-09 
 comments: true
 categories: issue_note
 ---
