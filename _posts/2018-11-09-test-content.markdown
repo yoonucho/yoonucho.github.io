@@ -1,45 +1,29 @@
 ---
 layout: post
 title:  "Example content"
-date:   2018-11-09 12:05
+date:   
 comments: true
 categories: issue_note
 ---
 
-Morbi ultrices libero imperdiet [lectus](#) dignissim, sit amet bibendum nisl consectetur. Morbi erat purus, pretium at ligula tincidunt, faucibus commodo sem. Etiam vel porttitor est, vitae maximus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien turpis, cursus non porta ac.
 
-## Lorem
-Quisque sodales euismod nibh, gravida venenatis nibh dignissim eget. Morbi gravida enim vel lectus aliquet aliquet.
+## 스마트쎈 인증샷 이벤트
+실제 작업시 막혔던 영역 코딩연습
 
-### Ipsum
-Nunc nec aliquam tellus. Etiam faucibus magna nibh, ut fermentum velit consectetur id. Nullam vehicula iaculis tortor, in cursus enim auctor vitae. Duis semper pulvinar justo, at vestibulum dolor. Cras fermentum nibh quis nisl imperdiet ornare. Sed nisi nunc, dictum sit amet gravida in, finibus rhoncus orci. Donec scelerisque commodo turpis ac venenatis.
+### 예상 시간
+30분
 
-## Dugem
-Nullam vehicula iaculis tortor, in cursus enim auctor vitae. Duis semper pulvinar justo, at vestibulum dolor. Cras fermentum nibh quis nisl imperdiet ornare. Sed nisi nunc, dictum sit amet gravida in, finibus rhoncus orci. Donec scelerisque commodo turpis ac venenatis.
+### 실제 시간
+1시간 30분
 
-> Nam vitae commodo ex. Nunc vel tellus leo.
+생각보다 늦어진 이유 
 
-### Golem
-Quisque sodales euismod nibh, gravida venenatis nibh dignissim eget. Morbi gravida enim vel lectus aliquet aliquet.
+1. 세팅파일 준비할 시간을 정리하지 못함.
+2. SNS영역을 가운데정렬을 하고 진행을 해서
+3. 작업전에 방향을 생각안하고 무작정 해서
 
-* Praesent commodo cursus magna.
-* Donec id elit non mi porta gravida at eget metus.
-* Nulla vitae elit libero, a pharetra augue.
+![코딩연습이미지](https://yoonucho.github.io/post_img/test1.png "인증샷 이벤트 SNS")
 
-Cras fermentum nibh quis nisl imperdiet ornare. Sed nisi nunc, dictum sit amet gravida in, finibus rhoncus orci. Donec scelerisque commodo turpis ac venenatis.
 
-1. Vestibulum id ligula porta felis euismod semper.
-2. Cum sociis natoque penatibus.
-3. Maecenas sed diam eget risus.
 
-![Large example image](http://placehold.it/800x400 "Large example image")
 
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-``` javascript
-function trigger_alert(){
-  alert("Lorem Ipsum dolor sit amet");
-}
-
-trigger_alert();
-```
