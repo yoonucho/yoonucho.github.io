@@ -29,7 +29,7 @@ categories: issue_note
 babel-core 6.26.3, babel-loader 7.1.5 설치 후 로컬서버 실행
 ex) npm install --save-dev babel-loader@" 7.1.5"
 
-2. package.json에서 ^제거 (^을 제거하면 버전이 업데이트안되고 고정된다고 함.)
+2. package.json에서 ^제거 (^을 제거하면 재설치시에도 버전이 업데이트안되고 고정된다고 함.)
 
 
 
