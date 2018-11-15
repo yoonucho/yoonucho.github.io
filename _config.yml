@@ -1,5 +1,5 @@
 # Site settings
-title: ?? ??????.(???)
+title: 윤우 블로그 (비공개)
 email: tomorrowcho@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
@@ -14,7 +14,7 @@ github: yoonucho
 # deviantart: username
 codepen: tomorrowcho/
 
-footer: © ?? ???
+footer: © 윤우 블로그
 
 # Build settings
 markdown: kramdown
