@@ -10,7 +10,7 @@ categories: issue_note
 
 
 
-[Vue.js로 데일리리포트 앱만들기 강의목록 ](#https://programmers.co.kr/learn/courses/4672#curriculum)
+[Vue.js로 데일리리포트 앱만들기 강의목록 ](https://programmers.co.kr/learn/courses/4672#curriculum)
 
 ### 원인
  babel-core , babel-loader 버전문제
