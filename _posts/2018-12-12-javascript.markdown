@@ -2,6 +2,7 @@
 layout: post
 title: "javascript"
 date: 2018-12-12
+published: false
 comments: true
 categories: javascript
 ---
