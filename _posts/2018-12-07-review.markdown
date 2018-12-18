@@ -4,7 +4,7 @@ title: "일취월장을 읽고"
 date: 2018-12-07
 # published: false
 comments: true
-categories: book review
+categories: review
 ---
 
 ## 일취월장을 읽고
