@@ -1,0 +1,39 @@
+---
+layout: post
+title: "이슈노트 3"
+date: 2018-12-16
+comments: true
+categories: issue_note
+---
+
+## ReactJS로 웹 서비스 만들기 (Windows7)
+
+[노마드 코더 ReactJS로 웹 서비스 만들기](https://academy.nomadcoders.co/courses/enrolled/216871)
+
+### 이슈 내용
+
+create-react-app설치 과정에서 에러코드를 뿜음
+
+### 원인
+
+eslint 버전과 node의 버전 충돌
+
+### 과정
+
+1. 에러 코드 확인
+
+2. 구글링
+
+### 해결
+
+1. 에러코드에 설명된 내용대로 우선 node_modules폴더를 삭제
+
+2. node를 기존건 지우고 인스톨러를 다운받아서 설치
+
+- **[Node 공식 사이트]** (https://nodejs.org/ko/download)
+
+3. eslint를 지우고 에러코드에 명시된 호환 버전으로 재설치
+
+   1. npm remove eslint
+
+   2. npm install eslint@5.6.0

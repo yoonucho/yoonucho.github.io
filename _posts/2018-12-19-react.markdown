@@ -1,0 +1,21 @@
+---
+layout: post
+title: "리액트 기초 배우기 #11"
+date: 2018-12-19
+comments: true
+categories: review
+---
+
+## ReactJS로 웹 서비스 만들기 (Windows7)
+
+[노마드 코더 ReactJS로 웹 서비스 만들기](https://academy.nomadcoders.co/courses/enrolled/216871)
+
+### 노마드 코더 ReactJS로 웹 서비스 만들기 #11
+
+..연산자에 대해 막연하게만 알고 있었는데 영화 무비앱을 만드는 과정을
+진행하면서 영화 전체 리스트를 ...this.state.movies로
+처리할 수 있다니 진짜 진짜 Awesome하다잉!
+
+페이스북이나 원티드에서 스크롤내릴때 무한업데이트 되는 원리가 이거였구나!
+
+(카테고리를 어디로 해야 할지 몰라서 우선 리뷰로)
