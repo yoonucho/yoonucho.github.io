@@ -17,7 +17,7 @@ categories: git
 1.  git commit --amend
 2.  insert 버튼을 눌러서 메세지 수정후 ESC버튼을 눌러줌
 3.  :wq로 저장+종료
-4.  git push -f(force)
+4.  git push -f(--force)
 
 이렇게 하면 이쁜(?) 일직선 형태의 log를 볼 수 있음.
 
@@ -26,3 +26,10 @@ categories: git
 - git reset HEAD [파일명]
   ex) index.html를 add후 취소
   - git reset HEAD index.html
+
+## 로컬은 유지하고 원격저장소에서만 해당폴더 지우기
+
+1. git rm -r(--recursive) --cached [지울 폴더명] 또는
+   git rm --cached [지울 폴더명]
+2. git commit -m "삭제후 커밋 메시지"
+3. git push -u origin [해당 브랜치]

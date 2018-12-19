@@ -20,12 +20,12 @@
     <div id="social-icons">
       <ul>
         <li>
-          <a href="http://github.com/{{ site.github }}"
+          <a href="https://github.com/{{ site.github }}"
             ><i class="fa fa-github"></i
           ></a>
         </li>
         <li>
-          <a href="http://codepen.io/{{ site.codepen }}"
+          <a href="https://codepen.io/{{ site.codepen }}"
             ><i class="fa fa-codepen"></i
           ></a>
         </li>
@@ -53,7 +53,9 @@
         {% for category in site.categories %}
         <li>
           <a
-            href="{{ site.baseurl | prepend: url }}/categories/{{ category | first | prepend: site.baseurl }}"
+            href="{{ site.baseurl | prepend: url }}/categories/{{
+              category | first | prepend: site.baseurl
+            }}"
             >{{ category | first }}</a
           >
         </li>
