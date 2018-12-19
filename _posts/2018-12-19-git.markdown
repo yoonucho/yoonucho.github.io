@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "깃 커밋메시지변경 + add취소"
+title: "깃 명령어"
 date: 2018-12-19
 comments: true
 categories: git
 ---
 
-## 커밋 후 커밋 메시지 변경 (push전)
+## 깃 명령어
+
+### 커밋 후 커밋 메시지 변경 (push전)
 
 1.  git commit --amend
 2.  insert 버튼을 눌러서 메세지 수정후 ESC
 3.  :wq로 저장+종료
 
-## 커밋 후 커밋 메시지 변경 (push후)
+### 커밋 후 커밋 메시지 변경 (push후)
 
 1.  git commit --amend
 2.  insert 버튼을 눌러서 메세지 수정후 ESC버튼을 눌러줌
@@ -21,13 +23,13 @@ categories: git
 
 이렇게 하면 이쁜(?) 일직선 형태의 log를 볼 수 있음.
 
-## add후 취소
+### add후 취소
 
 - git reset HEAD [파일명]
   ex) index.html를 add후 취소
   - git reset HEAD index.html
 
-## 로컬은 유지하고 원격저장소에서만 해당폴더 지우기
+### 로컬은 유지하고 원격저장소에서만 해당폴더 지우기
 
 1. git rm -r(--recursive) --cached [지울 폴더명] 또는
    git rm --cached [지울 폴더명]
