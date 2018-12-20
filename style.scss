@@ -104,6 +104,20 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 	line-height: 1.5em;
 	color: #666;
 	font-weight: 300;
+
+		
+	.post-link {
+		font-size: 20px;
+		border-bottom: 0.0625em solid #7bed9f;
+		box-shadow: 0 -0.4em 0 inset #7bed9f;
+		&:hover {
+			border-bottom: 0.0625em solid #2ed573;
+			box-shadow: 0 -0.4em 0 inset #2ed573;
+		
+	}
+	}
+	
+	
 }
 
 .content hr {
@@ -147,12 +161,12 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 
 .content a {
 	font-family: "Roboto Condensed", Arial, sans-serif;
-	background-color: #fff;
 	font-size: 16px;
 	line-height: normal;
 	font-style: normal;
-	color: #8c8c8c;
+	color:inherit;
 	font-weight: 300;
+	text-decoration: none;
 }
 
 .content pre {
