@@ -1,0 +1,36 @@
+---
+layout: post
+title: "이슈노트 5"
+date: 2018-12-24
+comments: true
+categories: issue_note
+---
+
+## 이슈 내용
+
+node packages를 설치하고 삭제하는 과정에서 에러메시지가 뜸.
+module not found: can't resolve 'react' in 'node_modules\react-dom\cjs
+
+### 원인
+
+사실 원인을 잘 모르겠음 달력 라이브러리 여러개 받았다가 지우고 삭제하다 생긴 과정이라 ㅠ
+
+### 과정
+
+1. 에러 코드 확인
+
+2. 구글링
+
+### 해결
+
+1. 구글링을 하니 (https://github.com/facebook/create-react-app/issues/2534)에
+
+	리덕스 창시자 Dan Abramov님의 솔루션이 있어서 그대로 적용함.
+
+   1. package-lock.json와 yarn.lock를 지운다.
+
+   2. node_modules에 react가 있는지 확인한다.
+
+   3. 만약 react가 없으면 package.json에 추가해준다.
+
+   4. npm install을 실행한다.

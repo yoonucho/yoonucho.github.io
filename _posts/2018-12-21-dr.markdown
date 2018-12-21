@@ -1,0 +1,21 @@
+---
+layout: post
+title: "데일리리포트앱 프로젝트"
+date: 2018-12-21
+comments: true
+categories: review
+---
+
+## ReactJS로 데일리포트앱 만들기 시자크 (Windows7)
+
+### 고민
+
+우선 각각의 파일을 상태저장 컴포넌트(이하 Smart)로 만들었다.
+
+리액트js를 1도 몰랐던 나는 Smart가 무조건 좋을거라 생각했는데;;
+
+여러 포스팅 글과 책(리액트교과서)을보니 상태비저장 컴포넌트(이하 Dumb)를
+
+가능한 많이 사용하라고 한다.
+
+지금 내가 생각하기로는 Day.js와 Calendar.js는 Smart로 만들고 나머지는 Dumb로 하면 될 듯 싶다.
