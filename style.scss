@@ -108,6 +108,7 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 		
 	.post-link {
 		font-size: 20px;
+		font-weight: 300;
 		border-bottom: 0.0625em solid #7bed9f;
 		box-shadow: 0 -0.4em 0 inset #7bed9f;
 		&:hover {
@@ -165,7 +166,7 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 	line-height: normal;
 	font-style: normal;
 	color:inherit;
-	font-weight: 300;
+	font-weight: 600;
 	text-decoration: none;
 }
 
