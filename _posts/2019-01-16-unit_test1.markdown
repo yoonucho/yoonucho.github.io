@@ -1,0 +1,27 @@
+---
+layout: post
+title: "이슈노트 6"
+date: 2019-01-16
+comments: true
+categories: issue_note
+---
+
+## 이슈 내용
+
+server.js를 unit test를 해보려고 server.test.js를 작성중 에러
+
+### 원인
+
+yarn test시 exit오류 
+
+![error_msg](https://yoonucho.github.io/post_img/code4.jpg "unit test시 오류")
+
+### 과정
+
+1. 에러 코드 확인
+
+2. 구글링
+
+### 해결
+
+1. 에러코드 메세지대로 jest --detectOpenHandles를 붙임
