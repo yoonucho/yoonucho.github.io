@@ -105,7 +105,12 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 	color: #666;
 	font-weight: 300;
 
-		
+	.post-content {
+		h2,h3,h4 {margin-bottom: 1em;}
+		h3 {margin-top: 1em;}
+		p {line-height: 2em;}
+	}	
+
 	.post-link {
 		font-size: 20px;
 		font-weight: 300;
@@ -115,10 +120,8 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 			border-bottom: 0.0625em solid #2ed573;
 			box-shadow: 0 -0.4em 0 inset #2ed573;
 		
+		}
 	}
-	}
-	
-	
 }
 
 .content hr {

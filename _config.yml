@@ -19,5 +19,4 @@ footer: yoonu blog
 
 # Build settings
 markdown: kramdown
-sass:
-  style: compressed
+highlighter: rouge 

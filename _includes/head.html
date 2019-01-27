@@ -1,64 +1,44 @@
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="yoonucho" />
-  <meta name="description" content="웹퍼블리셔 조윤우의 블로그입니다." />
-  <meta name="keywords" content="웹퍼블리셔 조윤우,조윤우 블로그" />
-  <meta property="og:title" content="웹퍼블리셔 조윤우의 블로그입니다." />
-  <meta property="og:description" content="웹퍼블리셔 조윤우의 블로그입니다." />
-  <meta
-    property="og:image"
-    content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg"
-  />
-  <title>
-    {% if page.title %}{{ page.title | escape }}{% else %}{{
-      site.title | escape
-    }}{% endif %}
-  </title>
-  <!-- favicon & icon -->
-  <link rel="shortcut icon" href="{{ site.baseurl }}/ico/favicon.ico" />
-  <link rel="icon" href="{{ site.baseurl }}/ico/icon_16.png" sizes="16x16" />
-  <link rel="icon" href="{{ site.baseurl }}/ico/icon_32.png" sizes="32x32" />
-  <link rel="icon" href="{{ site.baseurl }}/ico/icon_64.png" sizes="64x64" />
-  <link rel="icon" href="{{ site.baseurl }}/ico/icon_144.png" sizes="144x144" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="yoonucho" />
+	<meta name="description" content="웹퍼블리셔 조윤우의 블로그입니다." />
+	<meta name="keywords" content="웹퍼블리셔 조윤우,조윤우 블로그" />
+	<meta property="og:title" content="웹퍼블리셔 조윤우의 블로그입니다." />
+	<meta property="og:description" content="웹퍼블리셔 조윤우의 블로그입니다." />
+	<meta property="og:image" content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg" />
+	<title>
+		{% if page.title %}{{ page.title | escape }}{% else %}{{
+		site.title | escape
+		}}{% endif %}
+	</title>
+	<!-- favicon & icon -->
+	<link rel="shortcut icon" href="{{ site.baseurl }}/ico/favicon.ico" />
+	<link rel="icon" href="{{ site.baseurl }}/ico/icon_16.png" sizes="16x16" />
+	<link rel="icon" href="{{ site.baseurl }}/ico/icon_32.png" sizes="32x32" />
+	<link rel="icon" href="{{ site.baseurl }}/ico/icon_64.png" sizes="64x64" />
+	<link rel="icon" href="{{ site.baseurl }}/ico/icon_144.png" sizes="144x144" />
 
-  <link
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
-  <link
-    rel="canonical"
-    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-  />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="{{ site.title }}"
-    href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"
-  />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" />
 
-    gtag("config", "UA-130856644-1");
-  </script>
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/syntax.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-130856644-1");
+	</script>
 </head>
