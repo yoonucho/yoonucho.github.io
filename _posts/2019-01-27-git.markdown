@@ -1,0 +1,19 @@
+---
+layout: post
+title: "깃 명령어2"
+date: 2019-01-27
+comments: true
+categories: git
+---
+
+## 깃 명령어
+
+### push된 커밋을 취소하고  다시 push하기 (개인 프로젝트는 상관없겠지만 협업시는 주의가 필요합니다. 협업 멤버들과 의논후 진행하세요. )
+
+1.  git reflog로 목록을 확인합니다.
+  ![git reflog 명령어 입력시 목록 예시](https://yoonucho.github.io/post_img/code6.jpg "git reflog")
+2. git reset HEAD@{number} 되돌리려는 시점으로 리셋합니다. 
+3.  다시 git add와 commit후
+4.  git push -f(--force)로 강제 push합니다. 
+
+
