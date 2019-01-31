@@ -106,6 +106,8 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 	font-weight: 300;
 
 	.post-content {
+		margin-bottom: 3.5rem;
+
 		h2,h3,h4 {margin-bottom: 1em;}
 		h3 {margin-top: 1em;}
 		p {line-height: 2em;}
@@ -120,7 +122,6 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 			}
 		
 		}	
-	
 	}
 
 	.post-link {
@@ -266,4 +267,7 @@ input[data-function*="swipe"]:checked ~ .sidebar {
 			font-weight: 300;
 		}
 	}
+
 }
+
+
