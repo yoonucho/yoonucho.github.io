@@ -109,7 +109,19 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 		h2,h3,h4 {margin-bottom: 1em;}
 		h3 {margin-top: 1em;}
 		p {line-height: 2em;}
-	}	
+		ul,ol {
+			> li {
+			margin-bottom: 2rem;
+			
+				&:last-child {
+					margin-bottom: 3rem;
+				}
+		
+			}
+		
+		}	
+	
+	}
 
 	.post-link {
 		font-size: 20px;
