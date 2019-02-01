@@ -2,7 +2,7 @@
 title: 윤우블로그
 email: tomorrowcho@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yoonucho.github.io/intro" # the base hostname & protocol for your site
+url: "https://yoonucho.github.io" # the base hostname & protocol for your site
 
 # Sidebar settings
 description: One sentence introducing yourself or what you do
