@@ -1,0 +1,45 @@
+---
+layout: post
+title: "내가 착각한 REST API와 Mongoose에 대한 생각"
+date: 2019-02-08
+comments: true
+categories: review
+---
+
+## REST API와 Mongoose
+
+### 무엇을 착각하였는지
+
+ * 사이드 프로젝트에 서버를 만드느라 REST API와 Mongoose를 사용하게 되었는데 나는 Mongoose같은 DB안에 REST가 있는거라 생각을 했었다.
+
+### 왜 착각하였을까
+ 
+ * 내가 구글링과 책내용을 통하여 정보를 습득한 바로는 이 둘은 뗄수 없는 존재 마치 바늘과 실 1세트같이 느껴짐
+  
+### 우선 내가 아는 REST API와 Mongoose에 대해 적어보자.
+
+ *  REST는 웹의 장점을 최대한 활용할 수 있는 네트워크 기반의  아키텍쳐 , API로는 GET,PUT(또는 PATCH),POST,DELETE method가 있다.  
+ 
+ *  Mongoose는 DBMS중 noSQL의 하나인 MongoDB 기반의 대표적 ODM이다.
+
+### REST 관련글을 다시 검색해보자.
+
+   - 출처: https://bcho.tistory.com/321  **[조대협의 블로그]**
+   - 출처: [**[Guys, REST APIs are not Databases
+](https://medium.com/@marinithiago/guys-rest-apis-are-not-databases-60db4e1120e4)**]
+   - 출처: https://poiemaweb.com/js-rest-api  **[Poiemaweb]**
+   - 출처: https://velopert.com/332  **[VELOPERT.LOG]**
+   - 출처: [**[How create an API RESTfull in Express (Node.js) without Database
+](https://medium.com/@etiennerouzeaud/how-create-an-api-restfull-in-express-node-js-without-database-b030c687e2ea)**]
+
+### 이제 정리하자면
+
+ * REST와 Mongoose의 관계는 밀접하다.
+ * 하지만 Mongoose같은 DB없이도 사용할 수 있다. 
+ * DB의 목적은 데이터를 저장하는 것 ,REST API는 구성요소의 상호작용
+ * REST서버는 정보에 접근 및 변경을 가능케 하는데 여기서 정보는 text,xml,json등 형식으로 제공한다. 
+ * REST API는 자원(Resource), 행위(Verb), 표현(Representations)의 3가지 요소로 구성 
+
+### 내가 해야 할일	
+
+ * 사이드 프로젝트 sever.js를 unit test코드로 작성중인데 REST API와 Mongoose를 분리해서 코드 정리 시도
