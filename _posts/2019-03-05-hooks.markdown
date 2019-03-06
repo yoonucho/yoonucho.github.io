@@ -1,0 +1,98 @@
+---
+layout: post
+title: "리액트 Hook에 대한 정리"
+date: 2019-02-08
+comments: true
+categories: review
+---
+
+### Hook을 사용하면 뭐가 좋은가?
+
+* 리액트에서 컴포넌트를 만드는 2가지 방법으로는 state가 필요한 클래스기반의 컴포넌트와
+  함수기반의 컴포넌트가 있다.
+
+* Hook을 사용하면 state+ 함수기반의 컴포넌트를 사용할 수가 있다.
+
+* 똑같은 작업을 componentDidMount()와 componentUpdate()에서 구현해야 할때 useEffect()로 중복로직 해결이 가능하다. 
+
+### Hook의 역사 
+
+ * recompose라는 라이브러리에서 시작되었다.
+  
+   * [recompose - npm](https://www.npmjs.com/package/recompose)
+   * [recompose github](https://github.com/acdlite/recompose)
+ * 리액트팀에 합류하면서 2018.10.25 업데이트 중단 이후 Hooks로 릴리즈되었다.
+  
+### 실제 사용 예시
+ 
+   - 출처 - [리액트 Hooks 실제 사용 예시를 알아보자! | React Hooks for daily use!]([https://www.npmjs.com/package/recompose](https://www.youtube.com/watch?v=sZDvByH2mNU)
+  
+  **[인풋(이름 입력), 데이터요청(랜덤 고양이 이미지) 예제]**
+
+~~~javascript
+  
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import axios from "axios";
+
+function useInput(defaultValue) {
+  const [value, setValue] = useState(defaultValue);
+
+  const onChange = e => {
+    const {
+      target: { value }
+    } = e;
+    setValue(value);
+  };
+
+  return { value, onChange };
+}
+
+function useFetch(url) {
+	// 복수의 state 변수 선언 가능
+	 // url에서 가져온정보
+  const [payload, setPayload] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const callUrl = async () => {
+    try {
+      const { data } = await Axios.get(url);
+	  //throw Error();
+      setPayload(data);
+    } catch {
+      setError("😭");
+	  // 에러 유무에 따라서 실행
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  //componentDidMount()와 componentUpdate()를  대체할 수 있지만 
+  // 이 예제에서는 componentDidMount()만 사용 
+  useEffect(() => {
+    callUrl();
+  }, []);
+
+  return { payload, loading, error };
+}
+
+function App() {
+  const name = useInput("");
+  const { payload, loading, error } = useFetch("https://aws.random.cat/meow");
+  return (
+    <div className="App">
+      <h1>Use Hooks</h1>
+      <br />
+      <input {...name} placeholder="Whats your name" />
+      <br />
+      {loading && <span>loading your cat</span>}
+      {!loading && error && <span>{error}</span>}
+      {!loading && payload && <img src={payload.file} width="250" />}
+    </div>
+  );
+}
+
+
+
+
