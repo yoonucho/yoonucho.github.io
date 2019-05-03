@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "이슈노트 7"
+title: "이슈노트 8"
 date: 2019-05-03
 comments: true
 categories: issue_note
