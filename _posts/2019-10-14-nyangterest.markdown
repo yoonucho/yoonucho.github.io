@@ -13,12 +13,17 @@ categories: side_project
  {% include nyangtest.html id="-lYOQaib-co" %}  
 
 
-* 기본셋은 오늘 날짜의 유기묘의 리스트를 한 페이지에서 무한 스크롤링으로 다음 리스트를 볼 수 있습니다.
+* 기본셋은 오늘 날짜의 유기묘의 리스트를 한 페이지에서 무한 스크롤 형식으로 다음 리스트를 볼 수 있습니다.
 
 ![냥터레스트 소개 ](https://yoonucho.github.io/post_img/nyangterest1.jpg)
 
+* 토글버튼아래에 툴팁박스에 안내버튼을 누르면 24시간동안 툴팁박스가 보이지 않게 됩니다.
 
-<!-- ![냥터레스트 구현 ](https://yoonucho.github.io/post_img/nyangterest2.jpg) -->
+![냥터레스트 툴팁박스 안내 ](https://yoonucho.github.io/post_img/nyangterest2.jpg)
+
+* 토글버튼을 누르면 검색필터가 보이고 다시 누르면 숨겨집니다.
+  
+![냥터레스트 토글버튼 ](https://yoonucho.github.io/post_img/nyangterest2-1.jpg)
 
 * 상단검색필터는  엔터없이 선택이나 입력시 원하는 리스트를 바로 볼 수 있게 구현하였습니다.
 
@@ -38,16 +43,14 @@ categories: side_project
 ![냥터레스트 상단필터 키워드 입력 ](https://yoonucho.github.io/post_img/nyangterest5.jpg)
 
 
-<!-- ![냥터레스트 구현 ](https://yoonucho.github.io/post_img/nyangterest6.jpg) -->
-
 * 리스트를 클릭하면 팝업창이 열리며 상세정보를 볼 수 있는데 보호중은 스카이블루색이 기본이며
-* 
-![냥터레스트 구현 ](https://yoonucho.github.io/post_img/nyangterest8.jpg)
+  
+![냥터레스트 팝업(보호중) ](https://yoonucho.github.io/post_img/nyangterest6.jpg)
 
 
 * 종료시(입양,안락사,자연사 등등)는  빨강색으로 되어 있습니다.
   
-![냥터레스트 구현 ](https://yoonucho.github.io/post_img/nyangterest7.jpg)
+![냥터레스트 팝업(종료) ](https://yoonucho.github.io/post_img/nyangterest7.jpg)
 
 
 
