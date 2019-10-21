@@ -194,7 +194,6 @@ App.js (프론트 http://localhost:8080)
 
 ```
 
-
 #### 삽질 이유를 정리해보자면
 
 1. 어짜피 있어야 할 서버인데 서버를 만들고 싶지 않은 이상한 고집때문에 며칠을 몸고생 맘고생을 하였습니다. 😔
@@ -425,6 +424,28 @@ App.js (프론트 http://localhost:8080)
 다시 삽질끝에 알아낸 건 결국 저번과 비슷한 type의 충돌문제였습니다.
 백엔드 요청변수 bgnde와 endde의 타입을 string으로 변경하니 드디어 검색이 되었습니다!!! 😹
 
+  // Node.js
+  ```javascript
+
+	router.get("/page/:bgnde/:endde/:numOfRows/:id/", (req, res) => {
+
+		const { bgnde, endde, numOfRows, id } = req.params;
+		const url = `${api}/abandonmentPublic?ServiceKey=${serviceKey}&_type=json&bgnde=${bgnde}&endde=${endde}&upkind=422400&numOfRows=${numOfRows}&pageNo=${id}`;
+
+		fetch(url)
+			.then(response => response.json())
+			.then(json => {
+				res.send(json.response.body);
+				console.log(bgnde, endde, json.response.body.totalCount);
+			})
+			.catch(() => {
+				res.send(JSON.stringify({ message: "System Error" }));
+			});
+	});
+
+ ```
+
+ // React.js
 ```javascript
 
  @action
@@ -441,7 +462,7 @@ App.js (프론트 http://localhost:8080)
 
 #### 나의 착각
 
-1. 요청변수를 post로 받으면 그값이 json에 담겨야 한다는 큰 착각을 하였었습니다.
+1. 요청변수를 post로 받으면 그값이 res.json에 담겨야 한다는 큰 착각을 하였었습니다.
 제가 이렇게 착각한 이유중 하나는 검색해서 본 유투브 영상이나 글들은 새로운 값을 넣는 예시였기 때문에 그리 생각을 하게 되었었습니다.
 
 2. 달력연동에서 fetch는 어떻게 연결을 해야하나 라이브러리 api를 찾아보았으나 없어서 막막했었습니다.
@@ -451,6 +472,9 @@ App.js (프론트 http://localhost:8080)
    그래서 요청변수 bgnde와 endde에  날짜 value값 from과 to을 어떻게 넣어야 하나라고만 생각을 했었다가 
    파라미터이름이 동일하지 않아도 된다는게 기억나서 url에 파라미터로 바로 넣으면 되지 않을까라는 생각이 들었고 시도하였고 
    그 생각이 맞았음에 살짝 허무하면서도 신기하다고 생각했습니다. 
+
+4. 이 후 Post방식을 해보고서야 알게 되었는데 Get방식은 url에 요청변수를 그대로 넣기 때문에 변수이름이 달라도 괜찮지만 Post는 Body에 싣는거기 때문에
+   백엔드와 이름이 동일해야 백엔드가 제대로 값을 받아오는 걸 알게 되었습니다.
 
 
 #### 느낀 점
