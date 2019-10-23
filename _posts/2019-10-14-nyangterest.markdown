@@ -431,8 +431,9 @@ App.js (프론트 http://localhost:8080)
 * 다시 삽질끝에 알아낸 건 결국 저번과 비슷한 type의 충돌문제였습니다.
 백엔드 요청변수 bgnde와 endde의 타입을 string으로 변경하니 드디어 검색이 되었습니다!!! 😹
 
+ ```javascript
+
   // Node.js
-  ```javascript
 
 	router.get("/page/:bgnde/:endde/:numOfRows/:id/", (req, res) => {
 
@@ -450,22 +451,25 @@ App.js (프론트 http://localhost:8080)
 			});
 	});
 
- ```
+```
 
- // React.js
+
 ```javascript
 
- @action
-	loadList = async () => {
+ // React.js
 
-		// 중략...
-			const { items, pageNo, numOfRows, from, to } = this;
-			const happenFrom = moment(from).format("YYYYMMDD")
-			const happenTo = moment(to).format("YYYYMMDD")
-			const url = `/page/${happenFrom}/${happenTo}/${numOfRows}/${pageNo}`;
-		// 중략...
+	@action
+		loadList = async () => {
 
- ```
+			// 중략...
+				const { items, pageNo, numOfRows, from, to } = this;
+				const happenFrom = moment(from).format("YYYYMMDD")
+				const happenTo = moment(to).format("YYYYMMDD")
+				const url = `/page/${happenFrom}/${happenTo}/${numOfRows}/${pageNo}`;
+			// 중략...
+		}
+
+```
 
 #### 나의 착각
 
