@@ -19,4 +19,6 @@ footer: yoonu blog
 
 # Build settings
 markdown: kramdown
-highlighter: rouge 
+highlighter: rouge
+gems: 
+   - jekyll-gist 

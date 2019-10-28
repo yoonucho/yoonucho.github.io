@@ -36,6 +36,8 @@ th.title {
 
 ul {margin: 1rem 0}
 
+a {transition: .5s ease;}
+
 /* ------------ Sidebar Style -------------- */
 
 #picture {
@@ -155,13 +157,19 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 	}
 
 	.post-link {
+		background: 0;
+		color: inherit;
 		font-size: 20px;
 		font-weight: 400;
-		border-bottom: 0.0625em solid #7bed9f;
-		box-shadow: 0 -0.4em 0 inset #7bed9f;
+		border-bottom: 0.0625em solid #8b96d2;
+		box-shadow: 0 -0.4em 0 inset #8b96d2;
+
+
 		&:hover {
-			border-bottom: 0.0625em solid #2ed573;
-			box-shadow: 0 -0.4em 0 inset #2ed573;
+			background: 0;
+			color: #fff;
+			border-bottom: 0;
+			box-shadow: 0 -2em 0 inset #3f51b5;
 		}
 	}
 }
@@ -204,13 +212,19 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 }
 
 .content a {
+	padding: 0.5rem;
 	font-family: "NanumSquareRound", Arial, sans-serif;
 	font-size: 16px;
 	line-height: normal;
 	font-style: normal;
-	color: inherit;
+	background: #7885cb;
+	color: #fff;
 	font-weight: 600;
 	text-decoration: none;
+
+	&:hover {
+		background: #3f51b5;
+	}
 }
 
 .content pre {
