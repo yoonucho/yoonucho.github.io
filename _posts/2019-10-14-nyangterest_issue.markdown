@@ -13,8 +13,9 @@ categories: side_project
 
 * 맨처음으로 겪었던 문제는 CORS 이슈였습니다.
 
+
 * 유기묘들의 정보를 [공공데이터포털](https://www.data.go.kr/){: target="_blank" }에서 제공받았는데 API주소를 프론트에서 직접적으로 넣으면 
-  이슈를 뿜는걸 처음으로 알게 되었습니다.
+이슈를 뿜는걸 처음으로 알게 되었습니다.
 
 ![error_msg](https://yoonucho.github.io/post_img/code7.gif "안녕 CORS 이슈 월드에 온 것을 환영해")
 
@@ -26,8 +27,8 @@ categories: side_project
 *  Cors이슈를 해결하기 위해서 서버 세팅을 해야 하는게 처음에는 납득이 가지 않았습니다. 그래서 프론트에서만 해결할 수 방법들을 모색하였습니다. 
 대략적으로 5가지 방법을 확인하였습니다.
 
-   1. 구글확장 프로그램 설치 - [Allow-Control-Allow-Origin: *] `chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon`
 
+   1. 구글확장 프로그램 설치 - [Allow-Control-Allow-Origin: *] `chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon`
    2.  크롬에서 --disable-web-security 옵션을 추가하여 크롬 실행
    3.  JSONOP 방식으로 요청
    4. API 요청서버에서 cors 설정을 지원하는지 확인 
@@ -59,6 +60,7 @@ categories: side_project
 
     	  * npm install node-fetch --save
  
+
  server.js (서버 localhost:8080)
 
 ```javascript 
@@ -167,11 +169,11 @@ App.js (프론트 localhost:8080)
   
  <pre> 기존 src폴더 구조 </pre>
 
+
 ![기존 src폴더 구조](https://yoonucho.github.io/post_img/tree1.gif)
 
  <pre>MobX적용후 src 폴더 구조</pre>
 
- 
  ![MobX적용후 src 폴더 구조](https://yoonucho.github.io/post_img/tree2.gif)
 
 
@@ -192,6 +194,7 @@ App.js (프론트 localhost:8080)
 ```
 
 * List.js에 @observer를 사용한다.
+
 * 그 위에 @inject('listStore')를 넣어주면  listStore를 props로 전달받을 수 있게 된다.
   
 ``` javascript

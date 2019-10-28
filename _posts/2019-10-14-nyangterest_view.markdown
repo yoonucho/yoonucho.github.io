@@ -99,3 +99,4 @@ categories: side_project
 
 
  내용이 길어져서 페이지를 나누었습니다. [냥터레스트 진행시  이슈와 해결과정 보기](https://yoonucho.github.io/side_project/2019/10/14/nyangterest_issue.html){: target="_blank" }
+
