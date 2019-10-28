@@ -172,6 +172,18 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 			box-shadow: 0 -2em 0 inset #3f51b5;
 		}
 	}
+
+	.vglnk {
+	    padding: 0;
+		background: 0;
+		cursor: unset;
+		font-size: unset;
+		color: inherit;
+
+		&:hover {
+			background: 0;
+		}
+	}
 }
 
 .content hr {
@@ -226,6 +238,7 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 		background: #3f51b5;
 	}
 }
+
 
 .content pre {
 	border: none;
