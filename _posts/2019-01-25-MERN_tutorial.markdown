@@ -30,7 +30,7 @@ todos-list.component에 라이프사이클 메서드중 componentDidMount에서 
 
 2. 기존에는 isMounted()를 지원하였으나 현재는 안티 패턴이라고 한다.
 
-   * (https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html) **[리액트 공식사이트 블로그]** 
+   *  [리액트 공식사이트 블로그](https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html)
 
 ### 해결
 
@@ -75,7 +75,7 @@ export default class TodosList extends Component {
 
 방법 2번대로 Promise로 구현해보고 싶었으나 내가 느끼기에는 코드가 너무 길어보여서
 비효율적이라는 생각이 들었다.  또한 내생각대로 제대로 되는거 같지도 않아 (Promise를 잘 몰라서 그런걸지도) 좀 더 글을 검색해보다가 
-(https://www.facebook.com/groups/react.ko/permalink/1676709252589240) **[리액트 코리아]** 
+[리액트 코리아](https://www.facebook.com/groups/react.ko/permalink/1676709252589240) 
 이 글의 이재호님의 댓글을 보고 결정하게 되었다. 
 
  

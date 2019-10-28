@@ -19,24 +19,24 @@ categories: review
 
 2. 어떤 이벤트가 발생한 후 수행될 함수를 의미합니다.
  
-   - 출처:  https://victorydntmd.tistory.com/48 **[victolee]**
+   - 출처:  [victolee](https://victorydntmd.tistory.com/48){: target="_blank" } 
 
 
 3. 일종의 식당 자리 예약과 같습니다. 일반적으로 맛집을 가면 사람이 많아 자리가 없습니다. 그래서 대기자 명단에 이름을 쓴 다음에 자리가 날 때까지 주변 식당을 돌아다니죠. 만약 식당에서 자리가 생기면 전화로 자리가 났다고 연락이 옵니다. 그 전화를 받는 시점이 여기서의 콜백 함수가 호출되는 시점과 같습니다. 손님 입장에서는 자리가 날 때까지 식당에서 기다리지 않고 근처 가게에서 잠깐 쇼핑을 할 수도 있고 아니면 다른 식당 자리를 알아볼 수도 있습니다.
 자리가 났을 때만 연락이 오기 때문에 미리 가서 기다릴 필요도 없고, 직접 식당 안에 들어가서 자리가 비어 있는지 확인할 필요도 없습니다. 자리가 준비된 시점, 즉 데이터가 준비된 시점에서만 저희가 원하는 동작(자리에 앉는다, 특정 값을 출력한다 등)을 수행할 수 있습니다.
 
-    - 출처: (https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation) **[Captain Pangyo]**
+    - 출처:  [Captain Pangyo](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation){: target="_blank" }
 
 
 4. 콜백 함수의 이름에서부터 알 수 있듯이, 전화를 다시 하다 (?) 라는 뜻이다. (물론 그런 의도가 아니었을지라도)
 무엇인가 일을 다른 객체에게 시키고, 그 일이 끝나는 것을 기다리는 것이 아니라 그 객체가 나를 다시 부를때까지 내 할일을 하고 있는 것이다.
 
-   - 출처: (https://dalkomit.tistory.com/65) **[DalkomIT]**
+   - 출처:  [DalkomIT](https://dalkomit.tistory.com/65){: target="_blank" }
 
 
 5. 다른 함수의 인자로써 이용되는 함수, 어떤 이벤트에 의해 호출되어지는 함수
 
-   - 출처: (https://satisfactoryplace.tistory.com/18) **[만족]**
+   - 출처: [만족](https://satisfactoryplace.tistory.com/18){: target="_blank" }
 
 
 6. 콜백함수란 어떠한 정보(또는 이벤트)를 관리하는 대상이 자신의 정보가 변경되거나 또는 이벤트가 발생할때 
@@ -44,13 +44,13 @@ categories: review
 어떤 정보를 원하는 쪽이 정보를 제공하는 쪽에게 반복적으로 정보를 요구(또는 확인)하는 방법보다
 정보를 제공하는 쪽이 정보를 원하는 쪽에게 통보하는 것
 
-   - 출처: (https://smok95.tistory.com/193) **[Only YOUng]**
+   - 출처: [Only YOUng](https://smok95.tistory.com/193){: target="_blank" }
 
 
 7. Callback function은, 특정 함수에 매개변수로서 전달된 함수를 지칭합니다.
 그리고 그 Callback function은 그 함수를 전달받은 함수 안에서 호출되게 됩니다
-
-   - 출처: (https://velopert.com/255) **[velopert]**
+{: target="_blank" }
+   - 출처: [velopert](https://velopert.com/255){: target="_blank" }
 
 
 #### 공통점: 이벤트 발생하는 시점에 원하는 동작을 호출하는 함수(비동기)
@@ -83,13 +83,13 @@ categories: review
 
     * 동기와 비동기는 어떤 작업 혹은 그와 연관된 작업을 처리하고자 하는 시각의 차이입니다. 동기는 추구하는 같은 행위(목적)가 동시에 이루어지며, 비동기는 추구하는 행위(목적)가 다를 수도 있고, 동시에 이루어지지도 않습니다.
 
-    * 출처: https://private.tistory.com/24 **[공부해서 남 주자]**
+    * 출처: [공부해서 남 주자](https://private.tistory.com/24){: target="_blank" } 
 
 
    
 3. 자바스크립트의 비동기 처리란 특정 코드의 연산이 끝날 때까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 자바스크립트의 특성을 의미합니다.
 
-     * 출처 : https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation **[Captain Pangyo]**
+     * 출처 : [Captain Pangyo](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation){: target="_blank" }
 
 
 #### 공통점: 특정 로직이  끝날때까지 기다리지 않고 먼저 실행되는 경우 
@@ -117,5 +117,5 @@ categories: review
 	* try / catch로 에러 핸들링이 가능하다.
 * 다른 언어에서는 이미 사용하고 있음
   
-  * ex: C#(5.0부터), 스칼라, 파이썬(3.5부터) 등등 https://en.wikipedia.org/wiki/Async/await 
+  * ex: C#(5.0부터), 스칼라, 파이썬(3.5부터) 등등 `en.wikipedia.org/wiki/Async/await`
   
