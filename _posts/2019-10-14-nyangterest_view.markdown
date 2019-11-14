@@ -71,12 +71,14 @@ categories: side_project
 
  * 백엔드 : Node.js
 
- * DBMS(DB관리툴): SQL - MYSQL 
+ * DBMS(DB관리툴):  Amazon RDS (SQL - MYSQL)
 
  * 미들웨어 : Express 
 
  * 상태관리 라이브러리 : Mobx
-  
+
+ * 좀더 상세한 스택은 링크를 참고해주세요. [냥터레스트 사용 기술 스택](https://stackshare.io/yoonucho/nyangterest){: target="_blank" }
+
  * 진행 단계
 
 	1단계 레이아웃 잡기 `ovenapp.io`
@@ -84,6 +86,7 @@ categories: side_project
 	2단계 회원가입 시스템 이용약관 구축
 
 	3단계 게시물 검색 시스템 구축
+
 
 
 ##  협업으로 진행시 어떤 방식으로 진행하였나요?
