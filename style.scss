@@ -155,6 +155,19 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
 				}
 			}
 		}
+
+		&.about {
+			display: flex;
+
+			.about-text {
+				flex: 2;
+				padding-right: 2%;
+			}
+		
+			& figure {
+				flex: 1;
+			} 
+		}
 	}
 
 	.post-link {
@@ -341,6 +354,14 @@ input[data-function*="swipe"]:checked ~ .sidebar {
 	}
 }
 
+/* ------------ Content responsive-------------- */
+
+@media screen and (max-width: 991px) {
+	figure {
+		display: none;
+		transition: opacity .25s ease-in-out;
+	}
+}
 	/* ------------ Youtube Content -------------- */
 
 .youtube-wrap {
