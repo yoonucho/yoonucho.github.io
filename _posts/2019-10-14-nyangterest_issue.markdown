@@ -25,19 +25,19 @@ categories: side_project
 #### 방법 모색 1
 
 *  Cors이슈를 해결하기 위해서 서버 세팅을 해야 하는게 처음에는 납득이 가지 않았습니다. 그래서 프론트에서만 해결할 수 방법들을 모색하였습니다. 
-대략적으로 5가지 방법을 확인하였습니다.
+대략적으로 4가지 방법을 확인하였습니다.
 
 
-   1. 구글확장 프로그램 설치 - [Allow-Control-Allow-Origin: *] `chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon`
+   1. 크롬 확장 프로그램 설치 - [Allow CORS: Access-Control-Allow-Origin] `chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon`
    2.  크롬에서 --disable-web-security 옵션을 추가하여 크롬 실행
-   3.  JSONOP 방식으로 요청
+   3.  JSONP 방식으로 요청
    4. API 요청서버에서 cors 설정을 지원하는지 확인 
 
 *  이 중에 3번은 우회적인 방법이라 마음이 내키지 않아서 보류하였고, 4번은 공공데이터포털에서 Cors 이슈에 대한 문서를 제공하는걸 보니 Cors설정을 지원하지는 않는거 같아서 포기하였고 , 1번과 2번을 시도해 보게 되었습니다.
 
 #### 시도결과
 
-1. Allow-Control-Allow-Origin: * 설치 - 이상하게도  해결이 되지 않았고 오히려 기존 유투브와 AWS사이트에서 에러를 발생하는 문제가 발생하여서 실패
+1. Allow CORS: Access-Control-Allow-Origin 설치 - 이상하게도  해결이 되지 않았고 오히려 기존 유투브와 AWS사이트에서 에러를 발생하는 문제가 발생하여서 실패
 
 2. --disable-web-security - 역시나 실패
 
@@ -54,7 +54,11 @@ categories: side_project
 
 #### 해결과정
 
-1. API서버와 어떻게 연결해야 할까
+1. cors모듈을 설치
+   
+      * npm install cors --save
+
+2. API서버와 어떻게 연결해야 할까
 
 	* node-fetch를 설치하여 로컬 서버에서 fetch로 공공데이터 API주소를 요청하였습니다.
 
@@ -65,6 +69,8 @@ categories: side_project
 
 ```javascript 
 
+
+const cors = require("cors");
 const fetch = require("node-fetch");
 
 // 중략
@@ -86,7 +92,7 @@ router.get("/", (req, res) => {
 
 ```
 
-2. 서버와 프론트는 어떻게 연결해야 할까
+3. 서버와 프론트는 어떻게 연결해야 할까
 
    * 프론트 에서 fetch로 localhost:8080을 요청하였습니다.
 
@@ -106,6 +112,25 @@ App.js (프론트 localhost:8080)
 // 중략
 
 ```
+package.json
+
+```javascript 
+
+// 중략
+
+	callApi = () => {
+		return fetch("localhost:8080")
+			.then(res => res.json())
+			.then(json => json.response.body.items.item)
+			.catch(err => console.log(err));
+	};
+
+// 중략
+
+```
+
+
+
 
 
 #### 삽질 이유를 정리해보자면
