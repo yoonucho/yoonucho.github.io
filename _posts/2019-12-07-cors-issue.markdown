@@ -3,7 +3,7 @@ layout: post
 title: "냥터레스트, CORS를 모르는 프론트엔드 아깽이"
 date: 2019-12-05
 comments: true
-categories: 1st Home coming day 
+categories: 1stHomecomingday 
 ---
 
 
