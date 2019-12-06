@@ -13,7 +13,7 @@ categories: side_project
  {% include nyangtest.html id="Jg1u7te4EYI" %}  
 
 
-* 기본셋은 오늘 날짜의 유기묘의 리스트를 한 페이지에서 무한 스크롤 형식으로 다음 리스트를 볼 수 있습니다.
+* 기본셋은 오늘 날짜의 유기묘의 리스트를 무한 스크롤 형식으로 한 페이지에서  계속하여 보여집니다.
 
 ![냥터레스트 소개 ](https://yoonucho.github.io/post_img/nyangterest1.jpg)
 

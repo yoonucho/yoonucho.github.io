@@ -101,10 +101,7 @@ categories: 1stHomecomingday
 
   *  크롬 바로가기에 오른쪽마우스를 클릭하고 속성을 열어서 --disable-web-security을 추가해보았습니다. 하지만 달라지는게 없었습니다.
 
-  *  다시 검색해보니 --disable-web-security에 --user-data-dir="C:\chrome"를 추가하고 아이콘을 실행하면  C드라이브에 chrome이라는 폴더와 데이터가 생성이 되며 
-
-     도메인 이슈를 무시하는 브라우저가 새로 열립니다.
-
+  *  다시 검색해보니 --disable-web-security에 --user-data-dir="C:\chrome"를 추가하고 아이콘을 실행하면  C드라이브에 chrome이라는 폴더와 데이터가 생성이 되며 도메인 이슈를 무시하는 브라우저가 새로 열립니다.
 
    ![sop우회2](https://yoonucho.github.io/post_img/cors4.jpg)
 
