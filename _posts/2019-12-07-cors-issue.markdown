@@ -22,7 +22,7 @@ categories: 1stHomecomingday
 
 *  유기묘들의 정보를 [공공데이터포털](https://www.data.go.kr/){: target="_blank" }에서 제공받았는데 API주소를 프론트쪽에 직접적으로 넣으면 이슈를 뿜는걸 처음으로 알게 되었습니다. 
   
-![error_msg](https://yoonucho.github.io/cors/code1.jpg "안녕 CORS 이슈 월드에 온 것을 환영해")
+![error_msg](https://yoonucho.github.io/post_img/cors1.jpg "안녕 CORS 이슈 월드에 온 것을 환영해")
 
 * 말로만 듣던 CORS 이슈를 정면으로 마주하게 되었습니다. 😢
   
@@ -87,11 +87,11 @@ categories: 1stHomecomingday
 
 	
      * Before		
-     ![sop우회전](https://yoonucho.github.io/cors/code2.jpg)
+     ![sop우회전](https://yoonucho.github.io/post_img/cors2.jpg)
 
 
      * After
-     ![sop우회1](https://yoonucho.github.io/cors/code3.jpg)
+     ![sop우회1](https://yoonucho.github.io/post_img/cors3.jpg)
 
 
 
@@ -104,7 +104,7 @@ categories: 1stHomecomingday
      도메인 이슈를 무시하는 브라우저가 새로 열립니다.
 
 
-   ![sop우회2](https://yoonucho.github.io/cors/code4.jpg)
+   ![sop우회2](https://yoonucho.github.io/post_img/cors4.jpg)
 
 
 ## 방법 모색2 
