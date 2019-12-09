@@ -367,6 +367,10 @@ input[data-function*="swipe"]:checked ~ .sidebar {
 .youtube-wrap {
 	margin-bottom: 3rem;
 	text-align: center;
+
+	iframe:first-child {
+		margin-bottom: 2rem;
+	}
 }
 
 
