@@ -141,6 +141,7 @@ categories: 1stHomecomingday
    
       * npm install cors --save
 
+	// server.js (서버 localhost:8080)
 
 	```javascript 
 
@@ -167,7 +168,22 @@ categories: 1stHomecomingday
 
 	```
 
+	// App.js (프론트 localhost:3000) 
 
+	```javascript 
+
+	// 중략
+
+		callApi = () => {
+			return fetch("localhost:8080")
+				.then(res => res.json())
+				.then(json => json.response.body.items.item)
+				.catch(err => console.log(err));
+		};
+
+	// 중략	
+
+	```
 
 ## 삽질 이유를 정리해보자면
 
