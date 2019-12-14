@@ -12,7 +12,7 @@ categories: 1stHomecomingday
 
 *  영상의 상단은 CORS이슈 발생 상황이고, 하단은 Express 미들웨어 CORS모듈을 설치 후 실행했을때 화면입니다.
 
-	{% include cors.html id="TIE8-qyvkRQ" %}
+   {% include cors.html id="TIE8-qyvkRQ" %}
 
 
 ## 간단 소개
