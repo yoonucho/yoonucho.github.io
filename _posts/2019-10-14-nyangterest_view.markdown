@@ -91,11 +91,14 @@ categories: side_project
 
 ##  협업으로 진행시 어떤 방식으로 진행하였나요?
 
- *  우선 저 혼자 진행하는게 아니라  간단한 협업 규칙을 만들었고. [냥터레스트 협업규칙](https://github.com/henyy1004/nyangterest/blob/master/collaboration_report/collaboration_rules.md){: target="_blank" }
+ *  우선 저 혼자 진행하는게 아니라  간단한 협업 규칙을 만들었고 [냥터레스트 협업규칙](https://github.com/henyy1004/nyangterest/blob/master/collaboration_report/collaboration_rules.md){: target="_blank" }
  
- 각자 할 영역을 정하여 해당 영역의 프론트와 백엔드를 전부 맡는 방식으로 진행하였습니다.
+    각자 할 영역을 정하여 해당 영역의 프론트와 백엔드를 전부 맡는 방식으로 진행하였습니다.
+
+ * 이 중에 제가 맡은 부분은 메인콘텐츠(아이템 리스트), 이용약관 개인정보 처리방침, 이용툴팁, 상단 검색필터, 리스트 상세팝업입니다.
  
  * 진행하다가 의문점이 있거나 의논할게 있으면 서로의 시간이 허락하는 시간과 날짜에 온라인과 오프라인으로  회의를 하였으며 회의내용은 협업문서에 기록해두었습니다.
+   [냥터레스트 협업문서](https://github.com/henyy1004/nyangterest/tree/master/collaboration_report){: target="_blank" }
  
  * 기본적으로는 깃헙의 projects를 이용하여 각자 한 일들과 할 일들을 감시(?)또는 파악 할 수 있습니다.
  [냥터레스트 Projects ](https://github.com/henyy1004/nyangterest/projects/1){: target="_blank" }
