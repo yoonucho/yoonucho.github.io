@@ -360,8 +360,7 @@ h1 {float:left}
 	/* snippet */
 	.snippet {flex-flow: row wrap}
 	.snippet .flex_box {flex:none;min-width:50%;}
-	.modal_box .btn_close {padding:1% 2%}
-
+	
 	/* 챗봇위젯 커스텀 */
 	#collect-chat-launcher-container.collect-chat-launcher-left {left:0 !important}
 }
@@ -415,6 +414,7 @@ h1 {float:left}
 	#snippet {padding-bottom:0}
 	.snippet .flex_box {flex:none;min-width:100%;}
 	.modal h4 {font-size:150%;line-height:1.8}
+	.modal_box .btn_close {padding:1% 2%}
 
 	/* contant */
 	#contact {padding-bottom: 0;}
