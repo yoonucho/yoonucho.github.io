@@ -230,7 +230,7 @@ h1 {float:left}
 }
 
 .modal .modal_box {
-	position: absolute;
+	position: relative;
     top: 15%;
     left: 50%;
 	/* overflow: auto; */
@@ -252,7 +252,7 @@ h1 {float:left}
 
 .snippet .btn_click.active +.modal {opacity:1;pointer-events: auto;}
 .modal h4 {font-size:2rem;color:#333;line-height:1.6}
-.modal .btn_close {position: absolute;top:0;right:0;display:block;padding:1% 2%;background:none;font-size: 2rem;cursor: pointer;}
+.modal_box .btn_close {position: absolute;top:0;right:0;padding:1rem;background:none;font-size: 2rem;cursor: pointer;}
 
 /* Skills & Experience */
 .skills {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:space-between;margin-bottom:4rem;color:#615b4b;-webkit-box-orient :horizontal;-webkit-box-direction :normal;-ms-flex-flow :row wrap;flex-flow :row wrap;}
@@ -360,6 +360,7 @@ h1 {float:left}
 	/* snippet */
 	.snippet {flex-flow: row wrap}
 	.snippet .flex_box {flex:none;min-width:50%;}
+	.modal_box .btn_close {padding:1% 2%}
 
 	/* 챗봇위젯 커스텀 */
 	#collect-chat-launcher-container.collect-chat-launcher-left {left:0 !important}
