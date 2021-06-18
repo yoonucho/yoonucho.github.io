@@ -870,7 +870,7 @@ figure img {
 @media (max-width: 991px) {
 	.btn-wrap {
 		flex-direction: column-reverse;
-		width: 90%;
+		/* width: 90%; */
 	}
 }
 .btn-wrap.on {
@@ -884,12 +884,14 @@ figure img {
 	justify-content: center;
 	flex: 0 0 50%;
 	max-width: 60rem;
+	min-height: 9rem;
 	width: 50%;
 	max-height: 120px;
 	padding: 26px 0;
 	background-color: #000;
 	text-align: center;
 }
+
 @media (max-width: 991px) {
 	.pro-btn.pro-deal-btn {
 		margin-bottom: 1rem;
