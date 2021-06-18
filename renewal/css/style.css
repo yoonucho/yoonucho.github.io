@@ -269,8 +269,9 @@ h1 {float:left}
 
 /* Skills & Experience */
 .skills {position: relative;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:space-between;margin-bottom:4rem;color:#615b4b;-webkit-box-orient :horizontal;-webkit-box-direction :normal;-ms-flex-flow :row wrap;flex-flow :row wrap;}
-.skills figure {position: relative;width:20%;height:14rem;text-align: center;}
-.skills figure img { position: absolute;left:0;right:0;top:50%;margin-left:auto;margin-right:auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); }
+.skills figure {position: relative;width:14%;height:14rem;text-align: center;}
+.skills figure img {position: absolute;left:0;right:0;top:50%;min-width: 130px;
+    max-width: 130px;margin-left:auto;margin-right:auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); }
 .skills figure figcaption {position: absolute;width:100%;bottom:-30px;font-weight: 600}
 .skills_text {min-height:100%;padding:1%;color:#615b4b;font-size:1.2rem} 
 .skills_text p {white-space: pre-wrap}
@@ -348,7 +349,7 @@ h1 {float:left}
 	/* aboutme */
 	#about_me {padding-bottom:0;}
 	.time_line {margin-top:0}
-	.time_line ol {flex-flow:row wrap;align-items: center}
+	.time_line ol {flex-flow:row wrap;align-items: center;justify-content: center;}
 	.time_line ol:after {opacity:0;}
 	.time_line li {max-width: calc(50% - 2rem);margin: 0 1rem;flex: 0 0 50%;margin-bottom: 1rem;}
 	.time_line li:after {opacity:0;}
@@ -388,7 +389,7 @@ h1 {float:left}
 	/* snippet */
 	.snippet .btn_click{width:11.5rem;height:11.5rem}
 	/* skills */
-	.skills figure {width:33.33%;margin-bottom:2rem}
+	.skills figure {width:25%;margin-bottom:2rem}
 	.skills figure:nth-child(4n) {margin-bottom:0}
 }
 
@@ -406,7 +407,7 @@ h1 {float:left}
 	.intro_title .slideX2{ opacity:1; margin-left: 0; animation:none; -webkit-animation:none; }
 
 	/* about_me  */
-	.about_me .box {width:100%}
+	.about_me .box {margin:0;}
 	.time_line li {max-width: unset;width: 100%; flex: none;}
 	.time_line li .time_box {min-height: 3rem;width:auto;}
 	.time_line .time_box span {font-size:1.4rem;}
@@ -439,6 +440,12 @@ h1 {float:left}
 	.gnb li.a:hover:after {background:#fff}
 	.gnb_btn {display:block;background:none;font-size: 2rem;color:#494438;line-height:1;cursor: pointer;}
 	.gnb_btn .fa {vertical-align:top}
+
+	/* about_me  */
+	.about_me figure {flex-direction: column;padding:0;}
+	.about_me figure figcaption {padding: 2rem 0 0;white-space: pre-line;
+    word-break: keep-all;}
+	
 
 	/* portpolio*/
 	.tab .tab_list > li {min-width:50%}
