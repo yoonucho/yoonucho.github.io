@@ -1,0 +1,4 @@
+User-agent: BadBot
+Allow: /
+
+Sitemap: https://yoonucho.github.io/sitemap.xml

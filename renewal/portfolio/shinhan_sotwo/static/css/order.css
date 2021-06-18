@@ -1,0 +1,331 @@
+/* order request */
+.order {
+	/* padding: 46px 0 141px 0; */
+}
+/* .order .container {
+    padding-right: 15px;
+    padding-left: 15px;
+} */
+.order .copyright h2 {
+	height: 65px;
+	line-height: 65px;
+	font-size: 44px;
+	font-weight: 500;
+	color: #222222;
+	text-align: center;
+	margin: 0 0 49px 0;
+}
+
+.order .request .title {
+	position: relative;
+	height: 33px;
+	margin: 0 0 22px 0;
+	line-height: 33px;
+	font-size: 18px;
+	color: #000000;
+}
+
+.order .request .title:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 14px;
+	height: 14px;
+	background-image: url(../img/arrow_up_gray.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	transform: translateY(-50%);
+}
+.order .request .info {
+	height: 120px;
+	line-height: 120px;
+	padding: 0 20px;
+	background-color: #f3e6d5;
+	margin: 0 0 19px 0;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+}
+.order .request .info .image {
+	display: inline-block;
+	vertical-align: top;
+}
+.order .request .info .image img {
+	height: 120px;
+}
+.order .request .info .text {
+	width: calc(100% - 125px);
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1;
+	font-size: 12px;
+	color: #222526;
+	padding: 26px 0 0;
+}
+.order .request .info .text h5 {
+	font-size: 16px;
+	color: #333333;
+	margin: 0 0 9px 0;
+}
+.order .request .info .text p {
+	margin: 0 0 9px 0;
+	font-size: 13px;
+	color: #777777;
+}
+
+.order .request .info .text .option > button {
+	display: inline-block;
+	padding: 0;
+	font-size: 13px;
+	color: #777777;
+	text-decoration: underline;
+}
+
+.order .request .divider {
+	margin: 0 -30px 23px -30px;
+	max-width: 1020px;
+	border-top: 4px solid #f2f2f2;
+}
+
+.order .request .price {
+	font-size: 15px;
+	color: #555555;
+}
+
+.order .request h4 {
+	padding: 20px 0;
+	margin: 10px 0 20px;
+	font-size: inherit;
+	letter-spacing: -0.38px;
+	color: #333333;
+	height: 22px;
+	line-height: 22px;
+}
+
+.order .request h4 .float-right {
+	font-size: 22px;
+	color: #333333;
+}
+
+.order .request .price > div {
+	height: 32px;
+	line-height: 32px;
+}
+
+.order .request .price > div:last-child {
+	/* padding-bottom: 10px; */
+}
+
+.order .request .price > div .float-right {
+	color: #333333;
+}
+
+.order .request .price > h4 {
+	border-top: solid 1px #cccccc;
+}
+
+.order .request h4.pay {
+	padding: 0;
+	letter-spacing: -0.35px;
+}
+
+.order .request h4.pay span {
+	padding: 0;
+}
+
+.order .request h4.pay .float-right {
+	color: #000000;
+}
+
+.order .request .inputs {
+	font-size: 16px;
+	font-weight: 500;
+	color: #222222;
+	padding-bottom: 30px;
+}
+.order .request .inputs .form-group.text label {
+	font-size: 16px;
+	font-weight: 500;
+	color: #222222;
+}
+.order .request .inputs .form-group.text input {
+	border-radius: 0;
+}
+.order .request .inputs .form-group.text + div {
+	font-size: 12px;
+	font-weight: 500;
+	color: #222222;
+}
+.order .request .inputs .form-group.checkbox .form-check-label {
+	font-size: 14px;
+}
+.order .request .payment {
+	margin: 0 0 23px 0;
+}
+
+.order .request .payment .radio .form-check-label {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.order .request .payment .radio .form-check-label.mr-5 {
+	font-size: 15px;
+	color: #333333;
+}
+
+.order .request .payment .radio .form-check-label span {
+	text-decoration: underline;
+}
+
+.order .recipe .inner {
+	padding: 0;
+}
+.order .recipe .inner .total,
+.order .recipe .inner .deposit {
+	height: 36px;
+	line-height: 36px;
+}
+.order .recipe .inner .pay {
+	padding: 28px 0 0 0;
+	margin: 10px 0 0 0;
+	border-top: 1px solid #000;
+}
+.order .recipe .inner .pay span {
+	height: 26px;
+	font-size: 14px;
+	color: #333333;
+	line-height: 26px;
+}
+.order .recipe .inner .pay strong {
+	font-size: 22px;
+	font-weight: 500;
+	color: #000000;
+}
+.order .recipe .agree {
+	background-color: #f8f8f8;
+	padding: 18px 29px;
+}
+.order .recipe .agree h4 {
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 15px;
+}
+.order .recipe .agree .form-group .form-check-label {
+	font-size: 14px;
+	color: #333333;
+	line-height: 1.71;
+	word-break: break-all;
+}
+.order .recipe .btn-block {
+	height: 54px;
+	line-height: 54px;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	font-size: 16px;
+	font-weight: 500;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: -0.45px;
+	text-align: center;
+	color: #222526;
+}
+
+.order .recipe .agree .btn-group {
+	margin-top: 30px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}
+
+.order .recipe .agree .btn-group .btn {
+	height: 54px;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 500;
+	font-stretch: normal;
+	color: #000000;
+	font-style: normal;
+	background-color: #e4e4e4;
+	line-height: normal;
+	letter-spacing: -0.4px;
+	text-align: center;
+	line-height: 54px;
+}
+.order .recipe .agree .btn-group .btn-light {
+	max-width: 33.4%;
+	border: 1px solid #e4e4e4;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.order .recipe .agree .btn-group .btn-primary {
+	margin-left: 0;
+	color: #fff;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background-color: #1150c5;
+}
+
+@media (min-width: 768px) {
+	.order .request .divider {
+		margin: 0 auto 23px;
+	}
+}
+
+@media (max-width: 992px) {
+	.order {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.order .copyright {
+		display: none;
+	}
+	.order .request {
+		display: block !important;
+	}
+
+	.order .request .recipe {
+		border: 0;
+		box-shadow: none;
+	}
+	.order .request .recipe .inner .pay {
+		padding: 0 0 0 0;
+		margin: -20px 0 0 0;
+		border-top: 0;
+	}
+	.order .request .recipe .agree .btn-group {
+		/* border-top-left-radius: 6px;
+        border-top-right-radius: 6px; */
+	}
+	.order .request .recipe .agree .btn-group .btn {
+		/* height: 54px;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        color: #000000;
+        font-style: normal;
+        background-color: #e4e4e4;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        text-align: center;
+        line-height: 54px; */
+	}
+	.order .request .recipe .agree .btn-group .btn-light {
+		/* background-color: #dadfe5; */
+	}
+	.order .request .recipe .agree .btn-group .btn-primary {
+		/* background-color: #1150c5; */
+	}
+}
+
+@media (min-width: 992px) {
+}
+
+/* order request */

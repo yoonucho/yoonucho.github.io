@@ -1,0 +1,112 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400, 700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&family=Roboto:wght@500;700&display=swap");
+
+body,
+html {
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+	font-size: 14px;
+	word-break: keep-all;
+}
+
+.container {
+	max-width: 1080px;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+input {
+	outline: 0;
+}
+
+.contents {
+	position: relative;
+	z-index: 500;
+	min-height: calc(100vh - 53px);
+}
+
+img {
+	max-width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+body.modal-open .body-wrap {
+	filter: blur(4px);
+}
+
+button {
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.content-wrapper {
+	padding: 30px 0 24px;
+}
+
+.content-inner {
+	padding: 0 30px;
+}
+
+h1 {
+	font-size: 1.8rem;
+}
+
+p {
+	color: #555555;
+	font-size: 1rem;
+	letter-spacing: -0.2px;
+}
+
+ul {
+	list-style: none;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	white-space: nowrap;
+}
+
+.ellipsis.line {
+	-webkit-line-clamp: 2;
+}
+
+.view-more {
+	display: block;
+	margin: 24px 0 30px;
+	padding: 11px;
+	border: 1px solid #ccc;
+	color: #555;
+	text-align: center;
+}
+
+.view-more:hover {
+	color: #1150c5;
+	font-weight: bold;
+}
+
+.fix-bottom {
+	position: fixed;
+	z-index: 999;
+	top: auto;
+	bottom: 0;
+	left: 50%;
+	right: auto;
+	width: 100%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}

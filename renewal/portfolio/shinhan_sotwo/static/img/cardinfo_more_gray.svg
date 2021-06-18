@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="18px" viewBox="0 0 4 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="my-/-cardinfo_01" transform="translate(-915.000000, -85.000000)" fill="#999999">
+            <path d="M917,85 C918.104569,85 919,85.8954305 919,87 C919,88.1045695 918.104569,89 917,89 C915.895431,89 915,88.1045695 915,87 C915,85.8954305 915.895431,85 917,85 Z M917,92 C918.104569,92 919,92.8954305 919,94 C919,95.1045695 918.104569,96 917,96 C915.895431,96 915,95.1045695 915,94 C915,92.8954305 915.895431,92 917,92 Z M917,99 C918.104569,99 919,99.8954305 919,101 C919,102.104569 918.104569,103 917,103 C915.895431,103 915,102.104569 915,101 C915,99.8954305 915.895431,99 917,99 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

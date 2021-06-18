@@ -1,0 +1,211 @@
+﻿@charset "utf-8";
+/* Malgun Web Standard Team 20180210 */
+
+/* 단락 :: [컨텐츠 공통] */
+/*.section{position:relative;zoom:1}
+.section:after{display:block;clear:both;content:''}
+.section.v10{margin-bottom:10px}
+.section.v20{margin-bottom:20px}
+.section.v25{margin-bottom:25px}
+.section.v30{margin-bottom:30px}
+.section.v35{margin-bottom:35px}*/
+
+/* header */
+#wrap{}
+header{overflow:hidden;position:relative;background:#a2e6ff}
+.spot_cloud{display:inline-block;position:absolute;z-index:2;bottom:0;left:50%;width:2560px;height:241px;margin-left:-1280px;background:url(../img/cloud_bg2.png) no-repeat 0 0;content:''}
+.spot_cloud:before{dipslay:inline-block;position:absolute;bottom:0;left:-100%;right:100%;height:195px;background:#fff;content:''}
+.spot_cloud:after{dipslay:inline-block;position:absolute;bottom:0;left:100%;right:-100%;height:135px;background:#fff;content:''}
+header h1{overflow:hidden;position:absolute;top:20px;right:0;z-index:2;width:120px;height:35px}
+.header_inner{position:relative;width:1000px;height:741px;margin:0 auto}
+.header_inner .logo{overflow:hidden;display:inline-block;width:120px;height:35px;background:url(../img/logo.png) no-repeat 0 0;text-indent:-999em}
+#spot{overflow:hidden;position:absolute;left:50%;top:0;width:1300px;height:738px;margin-left:-650px;background:url(../img/spot_visual.png) no-repeat center 0}
+.spot_inner{position:relative;width:100%;height:100%}
+/* 별모션 */
+.star_wrap{position:absolute;top:65px;right:274px}
+.star_wrap .star{display:inline-block;position:relative;width:17px;height:16px;background:url(../img/star1.png)no-repeat;text-indent:-999em}
+.star_wrap .star1{top:11px}
+.star_wrap .star2{width:20px;height:19px;background:url(../img/star2.png)no-repeat}
+.star_wrap .star3{top:14px}
+
+.star_wrap {position:absolute;animation: star 1s infinite;}
+.star_wrap {position:absolute;animation: star 2s infinite;}
+
+/* 아이들 모션 */
+.children_wrap{position:absolute;top:414px;right:192px}
+.children_wrap .child{display:inline-block;position:relative;text-indent:-999em}
+.children_wrap .child1{top:-20px;width:78px;height:118px;background:url(../img/child1.png)no-repeat}
+.children_wrap .child2{width:74px;height:119px;background:url(../img/child2.png)no-repeat}
+.children_wrap .child3{right:-10px;top:-24px;width:76px;height:121px;background:url(../img/child3.png)no-repeat}
+
+
+/* 신학기, 우리 아이 든든 지원 선물 */
+.intro_evt1{background:#fff}
+.intro_evt1_inner{overflow:hidden;position:relative;width:1000px;height:794px;margin:0 auto;background:url(../img/con_evt1.png) no-repeat 0 0}
+
+/* 참여 방법 */
+/* .intro_evt2{background:#ffd03b} */
+.intro_evt2{height:1218px;background:#ffd03b url(../img/bg_evt2.png) no-repeat 50% 375px}
+.intro_evt2_inner{position:relative;width:1000px;height:1218px;margin:0 auto;background:url(../img/con_evt2.png) no-repeat 0 0}
+.intro_evt2_inner .btn_copy{position:absolute;left:50%;bottom:420px;margin-left:-170px}
+/* 별 모션2 */
+.star_wrap.v2{position:absolute;top:50px;left:50%;margin-left:-31px}
+.star_wrap.v2 .star{display:inline-block;width:17px;height:16px;background:url(../img/star1.png)no-repeat;text-indent:-999em}
+.star_wrap.v2 .star1{top:14px;background:url(../img/star1_w.png)no-repeat;}
+.star_wrap.v2 .star2{width:20px;height:19px;background:url(../img/star2_w.png) no-repeat}
+.star_wrap.v2 .star3{top:14px;background:url(../img/star1_w.png)no-repeat;}
+
+/* 비행기 탄 아이 모션 */
+
+.intro_evt2_inner .cloud1{position:absolute;bottom:497px;left:-397px;width:96px;height:45px;background:url(../img/cloud1.png) no-repeat;text-indent:-999em}
+.airplane_wrap{position:absolute;bottom:424px;left:-273px}
+.airplane_wrap .airplane{display:inline-block;position:relative;text-indent:-999em}
+.airplane_wrap .air_child{width:244px;height:207px;margin:90px -14px 0 0;background:url(../img/airplane_child.png) no-repeat}
+.airplane_wrap + .shadow{position:absolute;bottom:364px;left:-240px;display:block;width:215px;height:41px;background:url(../img/shadow.png) no-repeat;text-indent:-999em}
+
+.airplane_wrap {
+   animation: movement 1000ms ease 0ms infinite alternate;
+  -webkit-animation: movement 1000ms ease 0ms infinite alternate;
+}
+
+@keyframes movement {
+  from {
+    transform: scale(1) translateY(0px) rotateX(0deg);
+  }
+  to {
+    transform: scale(1) translateY(-35px) rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes movement {
+  from {
+    -webkit-transform: scale(1) translateY(0px) rotateX(0deg);
+    box-shadow: 0 0 0 transparent;
+  }
+  to {
+    -webkit-transform: scale(1) translateY(-35px) rotateX(0deg);
+  }
+}
+
+/* 비행기 그림자 */
+.shadow {
+    animation: shadowZoom 1s ease-in-out infinite alternate;
+    -webkit-animation: shadowZoom 1s ease-in-out infinite alternate;
+}
+
+@keyframes shadowZoom {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0)
+    }
+    100% {
+        transform: scale(0.8);
+          -webkit-transform: scale(0.8);
+    }
+}
+
+
+/* 오른쪽 구름 */
+.cloud_wrap{position:absolute;top:372px;right:-324px}
+.cloud_wrap .cloud{display:inline-block;position:relative;text-indent:-999em}
+.cloud_wrap .cloud2{width:131px;height:63px;background:url(../img/cloud2.png)no-repeat}
+.cloud_wrap .cloud3{width:83px;height:40px;margin:11px 0 0 87px;background:url(../img/cloud3.png)no-repeat}
+
+
+/* 오늘쪽 구름 모션 */
+.cloud_wrap {
+    -webkit-animation:infinite 3s linear 1s alternate;
+    animation:infinite 3s linear 1s alternate
+}
+/*
+@-webkit-keyframes moveRight {
+    0%   {opacity: 1.0; right:-324px}
+    50%   {opacity: 1.0; right:-350px}
+    100% {opacity: 1.0; right:-324px}
+}
+@keyframes moveRight {
+    0%  {opacity: 1.0; right:-324px}
+    50% {opacity: 1.0; right:-350px}
+
+    100% {opacity: 1.0; right:-324px}
+}
+*/
+
+/* 우리 아이 쎈수학 사용후기 등록하기 */
+.intro_evt3{}
+.intro_evt3_inner{position:relative;width:1000px;height:427px;margin:0 auto;background:url(../img/con_evt3.png) no-repeat 0 0}
+.intro_evt3_inner .btn_ok{position:absolute;left:147px;bottom:50px}
+.group_urlregist{overflow:hidden;width:1000px;margin:-10px auto 65px;padding-top:32px;text-align:left}
+.lst_input_wrap{float:left;width:790px}
+.lst_inputform{display:inline-block;margin-left:8px}
+.lst_inputform li{margin-bottom:20px}
+.lst_inputform li:last-child{margin-bottom:0}
+.lst_inputform li input{height:54px;padding:0 23px;border:1px solid #aaa;font-size:19px;color:#888}
+.loc_btn_add{position:absolute;display:inline-block;margin-left:9px;vertical-align:middle}
+.btn_regist{float:right;margin-right:11px}
+
+.intro_evt4_inner{position:relative}
+.intro_evt4_inner .evt4_list {}
+.intro_evt4_inner .evt4_list>li{display:table;height:100px;margin-top:15px;min-height:100px;border:solid 1px #ccc;background:#fff;}
+.intro_evt4_inner .evt4_list li:first-child {margin-top:0;padding-top:0}
+.intro_evt4_inner .evt4_list li .img_wrap {display:table-cell;width:159px;text-align:center;vertical-align:middle}
+.intro_evt4_inner .evt4_list li .link {display:table-cell;width:590px;padding:18px 0;font-size:17px;color:#666;text-align:left;vertical-align:middle}
+.intro_evt4_inner .link .link_list>li{padding:8px 0;border:0;border-bottom:1px solid #ddd;line-height:24px;}
+.intro_evt4_inner .link .link_list>li:first-child{padding-top:0}
+.intro_evt4_inner .link .link_list>li:last-child{padding-bottom:0;border:none}
+.intro_evt4_inner .evt4_list li .link a{color:#666}
+.intro_evt4_inner .evt4_list li .info{display:table-cell;width:230px;padding-right:20px;text-align:right;vertical-align:middle}
+.intro_evt4_inner .evt4_list li .info span{display:inline-block;position:relative;padding:0 12px;font-size:14px;color:#999;line-height:14px}
+.intro_evt4_inner .evt4_list li .info span:first-child:after{display:inline-block;position:absolute;top:3px;right:0;width:1px;height:9px;background:#b8b8b8;content:''}
+.intro_evt4_inner .evt4_list li .info .date{padding:0 16px 0 12px;}
+.intro_evt4_inner .evt4_list li .info a{display:inline-block;margin-left:-2px;vertical-align:middle}
+.intro_evt4_inner .evt4_list li .info .btn_del{width:17px;height:17px;padding:0;background:url(../img/btn_del.png) no-repeat;vertical-align:middle}
+
+/* 쎈수학으로 우리 아이 수학 자신감 완성! 우리 아이만의 쎈수학 활용 팁 공개 */
+.intro_evt4{padding-top:60px;background:#f2f2f2}
+.intro_evt4_inner{position:relative;width:1000px;height:1390px;margin:0 auto}
+.intro_evt4_inner h3{width:686px;height:101px;margin:0 auto 40px;background:url(../img/con_evt4_title.png) no-repeat 0 0;text-indent:-999em}
+
+
+/* 인풋박스 placeholder */
+.lst_inputform li input::-webkit-input-placeholder {color:#888 !important}
+.lst_inputform li input:-moz-placeholder {color:#888 !important}
+
+/* 리스트 */
+.intro_evt4 .list {}
+.intro_evt4 .list li {display:table;margin-top:10px;min-height:100px;border:solid 1px #e0e0e0;background:#fff;height:100px}
+.intro_evt4 .list li:first-child {margin-top:0;}
+.intro_evt4 .list li .img {display:table-cell;padding:0 16px 0 26px;vertical-align:middle}
+.intro_evt4 .list li .info {display:table-cell;width:679px;padding:15px 0;font-size:18px;color:#333;text-align:left;vertical-align:middle;line-height:24px}
+.intro_evt4 .list li .info span{color:#3dad00;font-weight:600}
+.intro_evt4 .list li .writer{display:table-cell;width:175px;text-align:right;vertical-align:middle}
+.intro_evt4 .list li .writer span {position:relative;padding:0 12px;font-size:14px;color:#999;line-height:14px}
+.intro_evt4 .list li .writer span:first-child:after{display:inline-block;position:absolute;top:6px;right:0;width:1px;height:9px;background:#b8b8b8;content:''}
+.intro_evt4 .list li .writer a{display:inline-block;margin-left:-2px;vertical-align:middle}
+.intro_evt4 .list li .btn_del{display:table-cell;width:25px;padding-right:10px;text-align:left;vertical-align:middle}
+.intro_evt4 .list li .btn_del a{display:inline-block;margin-left:-2px;vertical-align:middle}
+
+/* 페이지 */
+.pagination {margin:30px 0; text-align:center}
+.pagination span {display:inline-block;zoom:1; *display:inline;vertical-align:top}
+.pagination span img {vertical-align:top;padding-top:3px}
+.pagination div {display:inline-block; padding:0 8px; zoom:1; *display:inline}
+.pagination div strong {padding:2px 5px; color:#ff684a;font-size:16px;text-decoration:underline}
+.pagination div a {padding:2px 5px; color:#666;font-size:16px}
+
+/* 알아두세요 */
+.intro_evt5{padding-top:10px}
+.intro_evt5_inner{position:relative;width:1000px;height:230px;margin:0 auto;background:url(../img/con_evt5.png) no-repeat 0 0}
+.intro_evt5_inner .btn_edit{position:absolute;top:39px;left:164px}
+
+/* footer */
+.footer{padding:32px 0 120px;background:#fff;text-align:center}
+.footer .footer_inner{width:1000px;margin:0 auto}
+.footer .logo{display:inline-block;overflow:hidden;width:120px;height:35px;background:url(../img/footer_logo.png) no-repeat 0 0;text-indent:-999em}
+
+@media all and (min-width:768px){
+  #wrap{min-width:1050px}
+}
+
+
+

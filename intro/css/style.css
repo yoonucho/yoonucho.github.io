@@ -1,0 +1,414 @@
+/* layout */
+
+/* 벽돌배경 */
+body {width:100%;height:74vh;background-color: silver;
+	background-image: linear-gradient(335deg, #eee 23px, transparent 23px),
+	linear-gradient(155deg, #f2f2f2 23px, transparent 23px),
+	linear-gradient(335deg, #eee 23px, transparent 23px),
+	linear-gradient(155deg, #f2f2f2 23px, transparent 23px);
+	background-size: 58px 58px;background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px}
+main {position: relative;width:100%;height:100%}
+#flex_box {display:flex;flex-flow: row wrap}
+
+/* container */
+.container {position: relative;top:-26rem;max-width:1200px;height:100%;margin:0 auto}
+
+/* header */
+header {text-align: center}
+header .container {top:0}
+h1 {display:inline-block;margin-top:5.5rem;padding:1rem 4rem;/*border: 16px inset #fff;*/
+    -webkit-box-shadow: 0 1px 0 #ccc,
+		 0 2px 0 #c9c9c9,
+		 0 3px 0 #bbb,
+		 0 4px 0 #b9b9b9,
+		 0 5px 0 #aaa,
+		 0 6px 1px rgba(0, 0, 0, .1),
+		 0 0 5px rgba(0, 0, 0, .1),
+		 0 1px 3px rgba(0, 0, 0, .3),
+		 0 3px 5px rgba(0, 0, 0, .2),
+		 0 5px 10px rgba(0, 0, 0, .25),
+		 0 10px 10px rgba(0, 0, 0, .2),
+		 0 20px 20px rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 0 #ccc,
+		 0 2px 0 #c9c9c9,
+		 0 3px 0 #bbb,
+		 0 4px 0 #b9b9b9,
+		 0 5px 0 #aaa,
+		 0 6px 1px rgba(0, 0, 0, .1),
+		 0 0 5px rgba(0, 0, 0, .1),
+		 0 1px 3px rgba(0, 0, 0, .3),
+		 0 3px 5px rgba(0, 0, 0, .2),
+		 0 5px 10px rgba(0, 0, 0, .25),
+		 0 10px 10px rgba(0, 0, 0, .2),
+		 0 20px 20px rgba(0, 0, 0, .15);background:#eee;font-size:5rem;text-align:center;text-transform:capitalize;
+	    text-shadow: 0 1px 0 #ccc,
+		 0 2px 0 #c9c9c9,
+		 0 3px 0 #bbb,
+		 0 4px 0 #b9b9b9,
+		 0 5px 0 #aaa,
+		 0 6px 1px rgba(0, 0, 0, .1),
+		 0 0 5px rgba(0, 0, 0, .1),
+		 0 1px 3px rgba(0, 0, 0, .3),
+		 0 3px 5px rgba(0, 0, 0, .2),
+		 0 5px 10px rgba(0, 0, 0, .25),
+		 0 10px 10px rgba(0, 0, 0, .2),
+		 0 20px 20px rgba(0, 0, 0, .15);
+	}
+/* main */
+.window_box{position:static;margin-top:15rem;width:50%;height:19rem;perspective:600px;-webkit-perspective: 600px}
+
+.window { position:absolute; z-index:0; top:50%; left:0;right:0;width:17rem; height: 100%;margin:0 auto; background: #D2E5C5; border-radius: 50% 50% 0 0; border:5px solid #4A8391; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.window .window_inner {position:absolute; top:1rem; left:0; right:0; bottom:0; width: 90%; height: 90%; margin:0 auto;background: #4A8391; border-radius: 50% 50% 0 0; border:5px solid #4A8391;box-sizing:border-box }
+.window_inner .me { position: relative; margin-top: 3.5rem; animation: rotateHead 2s linear .5s  infinite alternate; -webkit-animation: rotateHead 2s linear .5s  infinite alternate}
+#window2 .window_inner .me {margin-top:4rem;margin-left:2rem;}
+#window2 .window_inner .me img{width:90%}
+
+/* 캐릭터 헤드 애니메이션 */
+@-webkit-keyframes rotateHead {
+	0%{
+		transform: rotate(-10deg)	;
+		-webkit-transform: rotate(-10deg)	;
+		-moz-transform: rotate(-10deg)	;
+		-ms-transform: rotate(-10deg)	;
+		-o-transform: rotate(-10deg)	;
+	}
+
+	50%{
+		transform: rotate(0deg)	;
+		-webkit-transform: rotate(0deg)	;
+		-moz-transform: rotate(0deg)	;
+		-ms-transform: rotate(0deg)	;
+		-o-transform: rotate(0deg)	;
+	}
+
+	100% {
+		transform:rotate(10deg);
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		-o-transform:rotate(10deg);
+	}
+}
+@keyframes rotateHead {
+	0%{
+		transform: rotate(-10deg)	;
+		-webkit-transform: rotate(-10deg)	;
+		-moz-transform: rotate(-10deg)	;
+		-ms-transform: rotate(-10deg)	;
+		-o-transform: rotate(-10deg)	;
+	}
+
+	50%{
+		transform: rotate(0deg)	;
+		-webkit-transform: rotate(0deg)	;
+		-moz-transform: rotate(0deg)	;
+		-ms-transform: rotate(0deg)	;
+		-o-transform: rotate(0deg)	;
+	}
+
+	100% {
+		transform:rotate(10deg);
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		-o-transform:rotate(10deg);
+	}
+}
+
+/* 창문 레이아웃 */
+.piece { position: absolute; top:-3px; width:50%; height:298px;border-bottom:5px solid #4A8391; cursor: pointer; -webkit-transition: .5s ease; transition: .5s ease;}
+.piece:after { position: absolute; width:100%; height:100%; border-radius:11rem 0 0 0;border: 5px solid #4A8391;
+    border-bottom:0;background: linear-gradient(#D2E5C5 50%, #4A8391 50%); background-size:100% 1rem; content:"" ; -webkit-border-radius:11rem 0 0 0; -moz-border-radius:11rem 0 0 0; -ms-border-radius:11rem 0 0 0; -o-border-radius:11rem 0 0 0; -webkit-box-sizing:border-box; box-sizing:border-box}
+.active_left {left:-4px;border-right: 5px solid #4A8391;-webkit-transform-origin: left center;transform-origin: left center;}
+.active_left:after {border-right:0;}
+.active_right {right:-4px;border-left: 5px solid #4A8391;-webkit-transform-origin: right center;transform-origin: right center;}
+.active_right:after {border-left:0;border-radius:0 11rem 0 0; -webkit-border-radius:0 11rem 0 0; -moz-border-radius:0 11rem 0 0; -ms-border-radius:0 11rem 0 0; -o-border-radius:0 11rem 0 0; }
+
+
+/* 4조각 레이아웃 */
+/* 왼쪽 창문 */
+/* .window_half {position: relative;width:100%; border: solid #4A8391;border-width: 5px 0 0 5px; border-radius:100% 0 0 0 ; -webkit-border-radius:100% 0 0 0 ; -moz-border-radius:100% 0 0 0 ; -ms-border-radius:100% 0 0 0 ; -o-border-radius:100% 0 0 0 ; }
+
+.window_half3 {border-width:0 0 5px 5px; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0; -ms-border-radius:0; -o-border-radius:0; } */
+
+/* 오른쪽 창문 */
+/* .window_half2 { border-width:5px 5px 0 0;border-radius: 0 100% 0 0 ; -webkit-border-radius: 0 100% 0 0 ; -moz-border-radius: 0 100% 0 0 ; -ms-border-radius: 0 100% 0 0 ; -o-border-radius: 0 100% 0 0 ; }
+
+.window_half4 {border-width: 0 5px 5px 0; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0; -ms-border-radius:0; -o-border-radius:0; }
+
+.window_half:last-child {top:-0.5rem}
+.window_half:after {position:absolute;width:100%; height:100%; border-radius:inherit;} */
+
+
+
+/* 오른쪽 창문 닫혔을때 */
+#window .active_right { animation: closeWindow 2s linear 2s infinite alternate; -webkit-animation: closeWindow 2s linear 2s infinite alternate; }
+
+@-webkit-keyframes closeWindow {
+	0% {
+		transform:rotateY(10deg) ;
+		-webkit-transform:rotateY(10deg) ;
+		-moz-transform:rotateY(10deg) ;
+		-ms-transform:rotateY(10deg) ;
+		-o-transform:rotateY(10deg) ;
+	}
+
+	100% {
+		transform:rotateY(15deg);
+		-webkit-transform:rotateY(15deg);
+		-moz-transform:rotateY(15deg);
+		-ms-transform:rotateY(15deg);
+		-o-transform:rotateY(15deg);
+	}
+
+}
+
+@keyframes closeWindow {
+	0% {
+		transform:rotateY(10deg) ;
+		-webkit-transform:rotateY(10deg) ;
+		-moz-transform:rotateY(10deg) ;
+		-ms-transform:rotateY(10deg) ;
+		-o-transform:rotateY(10deg) ;
+	}
+
+	100% {
+		transform:rotateY(15deg);
+		-webkit-transform:rotateY(15deg);
+		-moz-transform:rotateY(15deg);
+		-ms-transform:rotateY(15deg);
+		-o-transform:rotateY(15deg);
+	}
+
+}
+
+@-webkit-keyframes openWindow {
+	0% {
+		transform:rotateY(120deg) ;
+		-webkit-transform:rotateY(120deg) ;
+		-moz-transform:rotateY(120deg) ;
+		-ms-transform:rotateY(120deg) ;
+		-o-transform:rotateY(120deg) ;
+	}
+
+	100% {
+		transform:rotateY(110deg);
+		-webkit-transform:rotateY(110deg);
+		-moz-transform:rotateY(110deg);
+		-ms-transform:rotateY(110deg);
+		-o-transform:rotateY(110deg);
+	}
+
+}
+
+@keyframes openWindow {
+	0% {
+		transform:rotateY(120deg) ;
+		-webkit-transform:rotateY(120deg) ;
+		-moz-transform:rotateY(120deg) ;
+		-ms-transform:rotateY(120deg) ;
+		-o-transform:rotateY(120deg) ;
+	}
+
+	100% {
+		transform:rotateY(110deg);
+		-webkit-transform:rotateY(110deg);
+		-moz-transform:rotateY(110deg);
+		-ms-transform:rotateY(110deg);
+		-o-transform:rotateY(110deg);
+	}
+
+}
+
+/* 왼쪽 창문 열렸을때 */
+.open.active_left { transform:rotateY(-120deg); -webkit-transform:rotateY(-120deg); -moz-transform:rotateY(-120deg); -ms-transform:rotateY(-120deg); -o-transform:rotateY(-120deg); }
+
+/* 오른쪽 창문 열렸을때 */
+#window .active_right:hover { animation:none ; -webkit-animation:none ; }
+#window .open.active_right { animation:none; -webkit-animation:none; }
+
+.open.active_right {transform:rotateY(120deg) ; -webkit-transform:rotateY(120deg) ; -moz-transform:rotateY(120deg) ; -ms-transform:rotateY(120deg) ; -o-transform:rotateY(120deg)}
+
+
+/* 포트폴리오 안내바 */
+.window_bar { position:absolute; left:50%; bottom:-19px; width: 100%; height:3.3rem; background:#D2E5C5; border-radius: 10px 10px 0 0; border:5px solid #4A8391;border-bottom:0; color:#4A8391; font-size:1.5rem;line-height:3.3rem; text-transform: uppercase; text-align: center; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%)}
+
+/* 구름 */
+.big_cloud_container {position: relative;;bottom:-16rem;width:100%;height:100%;max-height:26rem}
+/* .cloud1,.cloud2 {display:none} */
+.cloud1{ position:absolute; top:0; left:0; z-index:1; width:29rem; height:23rem; background:url(../img/big_cloud1.png) center left / 100% no-repeat ; animation: upCloud  8s ease 1s forwards; -webkit-animation: upCloud  8s ease 1s forwards; }
+.cloud2{ position:absolute; top:0; right:0; z-index:1; width:26rem; height:26rem; background:url(../img/big_cloud2.png) center right / 100%  no-repeat; animation: upCloud  6s ease 3s forwards; -webkit-animation: upCloud  6s ease 3s forwards; }
+
+
+/* 큰구름 애니메이션 */
+ @keyframes upCloud{
+	0% {
+		top:0;
+		
+	}
+
+	/* 50% {
+		top: 0;
+	} */
+
+	100% {
+		top: -300%;
+	}
+} 
+
+/* 작은 구름 */
+.clouds { filter: drop-shadow(0 0 3px rgba(50, 50, 50, 0.75)); -webkit-filter: drop-shadow(0 0 3px rgba(50, 50, 50, 0.75));
+; animation:scaleCloud 5s linear infinite ; -webkit-animation:scaleCloud 5s linear infinite ; }
+.cloud3 {position: absolute;top:-1rem; left:0;width:8.3rem;height:3.2rem;background:url(../img/cloud1.png) no-repeat;}
+.cloud4 { position: absolute; top:5rem; left:-20rem; width:7.6rem; height:3rem; background:url(../img/cloud2.png) no-repeat; animation:scaleCloud 7s linear infinite ; -webkit-animation:scaleCloud 7s linear infinite ; }
+.cloud5 {position: absolute;top:-11rem;right:3.5rem;width:4.6rem;height:1.8rem;background:url(../img/cloud4.png) no-repeat;}
+.cloud6 { position: absolute; top:-2rem; right:15rem; width:6.8rem; height:2.7rem; background:url(../img/cloud5.png) no-repeat; animation:scaleCloud 7s linear infinite ; -webkit-animation:scaleCloud 7s linear infinite ; }
+.cloud7 {position: absolute;top:18rem;left:-5rem;width:4.6rem;height:1.8rem;background:url(../img/cloud4.png) no-repeat;}
+.cloud8 {position: absolute;top:32em;left:0;width:10.6rem;height:4.1rem;background:url(../img/cloud3.png) no-repeat;}
+.cloud9 { position: absolute;top:15rem; right:4rem; width:10.6rem; height:4.1rem; background:url(../img/cloud3.png) no-repeat; animation:scaleCloud 6s linear infinite ; -webkit-animation:scaleCloud 6s linear infinite ; }
+.cloud10 { position: absolute; top:32rem; right:0;width:6.8rem; height:2.7rem; background:url(../img/cloud5.png) no-repeat; animation:scaleCloud 8s linear infinite ; -webkit-animation:scaleCloud 8s linear infinite ; }
+
+
+
+
+/* 작은 구름 애니메이션 */
+@keyframes scaleCloud {
+	0% {
+		transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+	}
+
+	50% {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+	}
+}
+
+
+/* mediaquery 320 / 480 / 640 / 768 / 960 / 1024 / 1280 */
+@media only screen and (max-width:1280px) {
+	.clouds { transition: all 2s ease; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; -o-transition: all 2s ease; }
+	.cloud6 {top:1rem;right:9rem}
+	.cloud7 {left:3rem}
+	.cloud10 {right:3rem}
+}
+
+@media only screen and (max-width:1024px) {
+	.row {padding:1rem}
+	h1 { display:block; margin:1rem 0; font-size:3rem; transition: .3s ease-in; -webkit-transition: .3s ease-in; -moz-transition: .3s ease-in; -ms-transition: .3s ease-in; -o-transition: .3s ease-in; }
+	.window {width:16.5rem;transition: .3s ease;}
+	.window_inner .me {margin-top:4rem}
+	#window2 .window_inner .me {margin-top:5rem}
+	.big_cloud_container {bottom:-20rem}
+	.cloud1,.cloud2 {background-size:50%}
+	.cloud3 {top:-1rem;left:3rem}
+	.cloud5 {top:-8rem;right:3rem}
+	.cloud6 {top:-2rem;right:15rem}
+	.cloud8 {left:3rem}
+	.cloud9 {top:-1rem;right:21rem}
+		
+	/* 큰구름 애니메이션 */
+	/* @keyframes upCloud{
+		0% {
+			top:40%;
+			
+		}
+
+		50% {
+			top: 0;
+		}
+
+		100% {
+			top: -150%;
+		}
+	} */
+	
+}
+
+@media only screen and (max-width:960px) {	
+	.window {width:15.5rem}
+}
+
+@media only screen and (max-width:910px) and (min-width:769px){	
+	.window_box {position:relative;top:5rem;width:100%;margin-top:0;margin-bottom:6rem}
+
+}
+
+
+@media only screen and (max-width:768px) {
+	.window_box {position:relative;top:5rem;width:100%;margin-top:0}
+	#window {margin-bottom:6rem}
+	.big_cloud_container {bottom:-30rem}
+	.cloud3 {top:21rem;left:12rem}
+	.cloud4,.cloud6 {display:none}
+	.cloud7 {top:5rem;left:7rem;right:7rem}
+	.cloud8 {top:unset;bottom:-2.5rem;left:6rem;}
+	.cloud9 {top:-2rem;right:7rem}
+	.cloud10 {top:unset;bottom:-2.5rem;right:6rem}
+
+}
+
+
+@media only screen and (max-width:640px) {
+
+	h1 {margin:0;padding:1rem;font-size:2rem}
+	.window_box {top:3rem}
+	#window {top:2rem;margin-bottom:4rem}
+	.cloud9 {top:-1rem;}
+	}
+
+@media only screen and (max-width:480px) {
+	h1 { font-size: 1.5rem}
+	.window_box {top:1rem;height:70vw}
+	#window {top:0;margin-bottom:0}
+	.window {max-width:13rem;height:60vw}
+	.window .window_inner {overflow: hidden}
+	.window_inner .me {margin-top:3rem}
+	#window2 .window_inner .me {margin-top:3rem} 
+	.piece {height:100%}
+	.window_bar {font-size:1rem;line-height:5vh}
+	.cloud1,.cloud2{display:none}
+	.cloud4 {display:none}
+	.cloud7 {left:3rem}
+	.cloud8 {left:10rem;bottom:-6rem}
+	.cloud9 {display:none}
+	.cloud10 {right:unset;left:4rem;bottom:-6rem}
+}
+
+@media only screen and (max-width:360px) {
+	.window {max-width:12rem}
+	.cloud8 {left:9rem}
+	.cloud8, .cloud10 {bottom:-5rem}
+
+}
+
+@media only screen and (max-width:320px) {
+	.window {max-width:12rem;width: 11rem}
+	.window_inner .me {margin-top:2rem}
+	#window2 .window_inner .me {margin:2rem 0 0 1rem}
+	.window_bar {line-height:6vh} 
+	.cloud3 {display:none}
+	.cloud8 {left:6.5rem;bottom:-4rem}
+	.cloud10 {left:3rem;bottom:-4rem}
+	
+}
+
+/* 화면 회전시 */
+  @media  all and (min-width:320px) and (max-width:768px) and (orientation: landscape) {
+	 .cloud1,.cloud2 {display:none}
+	 .cloud8,.cloud10 {bottom:-32rem}
+ } 

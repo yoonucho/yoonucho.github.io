@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>결제하기 : 좋은책 신사고</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="author" content="Kim kwangsung">
+<meta name="keywords" content="좋은책 신사고, 쎈닷컴, 우공비">
+<meta name="description" content="좋은책 신사고에서 다양한 정보와 컨텐츠를 만나 보세요">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/content.css">
+<script src="../js/jquery.js"></script>
+<script src="../js/content.js"></script>
+</head>
+<body>
+<script src="../js/header.js"></script>
+<hr>
+<div id="container" class="sub"><!-- container -->
+	<h2 class="blind">본문</h2>
+	<div class="section v10">
+		<h3 class="blind">배송지 정보</h3>
+		<p class="lst_tit_payment"> <strong class="fl">기본 배송지</strong> <a href="#" class="btn_change_addr">배송지 변경</a> </p>
+		<div class="box_con_type v5">
+			<p class="text_addr"> <span class="blind">우편번호</span>[07791] <span class="blind">주소</span>서울특별시 강서구 강서로 463 새싹타워 8층 101동 802호 </p>
+			<ul class="lst_type5 mt12">
+				<li> <strong class="tit_buyinfo fl">받는분</strong> <span class="clr_grey2">일이삼사오육칠팔구십</span> </li>
+				<li> <strong class="tit_buyinfo fl">휴대폰</strong> <span class="clr_grey2">010-9999-9999</span> </li>
+				<li> <strong class="tit_buyinfo fl">전화번호</strong> <span class="clr_grey2">064-999-9999</span> </li>
+				<li class="form_area"> <strong class="tit_buyinfo fl mt4">배송요청</strong> <span class="clr_grey2">
+					<select title="선택" style="width: 100%">
+						<option selected>택배기사님께 전달되는 내용입니다.</option>
+						<option>택배기사님께 전달되는 내용입니다.</option>
+						<option>택배기사님께 전달되는 내용입니다.</option>
+					</select>
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section v10">
+		<ul class="lst_accordion">
+			<li class="on"><a href="#none" class="pd_space"><strong class="fl">총 주문상품(<em>2</em>개)</strong> <span class="ml6 clr_green"><i class="ico ico_ssing_v3 mr4"></i>보유씽 <em>17,000</em></span> </a>
+				<div class="group_book_view v2">
+					<ul class="lst_type4">
+						<li>
+							<span class="group_book_info v3">
+								<span class="img_book v3"><img src="../img/@tmp_book4.jpg" alt="우공비 초등 자습서 국·수·사·과 6-2 세트 섬네일"></span>
+								<dl class="desc_book v3">
+									<dt>우공비 초등 자습서 국·수·사·과 6-2 세트 (4권)우공비 초등 자습서 국·수·사·과 6-2 세트 (4권)</dt>
+									<dd><b>14,000</b>원 <span class="ico_pipe">|</span> <b>1</b>개</dd>
+									<dd class="form_input"><input type="text" title="사용할 씽 입력" value="" placeholder="사용할 씽을 입력해주세요." class="input_type1 v2"></dd>
+								</dl>
+							</span> 
+						</li>
+						<li>
+							<span href="#" class="group_book_info v3">
+								<span class="img_book v3"><img src="../img/@tmp_book4.jpg" alt="쎈(SSEN) 중등 수학1(상) 섬네일"></span>
+								<dl class="desc_book v3">
+									<dt>쎈(SSEN) 중등 수학1(상)(2018)</dt>
+									<dd><b>14,000</b>원 <span class="ico_pipe">|</span> <b>1</b>개</dd>
+									<dd class="form_input">
+										<input type="text" title="사용할 씽 입력" value="14,000" placeholder="사용할 씽을 입력해주세요." class="input_type1 v2">
+									</dd>
+								</dl>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="section v10">
+		<h3 class="lst_tit_mypage">할인/혜택 사용</h3>
+		<div>
+			<ul class="list_check v2">
+				<li>
+					<input class="checkbox" type="checkbox" id="discount1" title="배송비 선택" checked>
+					<label for="discount1"> 배송비(<strong class="clr_green ft14">14,000</strong>씽) </label>
+					<p><input type="text" title="배송비 입력" value="14,000" placeholder="배송비에 사용할 씽을 입력해주세요." class="input_type1 v2"></p>
+				</li>
+				<li>
+					<input class="checkbox" type="checkbox" id="discount2" title="도서쿠폰 선택">
+					<label for="discount2"> 도서쿠폰(<strong class="ft14">1</strong>개) </label>
+					<p>
+						<select title="도서쿠폰 선택" style="width:100%">
+							<option selected>사용 가능 쿠폰이 1개 있습니다</option>
+						</select>
+					</p>
+				</li>
+				<li>
+					<input class="checkbox" type="checkbox" id="discount3" title="도서쿠폰 선택">
+					<label for="discount3"> 도서쿠폰(<strong class="ft14">0</strong>개) </label>
+					<p>
+						<!-- [D]사용가능한 쿠폰이 없을 경우 -->
+						<select title="도서쿠폰 선택" disabled style="width:100%;background-color:#efefef">
+							<option selected>사용 가능 쿠폰이 없습니다.</option>
+						</select>
+					</p>
+				</li>
+			</ul>
+			<ul class="lst_totalbody">
+				<li><strong class="tit_lft_order">총 주문금액</strong><span class="tit_rgt_order"><em>42,000</em>원</span></li>
+				<li><strong class="tit_lft_order">총 할인금액</strong><span class="tit_rgt_order"><em>-0</em>원</span></li>
+				<li><strong class="tit_lft_order">배송비</strong><span class="tit_rgt_order"><em>+2,500</em>원</span></li>
+			</ul>
+			<p class="group_order_tfoot"><strong class="tit_lft_order">총 결제금액</strong><span class="tit_rgt_order v2"><em>30,500</em>원</span></p>
+		</div>
+	</div>
+	<div class="section v10">
+		<h3 class="title_payment">결제수단</h3>
+		<div>
+			<ul class="list_payment">
+				<li>
+					<input type="radio" id="payment_rdo1" name="payment_rdo" class="rdo_payment">
+					<label for="payment_rdo1"><i>신용카드</i></label>
+				</li>
+				<li>
+					<input type="radio" id="payment_rdo2" name="payment_rdo" class="rdo_payment" checked="checked">
+					<label for="payment_rdo2"><i>계좌이체</i></label>
+				</li>
+				<li>
+					<input type="radio" id="payment_rdo3" name="payment_rdo" class="rdo_payment">
+					<label for="payment_rdo3"><i>무통장<br>
+						입금</i></label>
+				</li>
+				<li>
+					<input type="radio" id="payment_rdo4" name="payment_rdo" class="rdo_payment">
+					<label for="payment_rdo4"><i>100%<br>
+						씽/쿠폰</i></label>
+				</li>
+			</ul>
+			<div class="payment_area">
+				<h4 class="tit_provision">전자보증안내 및 개인정보 동의</h4>
+				<p> 물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험 증권이 발급됩니다.<br>
+					증권이 발급되는 것의 의미는, 물품대금 결제시에 소비자에게 서울보증 보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여, 피해 발생시 쇼핑몰보증보험으로써 완벽하게 보호 받을 수 있습니다. 또한, <strong class="clr_green">입력하신 개인정보는 증권발급을 위해 필요한 정보이며 다른 용도로 사용되지 않습니다. </strong><br>
+					(전자보증보험 발생시 별도의 수수료가 부과되지 않습니다.) </p>
+				<ul class="list_provision">
+					<li class="mt7"> <strong>[제공받는자]</strong> 서울보증보험㈜, ㈜유세이프 </li>
+					<li> <strong>[제공하는 항목]</strong><br>
+						구매자명, 구매자 생년월일, 구매자 성별, 구매자 연락처(일반전화 및 핸드폰), 구매자 이메일, 주문번호, 배송지정보, 주문금액 </li>
+					<li class="mt7"> <strong>[제공목적]</strong> 쇼핑몰 보증보험 가입 및 보험가입 제반사항 </li>
+					<li> <strong>[보유 및 이용기간]</strong> 개별 서비스 제공기간
+						<ul  class="mt7">
+							<li>- 동의 시 : 보증보험 증권 발행</li>
+							<li>- 미동의 시 : 보증보험 증권 미발행</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="form_payment"> 
+				<strong>개인정보 이용동의</strong> 
+				<span> 
+					<span class="rdo_basic">
+						<input type="radio" id="rdo_basic1" name="rdo_basic" checked="checked">
+						<label for="rdo_basic1"><span>동의</span></label>
+					</span> 
+					<span class="rdo_basic">
+						<input type="radio" id="rdo_basic2" name="rdo_basic">
+						<label for="rdo_basic2"><span>미동의</span></label>
+					</span> 
+				</span> 
+			</div>
+			<div class="box_con_type v7"><a href="#" class="btn_v3 btn_green" style="width:100%"> <span class="ico ico_payment"></span>결제하기</a></div>
+		</div>
+	</div>
+	<div class="section note_group">
+		<h3 class="blind">유의사항</h3>
+		<div class="note_area">
+			<h4 class="tit_note">주문/결제</h4>
+			<ul class="lst_type1 v4">
+				<li>씽은 결제시 100씽 단위로 사용하실 수 있습니다.</li>
+				<li>10,000원 이상 주문시 배송비는 무료입니다.</li>
+				<li>배송완료일은 <strong class="clr_green">주문일+3일(주말, 공휴일 제외)</strong>입니다.</li>
+			</ul>
+		</div>
+		<div class="note_area">
+			<h4 class="tit_note">반품방법</h4>
+			<ul class="lst_type1 v4">
+				<li>상품을 실제 받으신 날로부터 7일 이내 요청(고객센터 or 홈페이지)</li>
+				<li>반품환불은 택배비 <strong class="clr_green">선불</strong> 부담이며, 하자교환은 택배비 <strong class="clr_green">착불</strong>입니다.</li>
+				<li>씽/쿠폰 결제시, 도서가 당사에 도착하면 환원됩니다. </li>
+				<li>반품 주소<br>
+					<strong class="clr_green style_underline">서울 특별시 강서구 강서로 463 새싹타워 지하1층 새싹홀 입구</strong></li>
+			</ul>
+		</div>
+		<div class="note_area">
+			<h4 class="tit_note">반품/교환 불가 상품</h4>
+			<ul class="lst_type1 v4">
+				<li>상품을 실제 받은 날로부터 7일이 경과한 경우</li>
+				<li>고객 부주의에 의한 상품 훼손 및 가치 감소한 경우</li>
+				<li>상품과 함께 전달된 사은품 누락된 경우 </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+<hr>
+<script src="../js/footer.js"></script>
+</body>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SO2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="../static/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../static/css/font.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../static/css/common.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../static/css/layout.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../static/css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../static/css/sales.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="body-wrap">
+            <header>
+                <!-- ///////////////////////////////////////////////////////////////////////////////// GNB : sub -->
+                <!-- <nav class="gnb sub sticky-top" style="background-color: #fcedca">
+                    <div class="container-fluid">
+                        <div class="row top">
+                            <div class="col-3 left">
+                                <ul class="nav">
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="nav-link" href="#"><img src="../static/img/GNB_back.svg" class="icon" /> 뒤로가기</a>
+                                    </li>
+                                    <li class="nav-item d-inline-block d-lg-none">
+                                        <a class="nav-link" href="#"><img src="../static/img/GNB_home.svg" class="icon" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 number"><a>STB-100057</a></div>
+                            <div class="col-3 right">
+                                <ul class="nav justify-content-end">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/alarm/list.html"><img src="../static/img/GNB_alarm_1.svg" class="icon" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav> -->
+                <!-- ///////////////////////////////////////////////////////////////////////////////// GNB : sub -->
+            </header>
+
+            <section class="detail image-main" style="background-color: #e4effa">
+                <div class="container">
+                    <div class="image">
+                        <img src="../static/img/snk_02.png" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="progress-detail detail title">
+                <div class="container position-relative">
+                    <div class="left">
+                        <div class="image"><img src="../static/img/snk_02.png" /></div>
+                        <div class="plate">
+                            <h1 class="name">Dunk Low Kasina Industrial Blue</h1>
+                            <p class="option">
+                                <button type="button"  data-toggle="modal" data-target="#productModal">구성상품보기</button><img src="../static/img/arrow_right_gray.svg" class="arrow" /> 
+                                <button class="float-right" type="button" data-toggle="modal" data-target="#infoModal"><span >공동구매 정보</span></button> 
+                            </p>
+                        </div>
+                        <div class="going">
+                            <h6>예상 수익률 <strong>32%</strong></h6>
+                            <p><strong>100%</strong> 분양 완료</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="dist">
+                        <div class="inner">
+                            <div class="single">
+                                <span class="status wait">판매 준비중</span>
+                                <span class="float-right">20조각 보유중</span>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="single">
+                                <span class="status">판매 진행중</span>
+                                <span class="float-right">20조각 보유중</span>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="single">
+                                <span class="status exit">판매 완료</span>
+                                <span class="float-right"><a href="../join/join_step1.html">가입하기</a></span>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail info">
+                <div class="container position-relative">
+					<div class="detail-line">
+						<div class="inner">
+							<div class="ratio plus">
+								최근 판매 결과 <strong>+ 41.54%</strong>
+								<span class="next"><img src="../static/img/arrow_white.svg" /></span>
+							</div>
+							<div class="ratio minus">
+								최근 판매 결과 <strong>- 41.54%</strong>
+								<span class="next"><img src="../static/img/arrow_white.svg" /></span>
+							</div>
+						</div>
+						<div class="inner">
+							<div class="per">
+								<h4 class="headline">판매정보</h4>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
+								<div class="sub d-flex justify-content-between">
+									<div class="left">
+										<h5>판매 진행률 0%</h5>
+									</div>
+									<div class="right">
+										<h5>0 / 1 (판매완료 / 총)</h5>
+									</div>
+								</div>
+								<div class="step row">
+									<div class="col-4 col-lg-4 active">
+										<span>판매준비중</span><button class="right"  type=button data-toggle="modal" data-target="#optionModal" ><span>1</span></button>
+									</div>
+									<div class="col-4 col-lg-4">
+										<span>판매중</span>
+										<button class="right" type=button data-toggle="modal" data-target="#optionModal"><span>0</span></button>
+									</div>
+									<div class="col-4 col-lg-4 active">
+										<span>판매완료</span>
+										<button class="right" type=button data-toggle="modal" data-target="#optionModal"><span>12</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="inner">
+                        <div class="quote">
+                            <h4 class="headline">외부시세정보</h4>
+                            <p>국내 거래가 <strong>1,250,000원 ~ 2,500,000원</strong></p>
+                            <div class="chart"></div>
+                            <p>최근 거래가</p>
+                            <div class="global row">
+                                <div class="col-12 col-lg-4">
+                                    <h5><img src="../static/img/flag_kr.svg" /> 한국</h5>
+                                    <div class="right">
+                                        <h3>1,250,000원</h3>
+                                        <p>2020.01.31</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <h5><img src="../static/img/flag_us.svg" /> 미국</h5>
+                                    <div class="right">
+                                        <h3>1,250,000원</h3>
+                                        <p>2020.01.31</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <h5><img src="../static/img/flag_cn.svg" /> 중국</h5>
+                                    <div class="right">
+                                        <h3>1,350,000원</h3>
+                                        <p>2020.01.31</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="headline">상품정보</h4>
+                        <div class="description">
+                            <p>
+                                STB-10056<br />
+                                Air Force 1 Low G-Dragon Peaceminusone Para-Noise (GD Autograph Package)<br />
+                                Korea Tag / 280(cm)
+                            </p>
+                            <p>
+                                <label>스타일</label> <span>AQ3692-001</span><br />
+                                <label>발매가</label> <span>219,000원</span><br />
+                                <label>발매일</label> <span>2019.11.23</span>
+                            </p>
+                            <p>
+                                지드래곤의 창의적인 자아와 이상에 영감을 담아 탄생한 에어 포스 1 파라- 노이즈를 만나보세요. 음악과 패션 그리고 문화를 아우르는, 한국의 대표적인 아티스트 지드래곤이 나이키 에어 포스 1과 만나 대담하고 혁신적인 스타일을 선보입니다.<br />
+                                <span class="info">* 지드래곤의 친필 사인이 적힌 제품과 홀로그램 인증 카드가 포함됩니다.
+                            </p>
+                        </div>
+                        <h4 class="headline">특이사항 / 컨디션</h4>
+                        <div class="description">
+                            <div class="slide">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                             <img src="../static/img/snk_02.png" alt="아이템">
+                                        </div>
+                                        <div class="swiper-slide">
+                                             <img src="../static/img/snk_02.png" alt="아이템">
+                                        </div>
+                                        <div class="swiper-slide">
+                                             <img src="../static/img/snk_02.png" alt="아이템">
+                                        </div>
+                                        <div class="swiper-slide">
+                                             <img src="../static/img/snk_02.png" alt="아이템">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <p>컨디션 리포트의 내용입니다. 지드래곤의 창의적인 자아와 이상에 영감을 담아 탄생한 에어 포스 1 파라- 노이즈를 만나보세요. 음악과 패션 그리고 문화를 아우르는, 한국의 대표적인 아티스트 지드래곤. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer></footer>
+        </div>
+
+        <div class="modal fade agree" id="agreeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"  role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">안내사항</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="../static/img/pop_icon_close.svg" style="fill: red" />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="scroll">
+                            <h5>주의사항 및 판매 위탁 동의</h5>
+                            <p>해당 작품의 모집기간은 2020년 8월 20일까지 진행됩니다.</p>
+                            <h5>공동구매 실패 안내</h5>
+                            <p>모집기간내로 참여율이 100% 미만일 경우 공동구매 실패 처리 됩니다. 실패 처리시 구매 금액은 즉시 환불 처리 됩니다.</p>
+                            <h5>공동구매 취소 안내</h5>
+                            <p>공동구매 참여 후 구매 후 7일이내 공동구매 참여 취소가 가능합니다. 단, 공동구매 완료 후에는 판매 준비 진행으로 취소가 불가 합니다.</p>
+                            <h5>판매진행 안내</h5>
+                            <p>공동구매 참여가 완료되면 판매가 바로 진행 됩니다.</p>
+                            <h5>판매 수수료 안내</h5>
+                            <p>공동 구매 참여 완료 후 판매 진행시 판매 수수료가 발생합니다. (판매 수수료 = 판매채널 수수료 + So2 위탁 판매 수수료)</p>
+                            <h5>세금 부과 안내</h5>
+                            <p>소유권 구매시 10%의 부가세가 부과됩니다. 일부 작품에는 양도소득세가 발생할 수 있습니다.</p>
+                            <h5>판매 및 관리, 운영 위탁에 대한 동의 안내</h5>
+                            <p>공동구매에 참여하는 즉시 서비스에 해당 상품/작품의 판매 및 관리 운영을 위탁하는 것에 동의하는 것으로 간주 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group form-check checkbox">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <span></span>
+                            <label class="form-check-label" for="exampleCheck1">위의 안내사항을 숙지하였고 내용에 동의 합니다. </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-light btn-block">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade info" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">공동구매정보</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="../static/img/pop_icon_close.svg" style="fill: red" />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li><strong>공동구매가
+							</strong>220,000원</li>
+                            <li><strong>총발행조각</strong>1,000주</li>
+                            <li><strong>조각당 가격</strong>1,000원</li>
+                            <li><strong>예상 수익율</strong>12%</li>
+                            <li><strong>공동구매 시작일</strong>2020-06-18 13:34</li>
+                            <li><strong>공동구매 종료일</strong>2020-06-20 12:24</li>
+                            <li><strong>소요일</strong>2일</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade option" id="optionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">상태별 구성상품</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="../static/img/pop_icon_close.svg" style="fill: red" />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-pills justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">판매 준비중(3)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">판매중(5)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">판매 완료(3)</a>
+                            </li>
+                        </ul>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">구성상품</th>
+                                    <th scope="col">판매가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">No.01</th>
+                                    <td>220cm</td>
+                                    <td>250,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.01</th>
+                                    <td>220cm</td>
+                                    <td>250,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.01</th>
+                                    <td>220cm</td>
+                                    <td>250,000원</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" colspan="3" class="text-center none">판매준비중 상품이 없습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-light btn-block">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade product" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">구성상품 <span>(총 30개)</span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="../static/img/pop_icon_close.svg" style="fill: red" />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">No.01</th>
+                                    <td>220cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.02</th>
+                                    <td>220cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.03</th>
+                                    <td>225cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.04</th>
+                                    <td>230cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.05</th>
+                                    <td>250cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.06</th>
+                                    <td>255cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.07</th>
+                                    <td>225cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.08</th>
+                                    <td>225cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.09</th>
+                                    <td>225cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">No.10</th>
+                                    <td>260cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header fail">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="../static/img/pop_icon_close.svg" style="fill: red" />
+                        </button>
+                    </div>
+                    <div class="modal-body fail">
+						<h5 class="modal-title" id="exampleModalLabel">주문 실패</span></h5>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td scope="row" colspan="2" class="text-center none">주문 가능 수량이 부족합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" colspan="2" class="text-center none">분양이 종료 되었습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-light btn-block">수량 재설정 하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////// Page -->
+        <script src="../static/js/jquery-3.5.1.min.js"></script>
+        <script src="../static/js/popper.min.js"></script>
+        <script src="../static/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script src="../static/js/common.js"></script>
+        <script>
+            $().ready(function () {
+                $("header").load("../gnb.html");
+                $("footer").load("../footer.html");
+
+                // $("#agreeModal").modal("show");
+				$('#optionModal, #infoModal, "#agreeModal').trigger('click');
+            });
+        </script>
+    </body>
+</html>
