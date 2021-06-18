@@ -125,17 +125,12 @@ ul {
 .fix-bottom {
 	position: fixed;
 	display: flex;
+	align-items: center;
+    justify-content: center;
 	z-index: 0;
 	top: auto;
 	bottom: 0;
-	left: 50%;
-	right: auto;
 	width: 100%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
 	padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -911,9 +906,8 @@ figure img {
 }
 @media (max-width: 991px) {
 	.pro-btn {
-		width: 100%;
 		max-width: 100%;
-		min-width: 33.5rem;
+		min-width: calc(100% - 2rem);
 		min-height: 60px;
 		padding: 15px 0 13px;
 	}
