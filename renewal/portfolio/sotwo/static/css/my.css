@@ -1,0 +1,1070 @@
+/* My : Dashboard */
+.my .inner {
+    padding: 64px 0 61px 0;
+    background-color: #f6f9fc;
+}
+.my .inner.white {
+    padding: 67px 0 120px 0;
+    background-color: #fff;
+}
+.my .headline {
+    height: 27px;
+    font-size: 22px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 27px;
+    letter-spacing: normal;
+    color: #222526;
+    margin: 0 0 15px 0;
+}
+.my .headline .dropdown {
+    display: inline-block;
+}
+.my .headline .dropdown .btn {
+    background: transparent;
+    font-size: 14px;
+    color: #9e9c98;
+    border: 0;
+}
+.my .headline .float-right {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #999999;
+}
+
+.my .headline .float-right span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 7px;
+    border: solid 1px #999999;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.my .inner .row {
+    margin-bottom: 30px;
+}
+.my .panel.dark {
+    height: 160px;
+    box-shadow: 0 8px 14px 0 #d7dee5;
+    background-color: #2a2a2c;
+    color: #fff;
+    padding: 24px 31px;
+}
+.my .panel.dark .title {
+    font-size: 14px;
+    color: #dddddd;
+}
+.my .panel.dark .title .float-right {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+    text-align: right;
+    color: #999999;
+}
+.my .panel.dark .price {
+    font-family: "Futura Std Heavy";
+    font-size: 24px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding: 0 0 18px 0;
+    border-bottom: solid 1px #484d54;
+    margin: 0;
+}
+.my .panel.dark .price .float-right {
+    letter-spacing: 0.45px;
+    color: #999999;
+}
+.my .panel.dark .price .float-right.plus {
+    color: #e75149;
+}
+.my .panel.dark .price .float-right.minus {
+    color: #4a90e2;
+}
+.my .panel.dark .bottom {
+    padding: 16px 0 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #999999;
+}
+.my .panel.teal {
+    height: 160px;
+    background-color: #848e9d;
+    color: #fff;
+    padding: 24px 31px;
+}
+.my .panel.teal .price {
+    font-family: "Futura Std Heavy";
+    font-size: 24px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding: 0 0 0 0;
+    margin: 0;
+}
+.my .panel.teal .price > span {
+    cursor: pointer;
+}
+.my .panel.teal .price img {
+    height: 10px;
+    /* display:none; */
+    vertical-align: middle;
+    margin-top: -4px;
+}
+.my .panel.teal .bottom {
+    padding: 13px 0 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #999999;
+}
+.my .panel.teal .bottom .btn-light {
+    padding: 0;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #3c495c;
+}
+.my .panel.teal .bottom .btn-light {
+    padding: 0;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #3c495c;
+}
+@media (max-width: 992px) {
+    .my .inner {
+        padding: 28px 30px 26px 30px;
+        background-color: #f6f9fc;
+    }
+    .my .inner.white {
+        padding: 28px 30px 26px 30px;
+        background-color: #fff;
+    }
+    .my .headline {
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #222526;
+    }
+    .my .panel {
+        margin: 0 0 28px 0;
+    }
+    .my .inner .row {
+        margin-bottom: 0;
+    }
+    .my.dashboard .swiper-container {
+        margin-right: -30px;
+    }
+    .my .panel.teal .bottom {
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        padding: 0;
+    }
+    .my .panel.teal {
+        position: relative;
+        height: auto;
+    }
+    .my .panel.teal .price {
+        font-size: 20px;
+    }
+}
+
+.my .report .list-group-item {
+    padding: 0 40px;
+    height: 115px;
+    border: 0;
+    border-bottom: 5px solid #f6f9fc;
+    border-radius: 0;
+}
+.my .report .list-group-item.none {
+    padding: 100px 0;
+    border: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    text-align: center;
+}
+.my .report .list-group-item .no {
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    width: 100px;
+    height: 115px;
+    line-height: 115px;
+    letter-spacing: normal;
+    color: #222526;
+    display: inline-block;
+}
+.my .report .list-group-item .image {
+    width: 150px;
+    height: 115px;
+    line-height: 115px;
+    display: inline-block;
+}
+.my .report .list-group-item .image img {
+    width: 90px;
+    height: 90px;
+}
+.my .report .list-group-item .name {
+    width: 350px;
+    padding-top: 50px;
+    display: inline-block;
+}
+.my .report .list-group-item .name h5 {
+    font-family: "Futura Std Heavy";
+    font-size: 14px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #222222;
+}
+.my .report .list-group-item .name p {
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #222222;
+}
+.my .report .list-group-item .profit {
+    width: 200px;
+    height: 115px;
+    line-height: 115px;
+    font-size: 22px;
+    font-weight: 900;
+    color: #e75149;
+    text-align: center;
+    display: inline-block;
+}
+.my .report .list-group-item .profit strong {
+    font-family: "Futura Std Heavy";
+}
+.my .report .list-group-item .date {
+    width: 160px;
+    padding-top: 35px;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #999999;
+    display: inline-block;
+}
+.my .report .list-group-item .date span {
+    display: block;
+}
+.my .report .list-group-item .arrow {
+    width: 10px;
+    height: 115px;
+    line-height: 115px;
+    display: inline-block;
+    float: right;
+}
+@media (max-width: 992px) {
+    .my .report {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    .my .report .list-group-item .d-flex {
+        display: block !important;
+    }
+    .my .report .list-group-item {
+        height: auto;
+        line-height: 1;
+        position: relative;
+        padding: 0 30px;
+    }
+    .my .report .list-group-item .no,
+    .my .report .list-group-item .image,
+    .my .report .list-group-item .name,
+    .my .report .list-group-item .profit,
+    .my .report .list-group-item .date,
+    .my .report .list-group-item .arrow {
+        height: auto;
+        line-height: 1;
+    }
+    .my .report .list-group-item {
+        padding: 28px 30px 26px 134px;
+    }
+    .my .report .list-group-item .no {
+        font-size: 12px;
+    }
+    .my .report .list-group-item .image {
+        position: absolute;
+        top: 28px;
+        left: 30px;
+    }
+    .my .report .list-group-item .name {
+        padding-top: 8px;
+    }
+    .my .report .list-group-item .name h5 {
+        font-size: 12px;
+    }
+    .my .report .list-group-item .name p {
+        font-size: 12px;
+        margin: 0 0 12px 0;
+    }
+    .my .report .list-group-item .image img {
+        width: 85px;
+        height: 85px;
+    }
+    .my .report .list-group-item .arrow {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+    }
+    .my .report .list-group-item .date {
+        padding-top: 0;
+        font-size: 10px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #999999;
+        margin: 0 0 18px 0;
+        width: 100%;
+    }
+    .my .report .list-group-item .date span {
+        display: inline;
+    }
+    .my .report .list-group-item .profit {
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        color: #e75149;
+        width: 100%;
+        padding: 0;
+    }
+}
+/* My : Dashboard */
+
+.my .copyright {
+    text-align: center;
+    margin: 14px 0 54px 0;
+}
+.my .copyright h4 {
+    font-size: 44px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #222526;
+}
+.my .history .list-group-item {
+    padding: 25px 30px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 1px;
+}
+.my .history .list-group-item .date {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #999999;
+    width: 100px;
+}
+.my .history .list-group-item .name {
+    width: calc(100% - 200px);
+}
+.my .history .list-group-item .name h5 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222526;
+}
+.my .history .list-group-item .name div {
+    font-size: 16px;
+    color: #bbbbbb;
+    height: 18px;
+    line-height: 18px;
+}
+.my .history .list-group-item .price {
+    width: 100px;
+}
+.my .history .list-group-item .price h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222526;
+}
+.my .history .list-group-item .price div {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5c5c5c;
+    height: 18px;
+    line-height: 18px;
+}
+.my .panel.remain .sect {
+    background-color: #848e9d;
+}
+.my .panel.remain .sect {
+    background-color: #848e9d;
+    padding: 19px 21px 49px 21px;
+    color: #fff;
+    text-align: center;
+}
+.my .panel.remain .sect .info {
+    margin: 0 0 35px 0;
+}
+.my .panel.remain .sect .info span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 7px;
+    border: solid 1px #ffffff;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 6px;
+}
+.my .panel.remain .sect .title {
+    font-size: 16px;
+    color: #dddddd;
+    margin: 0 0 11px 0;
+}
+.my .panel.remain .sect .price {
+    font-family: "Futura Std Heavy";
+    font-size: 32px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.my .panel.remain .btn-group {
+    border-radius: 0;
+    width: 100%;
+}
+.my .panel.remain .btn-group .btn {
+    border-radius: 0;
+    padding: 0;
+    height: 55px;
+    line-height: 55px;
+    background-color: #333;
+}
+.my .panel.remain .btn-group .btn:hover {
+    background-color: #303a49;
+}
+.my .panel.remain .btn-group .btn:first-child {
+    margin-right: 1px;
+}
+.my .history .list-group-item.nothing {
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: center;
+    color: #999999;
+    background-color: transparent;
+    padding: 150px 0;
+}
+.my .history + .more {
+    margin-top: 10px;
+}
+.my .history + .more .btn-light {
+    height: 40px;
+    line-height: 40px;
+    border: solid 1px #cccccc;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #666666;
+    padding: 0;
+}
+.my .history + .more .btn-light:hover {
+    background-color: #c3cbd6;
+}
+.my.deposit .alert {
+    margin: 0 0 10px 0;
+    padding: 30px 30px;
+}
+.my.deposit .alert .text {
+    display: inline-block;
+    vertical-align: middle;
+    /* width: calc(100% - 190px); */
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+}
+.my.deposit .alert .text p {
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #999999;
+}
+.my.deposit .alert .button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+    height: 48px;
+    line-height: 48px;
+    text-align: right;
+}
+.my.deposit .alert .btn-light {
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 5px;
+    background-color: #7ddec5;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.my.deposit .alert .closed {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 48px;
+    line-height: 48px;
+    text-align: right;
+}
+.my.deposit .alert .closed img {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+@media (max-width: 992px) {
+    .my .copyright {
+        display: none;
+    }
+    .my .history {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    .my .history .list-group-item .name h5 {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #222526;
+    }
+    .my .history .list-group-item .name div {
+        display: inline-block;
+        color: #999999;
+    }
+    .my .history .list-group-item .name p {
+        margin: 0;
+        font-size: 12px;
+        color: #bbbbbb;
+    }
+    .my .panel.remain {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    .my.deposit .inner {
+        padding-top: 0;
+    }
+
+    .my.deposit .alert {
+        margin: 0 0 8px 0;
+        padding: 14px 0 34px 0;
+        position: relative;
+    }
+    .my.deposit .alert .text {
+        display: block;
+        width: 100%;
+        height: 44px;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        text-align: center;
+    }
+    .my.deposit .alert .float-right {
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .my.deposit .alert .float-right img {
+        position: absolute;
+        top: -75px;
+        right: -10px;
+    }
+    .my.deposit .alert .btn-light {
+        padding: 0 10px;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 5px;
+        background-color: #7ddec5;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0;
+    }
+    .my.deposit .alert .closed {
+        display: block;
+        width: auto;
+        height: auto;
+        line-height: auto;
+        text-align: right;
+        position: absolute;
+        top: -10px;
+        right: 0;
+    }
+    .my.deposit .alert .closed img {
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+    }
+}
+
+.my.cardinfo .inner .container {
+    max-width: 980px;
+}
+.my.cardinfo .cards {
+    box-shadow: 0 8px 12px 0 rgba(225, 231, 236, 0.57);
+    margin-bottom: 26px;
+}
+.my.cardinfo .cards .image {
+    width: 290px;
+    height: 374px;
+    line-height: 374px;
+    text-align: center;
+}
+.my.cardinfo .cards .image img {
+    width: 270px;
+    height: 270px;
+}
+.my.cardinfo .cards .info {
+    width: calc(100% - 290px);
+    height: 374px;
+    background-color: #fff;
+    padding: 48px 61px;
+}
+.my.cardinfo .cards .info .no {
+    font-size: 16px;
+    color: #222526;
+}
+.my.cardinfo .cards .info .name {
+    /* height: 44px; */
+    line-height: 44px;
+}
+.my.cardinfo .cards .info .name strong {
+    font-family: "Futura Std Heavy";
+    font-size: 32px;
+    font-weight: 900;
+    color: #222222;
+    display: inline-block;
+    width: calc(100% - 200px);
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+    vertical-align: top;
+}
+.my.cardinfo .cards .info .name .status {
+    height: 29px;
+    line-height: 29px;
+    border-radius: 14.5px;
+    border: solid 1.2px #5c5c5c;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.53px;
+    text-align: center;
+    color: #5c5c5c;
+    width: 100px;
+    display: inline-block;
+}
+.my.cardinfo .cards .info .name .arrow {
+    height: 29px;
+    line-height: 29px;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.my.cardinfo .cards .info .name .arrow:hover {
+    opacity: 1;
+}
+.my.cardinfo .cards .info .name .arrow img {
+    height: 16px;
+}
+.my.cardinfo .cards .info .name .menu {
+}
+.my.cardinfo .cards .info .name .menu .dropdown .dropdown-toggle {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+.my.cardinfo .cards .info .name .menu .dropdown .dropdown-toggle::after {
+    display: none;
+}
+.my.cardinfo .cards .info .name .menu .dropdown .dropdown-menu {
+    padding: 0;
+    border-radius: 0;
+}
+.my.cardinfo .cards .info .name .menu .dropdown .dropdown-menu .dropdown-item {
+    border-radius: 0;
+    padding: 0 15px;
+}
+.my.cardinfo .cards .image .menu {
+}
+.my.cardinfo .cards .image .menu .dropleft .dropdown-toggle {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+.my.cardinfo .cards .image .menu .dropleft .dropdown-toggle::before {
+    display: none;
+}
+.my.cardinfo .cards .image .menu .dropleft .dropdown-menu {
+    padding: 0;
+    border-radius: 0;
+}
+.my.cardinfo .cards .image .menu .dropleft .dropdown-menu .dropdown-item {
+    border-radius: 0;
+    padding: 10px 15px;
+}
+.my.cardinfo .cards .image .menu:hover {
+    opacity: 1;
+}
+.my.cardinfo .cards .option {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #999999;
+    margin: 0 0 10px 0;
+}
+.my.cardinfo .cards .option a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.my.cardinfo .cards .stock {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.42px;
+    color: #000000;
+    margin: 0 0 10px 0;
+    height: 30px;
+    line-height: 30px;
+}
+.my.cardinfo .cards .stock strong {
+    font-family: "Futura Std Heavy";
+}
+.my.cardinfo .cards ul {
+    padding: 15px 0 0 0;
+    list-style: none;
+    border-top: solid 1px #dddddd;
+}
+.my.cardinfo .cards ul li {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #777777;
+}
+.my.cardinfo .cards ul li strong {
+    display: inline-block;
+    width: 90px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #777777;
+}
+.my.cardinfo .help {
+    text-align: center;
+}
+.my.cardinfo .help label {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+    margin-right: 4px;
+}
+.my.cardinfo .help > div {
+    display: inline-block;
+    vertical-align: top;
+}
+.my.cardinfo .help h6 {
+    font-weight: 500;
+    color: #e75149;
+    display: inline-block;
+}
+.my.cardinfo .help p {
+    display: inline-block;
+}
+.my.cardinfo .help {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #999999;
+}
+@media (max-width: 992px) {
+    .my.cardinfo .cards {
+        display: block !important;
+    }
+    .my.cardinfo .cards .image {
+        width: 100%;
+        height: 145px;
+        line-height: 145px;
+        text-align: left;
+        padding: 0 15px;
+        position: relative;
+    }
+    .my.cardinfo .cards .image img {
+        width: 140px;
+        height: 140px;
+    }
+    .my.cardinfo .cards .image .status {
+        position: absolute;
+        top: 20px;
+        right: 49px;
+        height: auto;
+        line-height: 25px;
+        height: 25px;
+        border-radius: 12.5px;
+        background-color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: -0.45px;
+        text-align: center;
+        color: #222526;
+        padding: 0 8px;
+    }
+    .my.cardinfo .cards .image .menu {
+        position: absolute;
+        top: 23px;
+        right: 18px;
+        height: auto;
+        line-height: 1;
+    }
+    .my.cardinfo .cards .image .menu img {
+        height: 18px;
+        width: 10px;
+    }
+    .my.cardinfo .cards .image .stock {
+        position: absolute;
+        bottom: 20px;
+        right: 25px;
+        font-size: 18px;
+        height: auto;
+        line-height: 1;
+        margin: 0;
+    }
+    .my.cardinfo .cards .info {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        padding: 29px 29px;
+    }
+    .my.cardinfo .cards .info .name strong {
+        font-size: 14px;
+        font-weight: 900;
+        color: #222222;
+        display: inline-block;
+        width: calc(100% - 30px);
+        overflow: visible;
+        text-overflow: ellipsis;
+        white-space: normal;
+        vertical-align: middle;
+        line-height: 1.43;
+    }
+    .my.cardinfo .cards .info .name .arrow {
+        height: 29px;
+        line-height: 29px;
+        display: inline-block;
+        width: 20px;
+        text-align: right;
+    }
+    .my.cardinfo .cards .info .name .arrow img {
+        height: 10px;
+    }
+    .my.cardinfo .cards .option {
+        font-size: 12px;
+        line-height: 1.33;
+        color: #999999;
+        margin-bottom: 28px;
+    }
+    .my.cardinfo .cards ul {
+        margin-bottom: 0;
+    }
+    .my.cardinfo .cards ul li strong {
+        font-weight: normal;
+        color: #777777;
+    }
+    .my.cardinfo .help {
+        text-align: left;
+    }
+    .my.cardinfo .help > div {
+        width: calc(100% - 30px);
+    }
+}
+
+.my.cardinfo .history {
+    margin: 50px 0 50px 0;
+}
+.my.cardinfo .history .list-group {
+    border: 0;
+    border-radius: 0;
+    border-top: solid 2px #222526;
+}
+.my.cardinfo .history .list-group .list-group-item {
+    border: 0;
+    border-bottom: solid 1px #eeeeee;
+    padding: 27px 21px;
+    border-radius: 0;
+}
+.my.cardinfo .history .list-group .list-group-item.none {
+    text-align: center;
+    padding: 100px 0;
+}
+.my.cardinfo .history .list-group .list-group-item .d-flex > p {
+    font-size: 12px;
+    letter-spacing: -0.48px;
+    color: #222526;
+    width: 200px;
+}
+.my.cardinfo .history .list-group .list-group-item .row > p {
+    font-size: 12px;
+    letter-spacing: -0.48px;
+    color: #222526;
+    width: 200px;
+}
+.my.cardinfo .history .list-group .list-group-item .d-flex small {
+    font-size: 11px;
+    color: #aaaaaa;
+}
+.my.cardinfo .history .list-group .list-group-item .row small {
+    font-size: 11px;
+    color: #aaaaaa;
+}
+.my.cardinfo .history .list-group .list-group-item > h5 {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.64px;
+    color: #222526;
+    padding: 10px 0 6px 0;
+}
+.my.cardinfo .history .list-group .list-group-item .d-flex > div > p {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #999999;
+    white-space: pre-wrap;
+}
+.my.cardinfo .history .list-group .list-group-item .row > div > p {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #999999;
+    white-space: pre-wrap;
+}
+
+.my.cardinfo .history .list-group .list-group-item:last-child {
+    border: 0;
+    border-bottom: 0;
+}
+.my.cardinfo .history .btn-block {
+    height: 40px;
+    line-height: 40px;
+    border: solid 1px #cccccc;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #666666;
+    box-shadow: none;
+}
+.my.cardinfo .history .btn-block:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.my.cardinfo .warning {
+    margin: 70px 0 115px 0;
+}
+.my.cardinfo .warning ul {
+    padding: 0 0 0 18px;
+    list-style: decimal;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #5c5c5c;
+}
+@media (max-width: 992px) {
+    .my.cardinfo .history .list-group .list-group-item .d-flex {
+        display: block !important;
+    }
+    .my.cardinfo .history {
+        margin: 50px 30px 50px 30px;
+    }
+    .my.cardinfo .warning {
+        margin: 70px 30px 115px 30px;
+    }
+}

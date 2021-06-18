@@ -1,0 +1,269 @@
+/* order request */
+.order {
+    padding: 46px 0 141px 0;
+}
+.order .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.order .copyright h2 {
+    height: 65px;
+    line-height: 65px;
+    font-size: 44px;
+    font-weight: 500;
+    color: #222222;
+    text-align: center;
+    margin: 0 0 49px 0;
+}
+.order .request .left {
+    width: 700px;
+}
+.order .request .right {
+    width: 315px;
+}
+.order .request .title {
+    height: 33px;
+    line-height: 33px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #272727;
+    margin: 0 0 22px 0;
+}
+.order .request .info {
+    height: 120px;
+    line-height: 120px;
+    padding: 0 20px;
+    background-color: #ddf1f7;
+    margin: 0 0 19px 0;
+}
+.order .request .info .image {
+    display: inline-block;
+    vertical-align: top;
+}
+.order .request .info .image img {
+    height: 120px;
+}
+.order .request .info .text {
+    width: calc(100% - 130px);
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+    font-size: 12px;
+    color: #222526;
+    padding: 40px 0 0 20px;
+}
+.order .request .info .text h5 {
+    font-family: "Futura Std Heavy";
+    font-size: 16px;
+    font-weight: 900;
+    color: #222222;
+    margin: 0 0 9px 0;
+}
+.order .request .info .text p {
+    margin: 0 0 9px 0;
+    font-size: 12px;
+    color: #222222;
+}
+.order .request .divider {
+    height: 10px;
+    background-color: #f6f9fc;
+    margin: 0 0 23px 0;
+}
+.order .request .price > div {
+    height: 32px;
+    line-height: 32px;
+}
+.order .request .price > div .float-right {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+}
+.order .request .price > h4 {
+    border-top: solid 1px #000000;
+    padding: 25px 0;
+    margin: 25px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.35px;
+    color: #222526;
+    height: 22px;
+    line-height: 22px;
+}
+.order .request .price > h4 .float-right {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+}
+.order .request .inputs {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+    padding-bottom: 30px;
+}
+.order .request .inputs > div:first-child {
+    padding-left: 0;
+}
+.order .request .inputs > div:last-child {
+    padding-right: 0;
+}
+.order .request .inputs .form-group.text label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+}
+.order .request .inputs .form-group.text input {
+    border-radius: 0;
+    text-align: right;
+}
+.order .request .inputs .form-group.text + div {
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+.order .request .inputs .form-group.checkbox .form-check-label {
+    font-size: 14px;
+}
+.order .request .payment {
+    margin: 0 0 23px 0;
+}
+.order .request .payment .radio .form-check-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.order .request .payment .radio .form-check-label span {
+    text-decoration: underline;
+}
+.order .request .recipe {
+    box-shadow: 0 8px 14px 0 #d7dee5;
+    border: solid 1px #c9cfd5;
+    background-color: #ffffff;
+}
+.order .request .recipe .inner {
+    padding: 21px 29px;
+}
+.order .request .recipe .inner .total,
+.order .request .recipe .inner .deposit {
+    height: 36px;
+    line-height: 36px;
+}
+.order .request .recipe .inner .pay {
+    padding: 28px 0 0 0;
+    margin: 10px 0 0 0;
+    border-top: 1px solid #000;
+}
+.order .request .recipe .inner .pay > span {
+    height: 26px;
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.order .request .recipe .inner .pay strong {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+}
+.order .request .recipe .agree {
+    background-color: #f6f9fc;
+    padding: 18px 29px;
+}
+.order .request .recipe .agree h6 {
+    height: 33px;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #272727;
+}
+.order .request .recipe .agree .form-group .form-check-label {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.71;
+    color: #222222;
+}
+.order .request .recipe .btn-block {
+    height: 54px;
+    line-height: 54px;
+    background-color: #7ddec5;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.45px;
+    text-align: center;
+    color: #222526;
+}
+@media (max-width: 992px) {
+    .order {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .order .copyright {
+        display: none;
+    }
+    .order .request {
+        display: block !important;
+    }
+    .order .request .left {
+        width: auto;
+        padding: 0 15px;
+    }
+    .order .request .right {
+        width: auto;
+        margin: 0 -15px;
+    }
+    .order .request .info .text h5 {
+        font-size: 14px;
+        margin: 0 0 6px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .order .request .info .text p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .order .request .divider {
+        margin: 0 -30px 23px -30px;
+    }
+    .order .request .recipe {
+        border: 0;
+        box-shadow: none;
+    }
+    .order .request .recipe .inner .pay {
+        padding: 0 0 0 0;
+        margin: -20px 0 0 0;
+        border-top: 0;
+    }
+    .order .request .recipe .agree .btn-group {
+        border-radius: 0;
+    }
+    .order .request .recipe .agree .btn-group .btn {
+        border-radius: 0;
+        border: 0;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        text-align: center;
+        color: #000000;
+        height: 54px;
+        line-height: 54px;
+    }
+    .order .request .recipe .agree .btn-group .btn-light {
+        background-color: #dadfe5;
+    }
+    .order .request .recipe .agree .btn-group .btn-primary {
+        background-color: #7ddec5;
+    }
+    .order .request .inputs > div {
+        padding: 0;
+    }
+}
+/* order request */

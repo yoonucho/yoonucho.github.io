@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="41px" viewBox="0 0 36 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC_03_판매리포트" transform="translate(-1134.000000, -506.000000)">
+            <g id="Group-6" transform="translate(1133.000000, 506.000000)">
+                <rect id="Rectangle" fill="#C3CBD6" x="18" y="25" width="2" height="16"></rect>
+                <rect id="Rectangle" stroke="#C3CBD6" stroke-width="4" x="6" y="2" width="25" height="25" rx="12.5"></rect>
+                <text id="₩" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="16" font-weight="bold" fill="#C3CBD6">
+                    <tspan x="14" y="21">₩</tspan>
+                </text>
+                <path d="M23,38.3570208 C23.3200062,31.6714042 27.960096,28.9971575 36.9202693,30.3342808 C34.3602198,38.3570208 29.72013,41.0312674 23,38.3570208 Z" id="Path-8" fill="#C3CBD6" transform="translate(29.960135, 34.679932) rotate(-10.000000) translate(-29.960135, -34.679932) "></path>
+                <path d="M14.9202693,38.3570208 C8.20013929,41.0312674 3.56004953,38.3570208 1,30.3342808 C9.96017334,28.9971575 14.6002631,31.6714042 14.9202693,38.3570208 Z" id="Path-8-Copy" fill="#C3CBD6" transform="translate(7.960135, 34.679932) rotate(10.000000) translate(-7.960135, -34.679932) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

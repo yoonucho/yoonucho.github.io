@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+		/>
+		<title>갤러리아 위탁판매 신청서</title>
+		<!-- add bootstrap css -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/styles.css" />
+		<script
+			defer
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<!-- add bootstrap js -->
+		<script
+			defer
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+		<!-- add custom js -->
+		<script defer src="../js/sales-contents.js"></script>
+	</head>
+	<body>
+		<nav class="gnb consignment-sales">
+			<h1 class="blind">갤러리아 위탁판매 신청서 페이지</h1>
+			<div class="container">
+				<div class="row top">
+					<div class="">
+						<h2>위탁판매 신청서</h2>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="consignment-sales contents">
+			<div class="container">
+				<div class="sales-contents">
+					<!-- 인적정보 -->
+					<div class="info-wrap user">
+						<form action="">
+							<div class="form-group row">
+								<label for="" class="form-label col-3"
+									>이름<span class="required">*</span></label
+								>
+								<div class="col-9 info-text">
+									<input
+										type="text"
+										placeholder=""
+										class="form-control"
+										value="김블루"
+										required
+									/>
+								</div>
+								<p class="error">이름을 확인하세요.</p>
+							</div>
+							<div class="form-group row">
+								<label for="" class="form-label col-3"
+									>휴대폰번호<span class="required">*</span></label
+								>
+								<div class="col-9 info-text">
+									<input
+										type="number"
+										class="form-control"
+										value="휴대폰번호"
+										placeholder="숫자만 입력하세요"
+									/>
+								</div>
+								<p class="error">휴대폰 번호를 확인하세요.</p>
+								<p class="error">숫자만 입력하세요.</p>
+							</div>
+							<div class="form-group row">
+								<label for="" class="form-label col-3"
+									>갤러리아 회원등급<span class="required">*</span></label
+								>
+								<div class="col-9 info-text">
+									<input
+										type="text"
+										class="form-control"
+										value="갤러리아 회원등급"
+									/>
+								</div>
+								<p class="error">갤러리아 회원등급을 확인하세요</p>
+							</div>
+							<div class="form-group row">
+								<label for="" class="address-label form-label col-3"
+									>주소<span class="required">*</span></label
+								>
+								<div class="col-9 find-address-group">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="우편번호"
+										id="input-post-code"
+										readonly=""
+									/>
+									<button class="find-address" id="btn-find-address">
+										주소찾기
+									</button>
+									<input
+										type="text"
+										class="form-control"
+										readonly=""
+										placeholder="주소"
+									/>
+									<input type="text" placeholder="나머지 주소" />
+								</div>
+								<p class="error">수취인명을 입력하세요(입력 에러시 노출)</p>
+							</div>
+						</form>
+					</div>
+					<!-- 계좌정보-->
+					<div class="info-wrap account-info">
+						<div class="inquiry-header">
+							<div class="title">계좌정보</div>
+						</div>
+						<div class="inquiry-body">
+							<div class="form-group row">
+								<label for="" class="form-label col-3"
+									>은행<span class="required">*</span></label
+								>
+								<div class="col-9 info-text">
+									<div class="select-wrap">
+										<select class="form-control">
+											<option value="all" selected="">은행을 선택하세요</option>
+											<option value="002">산업은행</option>
+											<option value="003">기업은행</option>
+											<option value="004">국민은행</option>
+											<option value="007">수협은행/수협중앙회</option>
+											<option value="011">농협은행</option>
+											<option value="012">농협중앙회</option>
+											<option value="020">우리은행</option>
+											<option value="023">SC제일은행</option>
+											<option value="027">한국씨티은행</option>
+											<option value="031">대구은행</option>
+											<option value="032">부산은행</option>
+											<option value="034">광주은행</option>
+											<option value="035">제주은행</option>
+											<option value="037">전북은행</option>
+											<option value="039">경남은행</option>
+											<option value="045">새마을금고중앙회</option>
+											<option value="048">신협중앙회</option>
+											<option value="050">상호저축은행</option>
+											<option value="054">HSBC은행</option>
+											<option value="055">도이치은행</option>
+											<option value="057">제이피모간체이스은행</option>
+											<option value="060">BOA은행</option>
+											<option value="062">중국공상은행</option>
+											<option value="064">산림조합중앙회</option>
+											<option value="071">우체국</option>
+											<option value="081">KEB하나은행</option>
+											<option value="088">신한은행</option>
+											<option value="089">K뱅크</option>
+											<option value="090">카카오뱅크</option>
+											<option value="103">SBI 저축은행</option>
+											<option value="209">유안타증권</option>
+											<option value="218">KB증권</option>
+											<option value="238">미래에셋대우</option>
+											<option value="240">삼성증권</option>
+											<option value="243">한국투자증권</option>
+											<option value="247">NH투자증권</option>
+											<option value="261">교보증권</option>
+											<option value="262">하이투자증권</option>
+											<option value="263">현대차투자증권</option>
+											<option value="264">키움증권</option>
+											<option value="265">이베스트투자증권</option>
+											<option value="266">SK증권</option>
+											<option value="267">대신증권</option>
+											<option value="269">한화투자증권</option>
+											<option value="270">하나금융투자</option>
+											<option value="278">신한금융투자</option>
+											<option value="279">동부증권</option>
+											<option value="280">유진투자증권</option>
+											<option value="287">메리츠종합금융증권</option>
+											<option value="290">부국증권</option>
+											<option value="291">신영증권</option>
+											<option value="292">케이프투자증권</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="" class="form-label col-3"
+									>예금주<span class="required">*</span></label
+								>
+								<div class="col-9 info-text">
+									<input type="number" class="form-control" value="예금주" />
+								</div>
+								<p class="error">이름을 확인하세요.</p>
+							</div>
+							<div class="form-group row">
+								<label for="" class="form-label col-3"
+									>계좌번호<span class="required">*</span></label
+								>
+								<div class="col-9 info-text">
+									<input
+										type="number"
+										class="form-control"
+										placeholder="숫자만 입력하세요."
+										value=""
+									/>
+								</div>
+								<p class="error">숫자만 입력하세요.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 상품 등록 -->
+					<div class="info-wrap inquiry">
+						<!-- 업로드시 로딩이미지 -->
+						<div class="loading-wrap">
+							<div class="loader-circle"></div>
+							<div class="loader-line-mask">
+								<div class="loader-line"></div>
+							</div>
+							<img
+								class="loading-logo"
+								src="../images/loading-logo.png"
+								width="40px"
+								height="40px"
+								viewBox="0 0 40 40"
+								version="1.1"
+							/>
+						</div>
+						<div class="inquiry-wrap">
+							<div class="inquiry-header row">
+								<div class="title">위탁상품</div>
+								<div class="item">
+									<button type="button" class="btn add-item-btn">
+										<img
+											class="icon"
+											src="../images/icon-plus.svg"
+											alt="상품추가"
+										/>
+									</button>
+								</div>
+							</div>
+							<div class="inquiry-body">
+								<div class="form-group row">
+									<label for="" class="form-label col-3"
+										>브랜드<span class="required">*</span></label
+									>
+									<div class="col-9 info-text">
+										<input
+											type="text"
+											placeholder=""
+											class="form-control"
+											value="브랜드"
+											required
+										/>
+									</div>
+									<p class="error">브랜드를 확인하세요.</p>
+								</div>
+								<div class="form-group row">
+									<label for="" class="form-label col-3">상품명</label>
+									<div class="col-9 info-text">
+										<input
+											type="text"
+											class="form-control"
+											value="상품명"
+											placeholder=""
+										/>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="" class="form-label picture-label col-3"
+										>사진<span class="required">*</span></label
+									>
+									<div class="col-9 picture-item-wrap">
+										<div class="image-item">
+											<input
+												type="file"
+												id="file-input-add"
+												accept="image/jpg,image/jpeg,image/png,image/gif;capture=camera"
+												multiple="true"
+												hidden=""
+											/>
+											<label for="file-input-add"
+												><img
+													class="icon"
+													src="../images/galleria-add-picture-button.svg"
+													alt="사진추가"
+												/>
+											</label>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview.png"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview2.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview3.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview4.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview2.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+									</div>
+									<p class="error">등록가능한 파일이 아닙니다.</p>
+									<p class="error">용량이 초과되었습니다.</p>
+									<p class="error">사진을 등록하세요.</p>
+								</div>
+								<p class="info-message">
+									판매를 원하시는 상품의 실제 사진을 올려주세요 <br />최소 1장의
+									경우 정면사진을 올려주세요(최대 5장) <br />20MB이하의 이미지
+									파일만 등록할 수 있습니다.(JPG/GIF/PNG)
+								</p>
+							</div>
+							<div class="divider"></div>
+						</div>
+						<div class="inquiry-wrap">
+							<div class="inquiry-header row">
+								<div class="title">위탁상품</div>
+								<div class="item">
+									<button type="image" class="btn">
+										<img
+											class="icon"
+											src="../images/icon-minus.svg"
+											alt="상품삭제"
+										/>
+									</button>
+								</div>
+							</div>
+							<div class="inquiry-body">
+								<div class="form-group row">
+									<label for="" class="form-label col-3"
+										>브랜드<span class="required">*</span></label
+									>
+									<div class="col-9 info-text">
+										<input
+											type="text"
+											placeholder=""
+											class="form-control"
+											value="브랜드"
+											required
+										/>
+									</div>
+									<p class="error">브랜드를 확인하세요.</p>
+								</div>
+								<div class="form-group row">
+									<label for="" class="form-label col-3">상품명</label>
+									<div class="col-9 info-text">
+										<input
+											type="text"
+											class="form-control"
+											value="상품명"
+											placeholder=""
+										/>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="" class="form-label picture-label col-3"
+										>사진<span class="required">*</span></label
+									>
+									<div class="col-9 picture-item-wrap">
+										<div class="image-item">
+											<input
+												type="file"
+												id="file-input-add"
+												accept="image/jpg,image/jpeg,image/png,image/gif;capture=camera"
+												multiple="true"
+												hidden=""
+											/>
+											<label for="file-input-add"
+												><img
+													class="icon"
+													src="../images/galleria-add-picture-button.svg"
+													alt="사진추가"
+												/>
+											</label>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview.png"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview2.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview2.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview2.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+										<div class="image-item">
+											<div class="upload-image show">
+												<input
+													type="text"
+													name="input-sub-image-seq"
+													value="2830"
+													hidden="hidden"
+												/><button
+													class="close-btn"
+													id="btn-delete-picture-0"
+													type="button"
+													data-index="0"
+												></button
+												><img
+													id="img-preview-0"
+													src="../images/img-preview2.jpg"
+													alt="이미지 미리보기"
+												/>
+											</div>
+										</div>
+									</div>
+									<p class="error">등록가능한 파일이 아닙니다.</p>
+									<p class="error">용량이 초과되었습니다.</p>
+									<p class="error">사진을 등록하세요.</p>
+								</div>
+								<p class="info-message">
+									판매를 원하시는 상품의 실제 사진을 올려주세요 <br />최소 1장의
+									경우 정면사진을 올려주세요(최대 5장)<br />20MB이하의 이미지
+									파일만 등록할 수 있습니다.(JPG/GIF/PNG)
+								</p>
+							</div>
+							<div class="divider"></div>
+						</div>
+					</div>
+
+					<div class="delivery-info">
+						<h3>상품배송안내</h3>
+						<ul>
+							<li>상품을 아래 주소지로 보내주세요</li>
+							<li>택배는 착불로 보내시면 됩니다.</li>
+							<li>
+								<span class="address-text"
+									>서울시 강남구 언주로 864(신사동 636-4) 서울옥션
+									강남센터</span
+								>
+								<span class="address-text2">B1층 XXBLUE VINTAGE 담당자</span>
+							</li>
+						</ul>
+					</div>
+					<!-- 위탁판매 이용안내 -->
+					<a
+						href="#"
+						role="button"
+						class="sales-btn"
+						data-toggle="modal"
+						data-target="#infoModal"
+						>위탁판매 이용안내
+						<span class="float-right"
+							><img src="../images/arrow-right-blue.svg" alt="화살표아이콘"
+						/></span>
+					</a>
+
+					<div class="terms-agreement">
+						<h3>이용약관 동의</h3>
+						<div class="card-wrap">
+							<div class="policy-inner">
+								<p>
+									[위탁 약관] <br />
+									상품판매를 위탁하려는 판매자(이하 “고객”)과 주식회사
+									엑스바이블루(이하 “XXBLUE)는 아래와 같이 위탁판매와 관련된
+									권리ㆍ의무에 관한 사항을 규정합니다
+								</p>
+								<h4>개인정보 보호법</h4>
+								<p>
+									"고객"은 개인정보 보호법 제15조 및 제22조, 제24조에 따라
+									본인의 개인정보 수집, 이용하는 것에 동의합니다.
+								</p>
+								<h4>위탁업무</h4>
+								<p>
+									"고객"은 “XXBLUE”가 위탁 상품을 판매할 수 있는 권한 및 판매를
+									위해 필요한 일체의 업무를 수행할 권한( 상품의 수거, 감정,
+									가격조사 및 책정, 촬영, 상품등록 판매촉진, 마케팅 활동, 판매
+									및 배송, 사후 관리 등)을 부여합니다.
+								</p>
+								<h4>계약 기간</h4>
+								<ul>
+									<li>
+										계약 기간은 상품등록일부터 판매 완료시까지를 원칙으로
+										합니다.
+									</li>
+									<li>
+										해당 상품 등록일로부터 2개월(60일) 경과일까지 상품이
+										판매되지 않는 경우 고객은 상품의 반환을 요청할 수 있으며 이
+										경우 배송비는 고객의 부담으로 합니다.
+									</li>
+									<li>
+										해당 상품 등록일로부터 4개월 경과일까지 상품이 판매되지 않는
+										경우 "XXBLUE"는 상품을 고객에게 반환할 수 있으며 이 경우
+										배송비는 고객의 부담으로 합니다
+									</li>
+								</ul>
+								<h4>판매금액의 정산정책</h4>
+								<ul>
+									<li>
+										“XXBLUE”는 상품 구매자로부터 판매대금 전액을 수령한 날로부터
+										3영업일 이내로 판매금액의 수수료를 제외한 나머지 금액을
+										고객이 지정한 계좌로 현금으로 입금합니다. 2.
+									</li>
+									<li>
+										“XXBLUE”는 유행의 변화, 수요 및 공급의 변화 혹은 판매 촉진에
+										필수적이라고 판단하는 경우 고객과 사전 협의 후 판매금액을
+										조정할 수 있습니다.
+									</li>
+								</ul>
+								<h4>"XXBLUE"의 판매 거부 및 취소</h4>
+								<ul>
+									<li>
+										“XXBLUE”는 다음의 경우 상품의 판매를 거부하거나 해당 상품이
+										판매된 경우 그 판매를 취소할 수 있습니다. ①수선, 리폼,
+										오염과 얼룩, 훼손의 정도가 심하여 판매에 적당하지 않은 경우
+										②가품(레플리카, 이미테이션등)의 가능성이 있어 판매에
+										적당하지 않은 경우
+									</li>
+									<li>
+										제1항 각호의 사유로 인하여 고객이 판매를 취소한 경우
+										"고객"은 즉시 해당 상품의 판매로 인하여 "XXBLUE"로부터
+										수령한 모든 대금을 반환하여야 하며, 이로 인하여 "XXBLUE" 및
+										고객에게 발생한 모든 손해를 배상하여야 합니다.
+									</li>
+									<li>
+										고객이 고의적으로 가품/장물/불법취득 품목을 위탁하는 경우
+										형사 처벌 될 수 있으며, 회수비용, 감정비용등 관련 제반
+										비용을 “XXBLUE” 에서 청구 할 수 있습니다.
+									</li>
+								</ul>
+
+								<h4>권리ㆍ의무의 양도금지</h4>
+								<p>
+									양 당사자 사전 동의 없이 본 계약상의 지위, 권리, 의무를 양도,
+									위임, 담보 등 일체의 처분행위를 해서는 안되며, “XXBLUE”는
+									“고객”의 사전 동의 없이 수탁업무의 전부 또는 일부를 제 3자에게
+									위임 또는 위탁 할 수 없습니다.
+								</p>
+							</div>
+						</div>
+						<div class="single-term">
+							<input
+								class="terms-checkbox"
+								id="terms-checkbox2"
+								type="checkbox"
+								value="value1"
+							/>
+							<label class="main-term" for="terms-checkbox2"
+								><span class="main-term-checkmark"></span>위 내용에
+								동의합니다.</label
+							>
+						</div>
+					</div>
+
+					<!-- <div class="terms-agreement">
+								<p class="agreement">
+									위탁과 관련한 제반 사항에 대한 설명을 듣고 이해하였으며, ㈜
+									엑스바이블루의 계약 및 내용을 확인합니다.
+								</p>
+								<div class="single-term">
+									<input
+										class="terms-checkbox"
+										id="terms-checkbox3"
+										type="checkbox"
+										value="value1"
+									/>
+									<label class="main-term" for="terms-checkbox3"
+										><span class="main-term-checkmark"></span>확인 및
+										동의</label
+									>
+								</div>
+
+								<h3>이용안내</h3>
+								<div class="card-wrap">
+									<ul>
+										<li>
+											위탁판매자는 본인이 소유하고 있는 상품을 당사에
+											위탁판매하여 해당 상품은 진품이 틀림없음을 확인합니다.
+										</li>
+										<li>
+											물건의 판매방법은 당사에 전권 위임되며 위탁인은 이에
+											이의를 제기할 수 없습니다.
+										</li>
+										<li>
+											개인정보 보호법 제15조 및 제 22조, 제 24조에 따라 본인의
+											개인정보 수집, 이용하는 것에 동의합니다.
+										</li>
+										<li>
+											위탁판매 대금은 위탁판매 계약서 내용이며, 정산은 지정
+											(본인)계좌로 송금됩니다.
+										</li>
+										<li>
+											위탁판매 계약서 작성 이후 위탁판매자 단순 변심으로 이해
+											계약을 철회할 수 없습니다.
+										</li>
+									</ul>
+								</div>
+							</div> -->
+				</div>
+				<div class="btn-wrapper">
+					<button class="btn btn-block disabled">등록</button>
+					<button class="btn btn-block active">등록</button>
+				</div>
+			</div>
+		</section>
+
+		<footer></footer>
+
+		<!-- Scrollable modal2 -->
+		<div
+			class="modal info-modal fade"
+			id="infoModal"
+			tabindex="-1"
+			aria-labelledby="infoModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-scrollable" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2>위탁판매 이용안내</h2>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<img src="../images/modal-close.svg" style="fill: red" />
+						</button>
+					</div>
+					<div class="modal-body sales-contents">
+						<div class="consignment-sales-info">
+							<div class="card-wrap">
+								<p>XXBLUE를 이용하여 주셔서 감사합니다.</p>
+								<ol>
+									<li>
+										XXBLUE는 전문적인 검수와 합리적인 위탁가를 회원님께 제안하여
+										드립니다.
+									</li>
+									<li>
+										위탁진행은 접수를 통해 가능하며, 접수 이후 전문 상담사를
+										통해 위탁가능 여부 확인이 가능합니다.
+									</li>
+									<li>
+										위탁기간은 최소 60일이며, 연장 또는 회수 가능합니다. 회수 시
+										배송비는 XXBLUE에서 지불합니다.
+									</li>
+									<li>
+										문의하신 제품 실물감정 후 위탁을 원하 실 경우 갤러리아 VIP
+										회원에 한해, 제품 촬영 및 온라인 업로드를 대행하여 드립니다.
+									</li>
+									<li>회원님의 위탁제품을 안전하게 보관하여 드립니다.</li>
+									<li>
+										<h4>갤러리아 VIP 우대 수수료</h4>
+										<table class="fee-table">
+											<colgroup>
+												<col width="66%" />
+												<col width="" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>20만원 미만</td>
+													<td>4만원</td>
+												</tr>
+												<tr>
+													<td>20만원 이상 ~200만원 미만</td>
+													<td>16%</td>
+												</tr>
+												<tr>
+													<td>200만원 이상 ~1,000만원 미만</td>
+													<td>11%</td>
+												</tr>
+												<tr>
+													<td>1000만원 이상</td>
+													<td>8%</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+									<li>
+										위탁판매가 완료 되었을 경우 해당 수수료 제외, 정산 금액을
+										위탁자 본인 계좌로 송금해 드리며, 해당 금액은 은행 송금만
+										가능합니다.
+									</li>
+									<li>
+										기타문의 사항이 있으실 경우, 영업시간 내 친절한 안내
+										드리도록 하겠습니다.
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="modal-footer">
+						<button class="btn btn-block disabled">등록</button>
+					</div> -->
+			</div>
+		</div>
+	</body>
+</html>
