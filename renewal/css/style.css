@@ -288,7 +288,7 @@ h1 {float:left}
 .footer address > a{display: inline-block;vertical-align: middle}
 
 /* 위로가기 버튼 */
-.btn_wrap {position: absolute;right:2rem;width:4rem;margin-top:-4.5rem;text-align: center}
+.btn_wrap {position: absolute;z-index: 3;right:2rem;width:4rem;margin-top:-4.5rem;text-align: center}
 .btn_wrap > span {display:block;color:#494438;font-size:1rem;font-weight: 600}
 .btn_wrap .btn_top {width: 3rem; height: 3rem; background: #a1ceab;border:1px solid #494438;border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; font-size:1.5rem;color:#fff;cursor: pointer ; }
 
@@ -316,7 +316,8 @@ h1 {float:left}
 }
 
 /* 챗봇위젯 커스텀 */
-#collect-chat-launcher-container {position:absolute !important;bottom:5px !important}
+#collect-chat-launcher-container {position:absolute !important;right:unset !important;bottom:5px !important}
+.chat-bot-flex-end {z-index: 2 !important;}
 
 #chat-bot-launcher-container.chat-bot-avatar-launcher, #chat-bot-launcher-container.chat-bot-launcher-notext {bottom: 30px !important}
 
