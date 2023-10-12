@@ -6,7 +6,6 @@ on:
       - master
 jobs:
   build:
-
     name: deploy
     runs-on: ubuntu-18.04
     steps:
