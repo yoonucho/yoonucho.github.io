@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+		/>
+		<title>AMORE PACIFIC X Off-White™ pro</title>
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<!-- favicon -->
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="./images/v1/favicon.ico" /> -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	</head>
+	<body>
+		<div class="">
+			<!-- banner -->
+			<div class="banner-wrapper">
+				<div class="header">
+					<a href="https://xxblue.com">
+						<img src="./images/assets/xxblue-logo.png" alt="x바이블루 로고"
+					/></a>
+				</div>
+				<div class="pro-container0 swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="container-wrapper logo">
+								<h1>Off-White™ <b>X </b>AMORE PACIFIC</h1>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-wrapper">
+								<figure>
+									<img
+										src="./images/v1/header-banner/pro_box-1.png"
+										alt="배너아이템2"
+									/>
+								</figure>
+								<p class="pro-title">Protection Box</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-wrapper">
+								<figure>
+									<img
+										src="./images/v1/header-banner/pro_box_open.png"
+										alt="배너아이템3"
+									/>
+								</figure>
+								<p class="pro-title">Protection Box</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-wrapper">
+								<figure>
+									<img
+										src="./images/v1/header-banner/pro_container_1.png"
+										alt="배너아이템4"
+									/>
+								</figure>
+								<p class="pro-title">
+									Protection container + Protection container strap
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-wrapper">
+								<figure>
+									<img
+										src="./images/v1/header-banner/pro_container_3.png"
+										alt="배너아이템5"
+									/>
+								</figure>
+								<p class="pro-title">
+									Protection container + Protection container strap
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-wrapper">
+								<figure>
+									<img
+										src="./images/v1/header-banner/pro_mask_1.png"
+										alt="배너아이템2"
+									/>
+								</figure>
+								<p class="pro-title">Fabric mask + Mask strap</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination custom-pagination"></div>
+					<div class="swiper-button-prev custom-prev"></div>
+					<div class="swiper-button-next custom-next"></div>
+				</div>
+				<div class="footer">
+					<p class="date">2021.02.01</p>
+				</div>
+			</div>
+			<script>
+				// 페이지 숫자
+				function SetPageNumber(nPageNumber) {
+					document.getElementById("page_number").innerHTML = nPageNumber;
+				}
+
+				var bannerSwiper = new Swiper(".pro-container0", {
+					// on: {
+					// 	slideChangeTransitionEnd: function () {
+					// 		// alert(this.activeIndex); // this.activeIndex 에 현재 슬라이드 번호가 들어있습니다
+					// 		SetPageNumber(this.activeIndex + 1 + "/" + this.slides.length);
+					// 	},
+					// },
+
+					loop: true,
+					slidesPerView: 1,
+
+					// pagination
+					pagination: {
+						el: ".swiper-pagination",
+						type: "progressbar",
+					},
+
+					// Navigation arrows
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+
+					breakpoints: {
+						991: {
+							slidesPerView: 1,
+						},
+					},
+				});
+			</script>
+
+			<div class="container" id="container">
+				<!-- Protection Box -->
+				<section class="main-section">
+					<div class="section-title">
+						<h2>Protection Box</h2>
+						<span>프로텍션 박스 </span>
+					</div>
+					<div class="product-box">
+						<div class="pro-container">
+							<div class="item">
+								<div class="product-image">
+									<img class="image" src="./images/v1/pro_box_all.png" alt="" />
+									<div class="overlay"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Protection container + Protection container strap -->
+				<section class="main-section">
+					<div class="section-title">
+						<h2>
+							Protection container +
+							<span class="sub-title">Protection container strap</span>
+						</h2>
+						<span
+							>프로텍션 콘테이너 +
+							<span class="sub-title">프로텍션 콘테이너 스트렙</span>
+						</span>
+					</div>
+					<div class="product-wrapper">
+						<div class="pro-container1 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_container_1.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_container_2.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_container_3.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_container_4.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination custom-pagination"></div>
+							<div class="swiper-button-prev custom-prev"></div>
+							<div class="swiper-button-next custom-next"></div>
+						</div>
+					</div>
+				</section>
+				<script>
+					var proSlider1 = new Swiper(".pro-container1", {
+						loop: false,
+						slidesPerView: 1.5,
+						spaceBetween: 20,
+						breakpoints: {
+							991: {
+								// autoHeight: true,
+								slidesPerView: 4,
+								spaceBetween: 20,
+							},
+						},
+					});
+				</script>
+
+				<!-- Fabric mask + Mask strap -->
+				<section class="main-section">
+					<div class="section-title">
+						<h2>Fabric mask + Mask strap</h2>
+						<span>마스크 + 마스크 스트렙 </span>
+					</div>
+					<div class="product-wrapper">
+						<div class="pro-container2 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_mask_1.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_mask_2.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_mask_3.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev custom-prev"></div>
+							<div class="swiper-button-next custom-next"></div>
+							<div class="swiper-pagination custom-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<script>
+					var proSlider2 = new Swiper(".pro-container2", {
+						loop: false,
+						slidesPerView: 1.5,
+						spaceBetween: 20,
+						breakpoints: {
+							991: {
+								// autoHeight: true,
+								slidesPerView: 4,
+								spaceBetween: 20,
+							},
+						},
+					});
+				</script>
+
+				<!-- Sheet masks -->
+				<section class="main-section">
+					<div class="section-title">
+						<h2>Sheet masks</h2>
+						<span>시트마스크 </span>
+					</div>
+					<div class="product-wrapper">
+						<div class="pro-container3 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_sheet_1.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_sheet_2.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_sheet_3.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination custom-pagination"></div>
+							<div class="swiper-button-prev custom-prev"></div>
+							<div class="swiper-button-next custom-next"></div>
+						</div>
+					</div>
+				</section>
+				<script>
+					var proSlider3 = new Swiper(".pro-container3", {
+						loop: false,
+						slidesPerView: 1.5,
+						spaceBetween: 20,
+						breakpoints: {
+							991: {
+								// autoHeight: true,
+								slidesPerView: 4,
+								spaceBetween: 20,
+							},
+						},
+					});
+				</script>
+				<!-- Sun tone-up cushion -->
+				<section class="main-section">
+					<div class="section-title">
+						<h2>Sun tone-up cushion</h2>
+						<span>톤-업 쿠션 </span>
+					</div>
+					<div class="product-wrapper">
+						<div class="pro-container4 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_cushion_1.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_cushion_2.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination custom-pagination"></div>
+							<div class="swiper-button-prev custom-prev"></div>
+							<div class="swiper-button-next custom-next"></div>
+						</div>
+					</div>
+				</section>
+				<script>
+					var proSlider4 = new Swiper(".pro-container4", {
+						loop: false,
+						slidesPerView: 1.5,
+						spaceBetween: 20,
+						breakpoints: {
+							991: {
+								// autoHeight: true,
+								slidesPerView: 4,
+								spaceBetween: 20,
+							},
+						},
+					});
+				</script>
+				<!-- Lipbalm -->
+				<section class="main-section">
+					<div class="section-title">
+						<h2>Lipbalm</h2>
+						<span>립밤 </span>
+					</div>
+					<div class="product-wrapper">
+						<div class="pro-container5 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_lipbalm_1.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="product-image">
+											<img
+												class="image"
+												src="./images/v1/pro_lipbalm_2.png"
+												alt=""
+											/>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination custom-pagination"></div>
+							<div class="swiper-button-prev custom-prev"></div>
+							<div class="swiper-button-next custom-next"></div>
+						</div>
+					</div>
+				</section>
+				<script>
+					var proSlider5 = new Swiper(".pro-container5", {
+						loop: false,
+						slidesPerView: 1.5,
+						spaceBetween: 20,
+
+						breakpoints: {
+							991: {
+								// autoHeight: true,
+								slidesPerView: 4,
+								spaceBetween: 20,
+							},
+						},
+					});
+				</script>
+			</div>
+			<div class="btn-wrap fix-bottom">
+				<a href="" class="pro-btn pro-view-btn"
+					><span class="btn-text">Play Kit<span> 보러가기</span></span>
+				</a>
+				<a href="" class="pro-btn pro-deal-btn"
+					><span class="btn-text"
+						>Protection Box <span>프로텍션 박스 거래하기</span></span
+					>
+				</a>
+			</div>
+		</div>
+		<script>
+			// 거래하기, 보러가기 버튼 스크롤
+			var element = $(".banner-wrapper").outerHeight(true);
+			// var clientHeight = $(window).height();
+			$(window).scroll(function () {
+				if ($(window).scrollTop() >= element - 200) {
+					$(".btn-wrap").addClass("on");
+				} else {
+					$(".btn-wrap").removeClass("on");
+				}
+			});
+		</script>
+	</body>
+</html>

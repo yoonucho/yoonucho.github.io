@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="yoonucho" />
+	<meta name="description" content="조윤우의 블로그입니다." />
+	<meta name="keywords" content="조윤우 블로그" />
+	<meta property="og:title" content="조윤우의 블로그입니다." />
+	<meta property="og:description" content="조윤우의 블로그입니다." />
+	<meta property="og:image" content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg" />
+	<title>
+		Rest와 WebSocket의 차이
+	</title>
+	<!-- favicon & icon -->
+	<link rel="shortcut icon" href="/ico/favicon.ico" />
+	<link rel="icon" href="/ico/icon_16.png" sizes="16x16" />
+	<link rel="icon" href="/ico/icon_32.png" sizes="32x32" />
+	<link rel="icon" href="/ico/icon_64.png" sizes="64x64" />
+	<link rel="icon" href="/ico/icon_144.png" sizes="144x144" />
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="canonical" href="https://yoonucho.github.io/review/2019/04/01/restVSwebsocket.html" />
+	<link rel="alternate" type="application/rss+xml" title="윤우블로그"
+		href="https://yoonucho.github.io/feed.xml" />
+
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/syntax.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-130856644-1");
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ53YR7BPP"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EZ53YR7BPP');
+	</script>
+
+	<!-- Google AdSense -->
+	<script data-ad-client="ca-pub-1871373979449169" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper">
+	<input data-function="swipe" id="swipe" type="checkbox" />
+	<label data-function="swipe" for="swipe" class="btn btn-default"
+		>Menu</label
+	>
+
+	<div class="content"><article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <h2>Rest와 WebSocket의 차이</h2>
+    <p class="post-meta">
+      <time
+        datetime="2019-04-01T00:00:00+00:00"
+        itemprop="datePublished"
+        >Apr 1, 2019</time
+      >
+    </p>
+    <hr />
+  </header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1871373979449169"
+     data-ad-slot="3248859537"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="rest와-websocket의-차이">Rest와 WebSocket의 차이</h3>
+
+<ul>
+  <li>가장 큰 차이점은 접속을 유지하는지의 여부이다.</li>
+</ul>
+
+<h3 id="websocket이전의-양방향-통신-방법">WebSocket이전의 양방향 통신 방법</h3>
+
+<h3 id="rest">Rest</h3>
+
+<h4 id="polling">Polling</h4>
+
+<ul>
+  <li>클라이언트가 서버에서  Http Request를 주기적으로 요청하고 서버가 응답하는 방식</li>
+  <li>가장 쉬운 방법이지만 클라이언트의 수가 증가하면 서버의 부담도 커진다.</li>
+</ul>
+
+<h4 id="long-polling">Long Polling</h4>
+
+<ul>
+  <li>클라이언트가 서버에 Http Request를 요청하면  서비는 대기하고 있다가 이벤트 발생시 클라이언트에게 응답하는 방식</li>
+  <li>Polling 처럼 불필요한 요청에 계속 응답하는 것이 아니기 때문에 요청에 따른 커넥션 맺는 과정에서 발생하는 비용이 줄어든다. 하지만 클라이언트의 수가 증가하면, 
+그에 따른 응답을 해야하는 수도 증가하기 때문에 Polling과 큰 차이는 없게 된다. 또한. 다수의 클라이언트가 동시에 이벤트가 발생할 경우 
+서버는 각 클라이언트에게 응답을 하게 되고 그 다수의 클라이언트는 서버에게 곧바로 요청을 하기 때문에 이 순간 서버의 부담도 커진다.</li>
+</ul>
+
+<h4 id="streaming">Streaming</h4>
+
+<ul>
+  <li>Long Polling과 마찬가지로 클라이언트에서 서버로 일단  Http Request를 요청한다 서버에서 클라이언트로 이벤트를 전달할 때 해당 요청을 끊지 않고 필요한 메시지만 보내기를(flush) 반복하는 방식이다.</li>
+  <li>Long Polling에 비해 서버에서 메시지를 보내고도 다시 Http Requestt 연결을 하지 않아도 되어 부담이 경감될것으로 보인다.</li>
+</ul>
+
+<h4 id="ajax">AJAX</h4>
+
+<ul>
+  <li>
+    <p>AJAX는 Javascript의 XmlHttpRequest 객체를 기반으로 한다. 비동기 Javascript 및 XML의 축약 된 양식이다 . XmlHttpRequest 객체를 사용하면 전체 웹 페이지를 다시 로드하지 않고도 Javascript를 실행할 수 있다. AJAX는 웹 페이지의 일부만 송수신</p>
+  </li>
+  <li>
+    <p>서버가 요청없는 클라이언트에게 먼저 통신을 할수 있는 방법이 없음. 반이중 통신</p>
+  </li>
+</ul>
+
+<h3 id="websocket">WebSocket</h3>
+
+<p><img src="https://yoonucho.github.io/post_img/WebSockets-Diagram.png" alt="WebSockets-Diagram" title="WebSockets-Diagram" /></p>
+
+<ul>
+  <li>
+    <p>순수 웹 환경에서 실시간 (양방향) 통신을 위한 스펙</p>
+  </li>
+  <li>
+    <p>서버와 클라이언트가 지속적으로 연결된 TCP라인을 통해 실시간으로 데이터를 주고 받을 수 있도록하는 HTML5의 새로운 사양</p>
+  </li>
+  <li>
+    <p>일반적인 TCP소켓과 같이 연결지향 양방향 전이중 통신이 가능하다.</p>
+  </li>
+  <li>
+    <p>채팅, 게임, 실시간 주식차트와 같은 실시간이 요구되는 응용프로그램 개발에 사용가능</p>
+  </li>
+  <li>
+    <p>클라이언트와 서버간에 전이중 통신을 수행하려면 클라이언트가 서버로 HTTP UPGRADE 요청을 보내야 한다. 이를 웹 소켓 프로토콜 핸드 쉐이크라고한다.</p>
+  </li>
+</ul>
+
+<h3 id="참고사이트">참고사이트</h3>
+
+<ul>
+  <li>
+    <p>http://blog.naver.com/PostView.nhn?blogId=foxmann&amp;logNo=90140923533</p>
+  </li>
+  <li>
+    <p>https://www.pubnub.com/blog/2015-01-05-websockets-vs-rest-api-understanding-the-difference/</p>
+  </li>
+  <li>
+    <p>https://lkhlkh23.tistory.com/121</p>
+  </li>
+  <li>
+    <p>https://medium.com/@flsqja12_33844/http%EC%97%90%EC%84%9C%EB%B6%80%ED%84%B0-websocket%EA%B9%8C%EC%A7%80-94df91988788</p>
+  </li>
+  <li>
+    <p>https://adrenal.tistory.com/20</p>
+  </li>
+  <li>
+    <p>https://m.mkexdev.net/98</p>
+  </li>
+</ul>
+
+</div>
+
+  <!-- To enable Disqus comments, comment out this code and insert your Disqus shortname -->
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "yoonucho"; // required: replace example with your forum shortname
+    var disqus_developer = 1; // Comment out when the site is live
+    var disqus_identifier = "/review/2019/04/01/restVSwebsocket.html";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+  
+</article>
+</div>
+
+	<div class="sidebar menu">
+		<div
+			id="picture"
+			style="background-image: url(https://yoonucho.github.io/post_img/yoonu.png)"
+		></div>
+		<!-- <p>One sentence introducing yourself or what you do</p> -->
+
+		<hr />
+
+		<p>윤우 블로그</p>
+
+		<hr />
+
+		<div id="social-icons">
+			<ul>
+				<li>
+					<a href="https://github.com/yoonucho" title="깃헙" target="_blank"><i
+							class="fa fa-github"></i></a>
+				</li>
+				<li>
+					<a href="https://t.me/tomorrowcho" title="텔레그램" target="_blank"><i
+							class="fa fa-telegram"></i></a>
+				</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				   
+				<li>
+					<a href="/about/">About</a>
+				</li>
+				  
+				<li>
+					<a href="/">Blog</a>
+				</li>
+				                           
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				
+				<li>
+					<a
+						href="/categories/issue_note"
+						>issue_note</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/git"
+						>git</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/review"
+						>review</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/book_list"
+						>book_list</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/side_project"
+						>side_project</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/1stHomecomingday"
+						>1stHomecomingday</a
+					>
+				</li>
+				
+			</ul>
+		</div>
+
+		<hr />
+
+		<p>yoonu blog</p>
+		<p></p>
+		<p>Powered by Jekyll</p>
+		<p></p>
+	</div>
+</div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- <script src="/js/index.js"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 상단사각 -->
+	<ins class="adsbygoogle"
+		style="display:block;text-align: center;"
+		data-ad-client="ca-pub-1871373979449169"
+		data-ad-slot="5339836252"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+  </body>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#page-content-wrapper").fadeIn();
+    });
+  </script>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="yoonucho" />
+	<meta name="description" content="조윤우의 블로그입니다." />
+	<meta name="keywords" content="조윤우 블로그" />
+	<meta property="og:title" content="조윤우의 블로그입니다." />
+	<meta property="og:description" content="조윤우의 블로그입니다." />
+	<meta property="og:image" content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg" />
+	<title>
+		이슈노트 4
+	</title>
+	<!-- favicon & icon -->
+	<link rel="shortcut icon" href="/ico/favicon.ico" />
+	<link rel="icon" href="/ico/icon_16.png" sizes="16x16" />
+	<link rel="icon" href="/ico/icon_32.png" sizes="32x32" />
+	<link rel="icon" href="/ico/icon_64.png" sizes="64x64" />
+	<link rel="icon" href="/ico/icon_144.png" sizes="144x144" />
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="canonical" href="https://yoonucho.github.io/issue_note/2018/12/20/jekyll.html" />
+	<link rel="alternate" type="application/rss+xml" title="윤우블로그"
+		href="https://yoonucho.github.io/feed.xml" />
+
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/syntax.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-130856644-1");
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ53YR7BPP"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EZ53YR7BPP');
+	</script>
+
+	<!-- Google AdSense -->
+	<script data-ad-client="ca-pub-1871373979449169" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper">
+	<input data-function="swipe" id="swipe" type="checkbox" />
+	<label data-function="swipe" for="swipe" class="btn btn-default"
+		>Menu</label
+	>
+
+	<div class="content"><article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <h2>이슈노트 4</h2>
+    <p class="post-meta">
+      <time
+        datetime="2018-12-20T00:00:00+00:00"
+        itemprop="datePublished"
+        >Dec 20, 2018</time
+      >
+    </p>
+    <hr />
+  </header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1871373979449169"
+     data-ad-slot="3248859537"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="jekyll-블로그-삽질기">jekyll 블로그 삽질기</h2>
+
+<h3 id="이슈-내용">이슈 내용</h3>
+
+<p>블로그 페이지에서 에러뿜는게 너무 신경쓰여서 수정하다가 헬을 맞이함.</p>
+
+<h3 id="원인">원인</h3>
+
+<p><img src="https://yoonucho.github.io/post_img/code3.png" alt="style.scss" title="@import에러" /></p>
+
+<p>지킬테마에 구글폰트가 임포트되어 있는데 내 VSCODE에 Prettier플러그인이  (코드를 이쁘게 만들어 주는 용도) 문서를</p>
+
+<p>저장하면서 ,에 자동 여백을 줘서 에러가 남.</p>
+
+<h3 id="과정">과정</h3>
+
+<ol>
+  <li>
+    <p>이메일로 온 에러 코드 확인</p>
+
+    <p><img src="https://yoonucho.github.io/post_img/git_email.jpeg" alt="email info" title="깃헙에서 온 에러 메일" /></p>
+  </li>
+  <li>
+    <p>구글링</p>
+  </li>
+  <li>
+    <p>지킬 설치  (루비도 설치ㅠㅠ) + 블로그도 재생성후 기존꺼 덮어 씌움</p>
+  </li>
+  <li>gem install jekyll bundler</li>
+  <li>루트에 디렉토리가 비지 않아서 jekyll new . –force
+    <ul>
+      <li>만약 새로운 폴더에 블로그 생성시는 jekyll new [블로그명]</li>
+    </ul>
+  </li>
+  <li>
+    <p>지킬 파일 포함된 파일 저장소에 다시 푸시</p>
+  </li>
+  <li>
+    <p>일시정지</p>
+
+    <ul>
+      <li>
+        <p>우선 원인이 깃허브페이지 문제인지 지킬블로그 문제인지 알 수 없었음.</p>
+      </li>
+      <li>
+        <p>몇시간이 흐르고 배는 고프고 ㅠㅠ ‘어려운 문제는 쉽게 해결될 수도 있다’ 라는 어디선가 본 내용이 떠오름.</p>
+      </li>
+      <li>
+        <p>메모장에 나름 방법을 정리</p>
+      </li>
+    </ul>
+
+    <ol>
+      <li>
+        <p>지킬블로그가 로컬서버에서 돌아가는지 확인</p>
+      </li>
+      <li>
+        <p>_config.yml 확인</p>
+      </li>
+      <li>
+        <p>저장소에서 지킬 파일을 지우고 깃허브페이지로는 실행되는지 확인</p>
+      </li>
+      <li>
+        <p>2시간안에 해결해보자.</p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="해결">해결</h3>
+
+<ol>
+  <li>
+    <p>지킬 로컬서버 실행시 커맨드창에  에러 메세지를 보고 발견</p>
+
+    <ul>
+      <li>
+        <p>에러메시지</p>
+
+        <ul>
+          <li>
+            <p>ERROR: YOUR SITE COULD NOT BE BUILT:</p>
+          </li>
+          <li>
+            <p>Invalid YAML front matter in F:/yu2/yoonucho.github.io/style.scss</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>scss파일에서 ,앞 여백 삭제</p>
+  </li>
+  <li>
+    <p>밥먹고 수정하고 20분만에 해결 :D</p>
+  </li>
+  <li>
+    <p>루비와 지킬을 설치할 필요는 없었으나 결국 로컬서버를 실행해서 에러를 확인했으니 완전 헛고생은 아니었구나와</p>
+
+    <p>해결이 되지 않을때는 잠시 쉬면서 생각해보자.</p>
+  </li>
+</ol>
+
+</div>
+
+  <!-- To enable Disqus comments, comment out this code and insert your Disqus shortname -->
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "yoonucho"; // required: replace example with your forum shortname
+    var disqus_developer = 1; // Comment out when the site is live
+    var disqus_identifier = "/issue_note/2018/12/20/jekyll.html";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+  
+</article>
+</div>
+
+	<div class="sidebar menu">
+		<div
+			id="picture"
+			style="background-image: url(https://yoonucho.github.io/post_img/yoonu.png)"
+		></div>
+		<!-- <p>One sentence introducing yourself or what you do</p> -->
+
+		<hr />
+
+		<p>윤우 블로그</p>
+
+		<hr />
+
+		<div id="social-icons">
+			<ul>
+				<li>
+					<a href="https://github.com/yoonucho" title="깃헙" target="_blank"><i
+							class="fa fa-github"></i></a>
+				</li>
+				<li>
+					<a href="https://t.me/tomorrowcho" title="텔레그램" target="_blank"><i
+							class="fa fa-telegram"></i></a>
+				</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				   
+				<li>
+					<a href="/about/">About</a>
+				</li>
+				  
+				<li>
+					<a href="/">Blog</a>
+				</li>
+				                           
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				
+				<li>
+					<a
+						href="/categories/issue_note"
+						>issue_note</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/git"
+						>git</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/review"
+						>review</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/book_list"
+						>book_list</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/side_project"
+						>side_project</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/1stHomecomingday"
+						>1stHomecomingday</a
+					>
+				</li>
+				
+			</ul>
+		</div>
+
+		<hr />
+
+		<p>yoonu blog</p>
+		<p></p>
+		<p>Powered by Jekyll</p>
+		<p></p>
+	</div>
+</div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- <script src="/js/index.js"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 상단사각 -->
+	<ins class="adsbygoogle"
+		style="display:block;text-align: center;"
+		data-ad-client="ca-pub-1871373979449169"
+		data-ad-slot="5339836252"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+  </body>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#page-content-wrapper").fadeIn();
+    });
+  </script>
+</html>

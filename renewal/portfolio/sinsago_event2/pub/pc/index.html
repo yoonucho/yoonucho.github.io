@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>쎈 자신감 꿀템 이벤트</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="7쎈 자신감 꿀템 이벤트">
+<meta name="description" content="쎈 자신감 꿀템 이벤트">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="css/content.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/content.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="u_skip">
+	<!-- skip navigation -->
+	<dl>
+		<dt class="blind">바로가기 메뉴</dt>
+		<dd><a href="#wrap">본문으로 바로가기</a></dd>
+	</dl>
+</div>
+<!-- //skip navigation -->
+<div class="md-modal md-effect-1" id="modal-1">
+	<!-- layer popup -->
+	<div class="md-content">
+		<div class="layerpopup">
+			<h3 class="blind">7쎈 자신감 꿀템</h3>
+			<div class="pop_content">
+				<div class="scroll_content">
+					<div class="section v25">
+						<h4 class="tit_h4_infocollect">개인정보 수집 및 이용에 대한 안내(필수)</h4>
+						<div class="box_infocollect">
+							<p class="mb5">좋은책신사고는 본 이벤트를 위하여 다음과 같이 개인정보를 수집 및 이용합니다.</p>
+							<ul>
+								<li>· 수집 이용 목적 : 이벤트 진행 및 경품 발송으로만 수집하며, 기타 마케팅 용도로 이용되지 않습니다.</li>
+								<li>· 보유/이용 기간 : 이벤트 종료일로부터 60일간</li>
+								<li>· 수집항목 : 이름, 휴대폰번호, 학년</li>
+							</ul>
+						</div>
+						<div class="box_agree">
+							<label>
+								<input type="checkbox" title="선택">개인정보 수집 및 이용에 대한 안내에 동의합니다.</label>
+						</div>
+					</div>
+					<div class="section v25">
+						<h4 class="tit_h4_evtjoin">이벤트 참여하기</h4>
+						<table class="tbl_pop">
+							<caption>이벤트 참여 작성 목록</caption>
+							<colgroup>
+								<col style="width:169px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<label for="name">이름</label>
+									</th>
+									<td>
+										<input type="text" id="name" title="이름 입력" style="width:272px">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="address">주소</label>
+									</th>
+									<td>
+										<input type="text" name="zipcode1" title="우편번호 입력" class="txt" style="width:62px" readonly maxlength="5">
+										<a href="#" class="zipcode">우편번호검색</a>
+										<p class="address_input">
+											<input type="text" name="addr1" title="주소입력" style="width:169px" readonly>
+											<input type="text" name="addr2" title="주소 상세정보 입력" style="width:250px" placeholder="상세 주소 입력">
+										</p>
+									</td>
+								</tr>					
+								<tr>
+									<th scope="row">
+										<label for="phoneNum">휴대폰번호</label>
+									</th>
+									<td>
+										<select id="phoneNum" style="min-width:120px">
+											<option>선택</option>
+											<option>010</option>
+										</select> -
+										<input type="text" title="휴대폰 둘째자리 입력" style="width:92px"> -
+										<input type="text" title="휴대폰 첫째자리 입력" style="width:92px">
+										<p class="phone_info">※ 휴대폰 번호를 다시 한 번 확인해주세요!</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="grade">학년</label>
+									</th>
+									<td>
+										<select id="grade" style="min-width:120px">
+											<option>선택</option>
+											<option>중등 1학년</option>
+										</select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="group_pop_note">
+						<h4>이벤트 유의사항</h4>
+						<ul>
+							<li>※ 본 이벤트는 기재된 휴대전화번호로 기프티콘이 지급됩니다.</li>
+							<li>※ 개인정보 오류 및 SMS 수신거부의 경우 경품 지급 및 재발송 처리 되지 않습니다.</li>
+							<li>※ 부정한 방법을 통해 참여한 경우 당첨 경품 지급이 불가하며, 예고 없이 당첨이 취소될 수 있습니다.</li>
+							<li>※ 이벤트 경품은 모바일 쿠폰사 사정에 따라 동일 금액의 다른 상품으로 변경될 수 있습니다.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<a href="#none" class="btn_reg">등록완료</a>
+				</div>
+				<a class="md-close">닫기</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="md-modal md-effect-1 v2" id="modal-2">
+	<div class="md-content md-effect">
+		<div class="layerpopup pop2">
+			<div class="blind">
+				<h4>‘나는 독서대, 너는 명문대’ 멀티 독서대</h4>
+				<p>교재 볼 때 더 이상 고개 숙이지 마세요. 여러분의 목 관절은 소중하니까요. ‘너는 명문대’ 독서대로 바른 자세와 당당함을 동시에!</p>
+				<ul>
+					<li>문제집, 휴대폰, 테블릿 PC 등 책도 보고, 인강도 듣는 다용도 독서대!</li>
+					<li>볼 때마다 명문대에 붙을 것만 같은 신묘한 문구!</li>
+					<li>가벼운 무게, 2단 높이 조절로 편리함이 2배!</li>
+				</ul>		
+			</div>
+			<a class="md-close">닫기</a>
+		</div>
+	</div>
+</div>	
+<div class="md-modal md-effect-1 v2" id="modal-3">
+	<div class="md-content md-effect">
+		<div class="layerpopup pop3">
+			<div class="blind">
+				<h4>‘쌓아가는 자신감’ 스프링 연습장</h4>
+				<p>수학이 술술 풀리는 연습장! 쌓여가는 연습장만큼 여러분의 수학 실력도 쑥쑥 자라납니다^^</p>
+				<ul>
+					<li>두툼한 두께, 스프링 처리로 열공 효율 UP!</li>
+					<li>볼 때마다 자신감이 쌓이는 기묘한 문구!</li>
+					<li>자유로운 수학 연습을 위한 순백의 무지 노트!</li>
+				</ul>
+			</div>
+			<a class="md-close">닫기</a>
+		</div>
+	</div>
+</div>	
+<div class="md-modal md-effect-1 v2" id="modal-4">
+	<div class="md-content md-effect">
+		<div class="layerpopup pop4">
+			<div class="blind">
+				<h4>‘자신감 한 水’ 에코 보틀</h4>
+				<p>아무리 바빠도 내 몸을 위한 수분 충전은 잊지 마세요. 수분과 자신감을 동시에 충전하는 ‘자신감 한 水’도 놓치지 마세요!</p>
+				<ul>
+					<li>친환경 에코젠 소재로 건강하고 촉촉하게!</li>
+					<li>마실 때마다 자신감이 충전되는 오묘한 보틀!</li>
+					<li>가볍고 편리한 휴대성으로 언제 어디서나 수분 충전!</li>
+				</ul>
+			</div>
+			<a class="md-close">닫기</a>
+		</div>
+	</div>
+</div>	
+<div class="md-overlay"></div>
+	<!-- the overlay element -->
+<div id="wrap">
+	<!-- article -->
+	<article>
+		 <!-- 쎈 자신감 꿀템 7자톡 이벤트 -->
+		<div class="intro">
+			<div class="header_inner">
+				<h1><a href="#" class="logo" target="_blank" title="새창열림">좋은책 신사고</a></h1>
+			</div>
+			<div class="intro_inner">
+				<h2>
+					<span class="slideX tit_motion tit_motion1">쎈 자신감 꿀템</span>
+					<span class="slideX tit_motion tit_motion2">숫자7</span>
+					<span class="slideX tit_motion tit_motion3">자톡 이벤트</span>
+					<span class="slideY tit_motion tit_motion4">라인</span>
+				</h2>
+				<div class="blind">
+					<p>2018년 신학기 지금 가장 필요한 건? 바로 자. 신. 감 ! 7자톡 쓰고, 보기만 해도 자신감이 불끈 나는 ‘쎈 자신감 꿀템’ 받자~!!</p>
+					<ul>
+						<li>대상 : 중고등 학생이면 누구나</li>
+						<li>기간 : 2018.3.2(금)~3.21(수)</li>
+						<li>발표 : 3.28(수), 홈페이지 공지사항</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!-- //쎈 자신감 꿀템 7자톡 이벤트  -->
+		<hr>
+		 <!-- 꿀템 3종 특별 세트 -->
+		<div class="intro_evt1">
+			<div class="intro_evt1_inner">
+				<p class="blind">쎈 자신감 꿀템이 필요한 이유 7자톡을 작성하면, 꿀템별 100명, 3종 특별 세트 100명, 총 400명을 추첨하여 자신감 꿀템 증정!</p>
+				<div class="evt1_con">
+				</div>
+				<ul class="item_lst">
+					<li>
+						<span class="item item1">상품이미지1</span>
+						<a href="#none" class="md-trigger icon_view" data-modal="modal-2">돋보기</a>
+					</li>
+					<li>
+						<span class="item item2">상품이미지2</span>
+						<a href="#none" class="md-trigger icon_view" data-modal="modal-3">돋보기</a>
+					</li>
+					<li>
+						<span class="item item3">상품이미지3</span>
+						<a href="#none" class="md-trigger icon_view" data-modal="modal-4">돋보기</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		 <!-- //꿀템 3종 특별 세트 -->
+		 <hr>
+		 <!-- 쎈 자신감 꿀템이 필요해요! 왜냐하면~ -->
+		<div class="intro_evt2">
+			<div class="intro_evt2_inner">
+				<h3>쎈 자신감 꿀템이 필요해요! 왜냐하면~</h3>
+				<span class="status">현재 <strong class="total">1400</strong>명 참여중</span>
+				<div class="bxslider">
+					<ul class="slider">
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item1.png" alt="너는 명문대' 독서대">
+								</div>
+								<div class="text_wrap">
+									<strong>수학자신감충전</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item2.png" alt="‘쌓아가는 자신감’ 스프링 연습장">
+								</div>
+								
+								<div class="text_wrap">
+									<strong>명불허전쎈최고</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item3.png" alt="자신감한수_보틀">
+								</div>
+							
+								<div class="text_wrap">
+									<strong>명문대가기위해</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="slider">
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item1.png" alt="너는 명문대' 독서대">
+								</div>
+								<div class="text_wrap">
+									<strong>수학자신감충전</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item2.png" alt="‘쌓아가는 자신감’ 스프링 연습장">
+								</div>
+								
+								<div class="text_wrap">
+									<strong>명불허전쎈최고</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item3.png" alt="자신감한수_보틀">
+								</div>
+							
+								<div class="text_wrap">
+									<strong>명문대가기위해</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="slider">
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item1.png" alt="너는 명문대' 독서대">
+								</div>
+								<div class="text_wrap">
+									<strong>수학자신감충전</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item2.png" alt="‘쌓아가는 자신감’ 스프링 연습장">
+								</div>
+								
+								<div class="text_wrap">
+									<strong>명불허전쎈최고</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="con_wrap">
+								<div class="img_wrap">
+									<img src="img/slider_item3.png" alt="자신감한수_보틀">
+								</div>
+							
+								<div class="text_wrap">
+									<strong>명문대가기위해</strong>
+									<p><span class="name">이*랑</span><span class="date">2018.02.26</span></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //쎈 자신감 꿀템이 필요해요! 왜냐하면~ -->
+		<hr>
+		<!-- 참여 방법 -->
+		<div class="intro_evt3">
+			<div class="intro_evt3_inner">
+				<div class="step_wrap">
+					<h3>참여방법</h3>
+					<p class="blind">STEP 1 쎈 자신감 꿀템 선택하기</p>
+					<div class="radio_box_wrap">
+						<ul>
+							<li>
+								<div class="check_item check_item1">'너는 명문대' 독서대</div>
+								<input type="radio" id="r1" name="evt">
+								<label for="r1"></label>
+							</li>
+							<li>
+								<div class="check_item check_item2">'‘쌓아가는 자신감’ 스프링 연습장</div>
+								<input type="radio" id="r2" name="evt">
+								<label for="r2"></label>
+							</li>
+							<li>
+								<div class="check_item check_item3">'자신감한수_보틀</div>
+								<input type="radio" id="r3" name="evt">
+								<label for="r3"></label>
+							</li>
+						</ul>
+					</div>
+					<p class="step_info">꿀템에 새겨진 센스 넘치는 문구는 쎈 수학 자신감 명언 공모전 수상작에서 발췌하였습니다.</p>
+				</div>
+				<div class="step_wrap v2">
+					<div class="blind">
+						<h3>꿀템 선택 이유 7자평 작성하기</h3>
+						<span>선택한 꿀템이 꼭 필요한 이유를 7자로 입력해주세요.</span>
+					</div>
+					<div class="input_box_wrap">
+						<p class="input_text">
+							<span class="loc_input loc_input1">
+								<input type="text" title="첫번째 글자 입력">
+							</span>
+							<span class="loc_input loc_input2">
+								<input type="text" title="두번째 글자 입력">
+							</span>
+							<span class="loc_input loc_input3">
+								<input type="text" title="세번째 글자 입력">
+							</span>
+							<span class="loc_input loc_input4">
+								<input type="text" title="네번째 글자 입력">
+							</span>
+							<span class="loc_input loc_input5">
+								<input type="text" title="다섯번째 글자 입력">
+							</span> 
+							<span class="loc_input loc_input6">
+								<input type="text" title="여섯번째 글자 입력">
+							</span>
+							<span class="loc_input loc_input7">
+								<input type="text" title="일곱째 글자 입력">
+							</span>  
+						</p>
+					</div>
+				</div>
+				<p class="btn_cnt v2">
+					<a href="#none" class="btn btn_member">회원참여</a>
+					<a href="#none" class="btn btn_non_member md-trigger" data-modal="modal-1">비회원참여</a>
+				</p>
+			</div>
+		</div>
+		<!-- //참여 방법 -->
+		<hr>
+		<!-- 보너스 이벤트  -->
+		<div class="intro_evt4">
+			<div class="intro_evt4_inner">
+				<div class="blind">
+					<h3>이벤트 소문내고 CU편의점 상품권 받자</h3>
+					<ul>
+						<li>블로그, SNS, 카페 등에 이벤트를 소문내주세요! </li>
+						<li>추첨을 통해 CU편의점 상품권 1,000원을 드립니다.</li>
+					</ul>
+				</div>
+				<ul class="lst_sns">
+					<li><a href="#" class="sns btn_blog" target="_blank" title="새창">네이버 블로그</a></li>
+					<li><a href="#" class="sns btn_facebook" target="_blank" title="새창">페이스북</a></li>
+					<li><a href="#" class="sns btn_story" target="_blank" title="새창">카카오스토리</a></li>
+				</ul>
+				<div class="group_urlregist">
+					<div class="lst_input_wrap">
+						<ul class="lst_inputform">
+							<li><input type="text" placeholder="스크랩 URL을 입력해주세요." name="sns_url" style="width:762px"></li>
+						</ul>
+						<a href="#none" class="loc_btn_add"><img src="img/btn_add.png" alt="추가하기"></a>
+					</div>
+					<p class="btn_cnt">
+						<a href="#none" class="btn btn_member">회원참여</a>
+						<a href="#none" class="btn btn_non_member md-trigger" data-modal="modal-1">비회원참여</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- //보너스 이벤트  -->
+		<hr>			
+		<!-- 알아두세요 -->
+		<div class="intro_evt5">
+			<div class="intro_evt5_inner">
+				<div class="blind">
+					<h3>알아두세요</h3>
+					<ul>
+						<li>* 중복 참여가 가능하며, 상품은 1인당 1개 당첨으로 제한됩니다.</li>
+						<li>* 입력란에 욕설, 비방글 등 이벤트와 무관한 글이 작성될 시 관리자의 권한으로 삭제할 수 있습니다.</li>
+						<li>* 부정한 방법으로 참여 시 당첨자 선정에서 제외될 수 있습니다.</li>
+						<li>* 당첨자로 선정된 경우, 기입한 주소 및 휴대폰 번호로 상품이 발송될 예정이오니 정확한 정보를 입력해주세요.</li>
+						<li>* 회원인 경우 ‘회원정보수정’을 통해 정확한 정보를 확인해주시기 바랍니다.</li>
+					</ul>
+				</div>
+				<a href="#" class="btn_ok" target="_blank">회원정보 확인</a>
+			</div>
+		</div>
+		<!-- //알아두세요 -->
+	</article>
+	<!-- //article -->
+	<div class="footer">
+		<!-- footer -->
+		<div class="footer_inner">
+			<h3 class="logo">좋은책 신사고</h3>
+			<address>Copyright ⓒ (주)좋은책신사고 All rights reserved.</address>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/modalEffects.js"></script>
+</body>
+
+</html>

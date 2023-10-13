@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="yoonucho" />
+	<meta name="description" content="조윤우의 블로그입니다." />
+	<meta name="keywords" content="조윤우 블로그" />
+	<meta property="og:title" content="조윤우의 블로그입니다." />
+	<meta property="og:description" content="조윤우의 블로그입니다." />
+	<meta property="og:image" content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg" />
+	<title>
+		Web Server와 WAS의 차이
+	</title>
+	<!-- favicon & icon -->
+	<link rel="shortcut icon" href="/ico/favicon.ico" />
+	<link rel="icon" href="/ico/icon_16.png" sizes="16x16" />
+	<link rel="icon" href="/ico/icon_32.png" sizes="32x32" />
+	<link rel="icon" href="/ico/icon_64.png" sizes="64x64" />
+	<link rel="icon" href="/ico/icon_144.png" sizes="144x144" />
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="canonical" href="https://yoonucho.github.io/review/2019/03/18/webserverVSwas.html" />
+	<link rel="alternate" type="application/rss+xml" title="윤우블로그"
+		href="https://yoonucho.github.io/feed.xml" />
+
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/syntax.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-130856644-1");
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ53YR7BPP"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EZ53YR7BPP');
+	</script>
+
+	<!-- Google AdSense -->
+	<script data-ad-client="ca-pub-1871373979449169" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper">
+	<input data-function="swipe" id="swipe" type="checkbox" />
+	<label data-function="swipe" for="swipe" class="btn btn-default"
+		>Menu</label
+	>
+
+	<div class="content"><article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <h2>Web Server와 WAS의 차이</h2>
+    <p class="post-meta">
+      <time
+        datetime="2019-03-18T00:00:00+00:00"
+        itemprop="datePublished"
+        >Mar 18, 2019</time
+      >
+    </p>
+    <hr />
+  </header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1871373979449169"
+     data-ad-slot="3248859537"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <div class="post-content" itemprop="articleBody"><h3 id="web-server">Web Server</h3>
+
+<h4 id="web-server-1">Web Server</h4>
+
+<ul>
+  <li>클라이언트가 보내는 HTTP요청을 받아 서버에 있는  HTML, CSS, 자바스크립트를 전송하는 역할, 리소스 송신</li>
+</ul>
+
+<h4 id="종류">종류</h4>
+
+<ul>
+  <li>아파치</li>
+  <li>nginx</li>
+  <li>IIS</li>
+  <li>node.js</li>
+  <li>WebtoB</li>
+  <li>Mongoose</li>
+  <li>Lighttpd</li>
+  <li>LightSpeed</li>
+  <li>Zeus</li>
+</ul>
+
+<h3 id="web-application-server">Web Application Server</h3>
+
+<h4 id="web-application-server-1">Web Application Server</h4>
+
+<ul>
+  <li>
+    <p>비즈니스 로직 수행 (서블릿(Servlet)을 통해 JSP를 처리하고, 서버 하드웨어의 쓰레드를 처리하고, 데이터베이스에 접속하여 SQL 쿼리문에 대한 결과값을 반환하는 역할)</p>
+  </li>
+  <li>
+    <p>대부분이 자바 기반으로 주로 자바 EE 표준을 수용하고 있으나, 자바 기반이지만 자바 EE 표준을 따르지 않는 제품과 .NET이나 Citrix 기반인 비 자바 계열도 존재함.</p>
+  </li>
+</ul>
+
+<h4 id="종류-1">종류</h4>
+
+<ul>
+  <li>톰캣 (Web Server 기능 포함)</li>
+  <li>JEUS</li>
+  <li>WebLogic</li>
+</ul>
+
+<h3 id="web-server와-was의-차이">Web Server와 WAS의 차이</h3>
+
+<ul>
+  <li>Web Server는 정적인 데이터를 처리 (ex: 이미지파일, HTML문서)</li>
+  <li>WAS는 정적,동적처리 둘다 가능하지만 효율적인 자원관리를 위해 동적인 데이터를 처리</li>
+</ul>
+
+<h3 id="참고사이트">참고사이트</h3>
+
+<ul>
+  <li>
+    <p>https://jeong-pro.tistory.com/84</p>
+  </li>
+  <li>
+    <p>https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html</p>
+  </li>
+  <li>
+    <p>https://limmmee.tistory.com/4</p>
+  </li>
+  <li>
+    <p>https://namu.wiki/w/%EC%9B%B9%20%EC%84%9C%EB%B2%84?from=%EC%9B%B9%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EC%84%9C%EB%B2%84#s-6</p>
+  </li>
+  <li>
+    <p>https://ko.wikipedia.org/wiki/웹_애플리케이션_서버</p>
+  </li>
+</ul>
+</div>
+
+  <!-- To enable Disqus comments, comment out this code and insert your Disqus shortname -->
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "yoonucho"; // required: replace example with your forum shortname
+    var disqus_developer = 1; // Comment out when the site is live
+    var disqus_identifier = "/review/2019/03/18/webserverVSwas.html";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+  
+</article>
+</div>
+
+	<div class="sidebar menu">
+		<div
+			id="picture"
+			style="background-image: url(https://yoonucho.github.io/post_img/yoonu.png)"
+		></div>
+		<!-- <p>One sentence introducing yourself or what you do</p> -->
+
+		<hr />
+
+		<p>윤우 블로그</p>
+
+		<hr />
+
+		<div id="social-icons">
+			<ul>
+				<li>
+					<a href="https://github.com/yoonucho" title="깃헙" target="_blank"><i
+							class="fa fa-github"></i></a>
+				</li>
+				<li>
+					<a href="https://t.me/tomorrowcho" title="텔레그램" target="_blank"><i
+							class="fa fa-telegram"></i></a>
+				</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				   
+				<li>
+					<a href="/about/">About</a>
+				</li>
+				  
+				<li>
+					<a href="/">Blog</a>
+				</li>
+				                           
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				
+				<li>
+					<a
+						href="/categories/issue_note"
+						>issue_note</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/git"
+						>git</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/review"
+						>review</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/book_list"
+						>book_list</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/side_project"
+						>side_project</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/1stHomecomingday"
+						>1stHomecomingday</a
+					>
+				</li>
+				
+			</ul>
+		</div>
+
+		<hr />
+
+		<p>yoonu blog</p>
+		<p></p>
+		<p>Powered by Jekyll</p>
+		<p></p>
+	</div>
+</div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- <script src="/js/index.js"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 상단사각 -->
+	<ins class="adsbygoogle"
+		style="display:block;text-align: center;"
+		data-ad-client="ca-pub-1871373979449169"
+		data-ad-slot="5339836252"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+  </body>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#page-content-wrapper").fadeIn();
+    });
+  </script>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SO2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="../static/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static/css/font.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static/css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static/css/layout.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static/css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static/css/sales.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static/css/order.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- ///////////////////////////////////////////////////////////////////////////////// GNB : Sub -->
+		<nav class="gnb sub order">
+			<div class="container">
+				<div class="row top">
+					<div class="col-3 left"></div>
+					<div class="col-6 logo d-inline-block">
+						<a>주문확인</a>
+					</div>
+					<div class="col-3 right">
+						<ul class="nav justify-content-end">
+							<li class="nav-item">
+								<a class="nav-link d-inline-block" href="">취소</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- ///////////////////////////////////////////////////////////////////////////////// GNB : Sub -->
+
+		<section class="order">
+			<div class="container">
+				<div class="content-inner">
+					<!-- <div class="copyright">
+						<h2>주문확인</h2>
+					</div> -->
+					<div class="justify-content-between request">
+						<div class="left">
+							<div class="divider d-block"></div>
+							<h3 class="title">상세 구매 내역</h3>
+							<div class="info">
+								<div class="image"><img src="../static/img/snk_02.png" /></div>
+								<div class="text">
+									<p class="no">STB-10057</p>
+									<h5 class="name ellipsis">Air More Uptempo Scottie Pippen (2020) 30족</h5>
+									<p class="option">
+										<button type="button" data-toggle="modal" data-target="#productModal">구성상품보기</button>
+									</p>
+								</div>
+							</div>
+							<div class="price">
+								<div>1조각<span class="float-right">10,000원</span></div>
+								<div>주문 수량<span class="float-right">20조각</span></div>
+								<h4>총 구매금액<span class="float-right">1,000,000원</span></h4>
+							</div>
+							<div class="divider"></div>
+							<h3 class="title">결제수단</h3>
+							<div class="payment">
+								<div class="form-check radio">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+									<label class="form-check-label mr-5" for="inlineRadio1"><span></span>SOL Pay</label>
+								</div>
+							</div>
+							<div class="divider d-block d-lg-none"></div>
+							<h4 class="d-flex justify-content-between pay">
+								<span>총 결제금액</span>
+								<span class="float-right"> 1,000,000원</span>
+							</h4>
+							<!-- <h5 class="title">결제정보</h5>
+							<div class="container">
+								<div class="row inputs">
+									<div class="col-lg-6">
+										<div class="form-group text">
+											<label for="exampleInputEmail1">포인트</label>
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+										</div>
+										<div class="d-flex justify-content-between">
+											<div>총 포인트 2,050P</div>
+											<div class="form-group form-check checkbox">
+												<input type="checkbox" class="form-check-input" id="exampleCheck1" />
+												<span></span>
+												<label class="form-check-label" for="exampleCheck1">모두사용</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group text">
+											<label for="exampleInputEmail1">예치금</label>
+											<input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" />
+										</div>
+										<div class="d-flex justify-content-between">
+											<div>총 포인트 2,050P</div>
+											<div class="form-group form-check checkbox">
+												<input type="checkbox" class="form-check-input" id="exampleCheck2" />
+												<span></span>
+												<label class="form-check-label" for="exampleCheck2">모두사용</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div class="right">
+						<!-- <h3 class="title d-none d-lg-block">결제 요약 정보</h3> -->
+						<div class="recipe">
+							<!-- <div class="inner">
+								<div class="d-none d-lg-block">
+									<div class="d-flex justify-content-between total">
+										<span>총 주문금액</span>
+										<strong>100,000원</strong>
+									</div>
+									<div class="d-flex justify-content-between deposit">
+										<span>예치금</span>
+										<strong> -1,000원</strong>
+									</div>
+								</div>
+							</div> -->
+							<div class="agree">
+								<h4>구매동의</h4>
+								<div class="form-group form-check checkbox">
+									<input type="checkbox" class="form-check-input" id="exampleCheck3" />
+									<label class="form-check-label" for="exampleCheck3"><span></span>상품, 가격, 할인정보, 유의 사항 등을 확인하였으며 결제 진행에 동의합니다. </label>
+								</div>
+								<div class="d-block">
+									<div class="btn-group btn-block" role="group" aria-label="Basic example">
+										<button type="button" class="btn btn-light">취소</button>
+										<button type="button" class="btn btn-primary">결제하기</button>
+									</div>
+								</div>
+							</div>
+							<!-- <button class="btn btn-light btn-block d-none d-lg-block">결제하기</button> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer></footer>
+
+		<!-- ///////////////////////////////////////////////////////////////////////////////// Page -->
+		<script src="../static/js/jquery-3.5.1.min.js"></script>
+		<script src="../static/js/popper.min.js"></script>
+		<script src="../static/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+		<script src="../static/js/common.js"></script>
+		<script>
+			$().ready(function () {
+				$("footer").load("../footer.html");
+			});
+		</script>
+	</body>
+</html>

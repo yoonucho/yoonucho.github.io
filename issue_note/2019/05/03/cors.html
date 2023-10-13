@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="yoonucho" />
+	<meta name="description" content="조윤우의 블로그입니다." />
+	<meta name="keywords" content="조윤우 블로그" />
+	<meta property="og:title" content="조윤우의 블로그입니다." />
+	<meta property="og:description" content="조윤우의 블로그입니다." />
+	<meta property="og:image" content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg" />
+	<title>
+		이슈노트 8
+	</title>
+	<!-- favicon & icon -->
+	<link rel="shortcut icon" href="/ico/favicon.ico" />
+	<link rel="icon" href="/ico/icon_16.png" sizes="16x16" />
+	<link rel="icon" href="/ico/icon_32.png" sizes="32x32" />
+	<link rel="icon" href="/ico/icon_64.png" sizes="64x64" />
+	<link rel="icon" href="/ico/icon_144.png" sizes="144x144" />
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="canonical" href="https://yoonucho.github.io/issue_note/2019/05/03/cors.html" />
+	<link rel="alternate" type="application/rss+xml" title="윤우블로그"
+		href="https://yoonucho.github.io/feed.xml" />
+
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/syntax.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-130856644-1");
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ53YR7BPP"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EZ53YR7BPP');
+	</script>
+
+	<!-- Google AdSense -->
+	<script data-ad-client="ca-pub-1871373979449169" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper">
+	<input data-function="swipe" id="swipe" type="checkbox" />
+	<label data-function="swipe" for="swipe" class="btn btn-default"
+		>Menu</label
+	>
+
+	<div class="content"><article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <h2>이슈노트 8</h2>
+    <p class="post-meta">
+      <time
+        datetime="2019-05-03T00:00:00+00:00"
+        itemprop="datePublished"
+        >May 3, 2019</time
+      >
+    </p>
+    <hr />
+  </header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1871373979449169"
+     data-ad-slot="3248859537"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="cors-이슈를-처음으로-맞이하다">CORS 이슈를 처음으로 맞이하다.</h2>
+
+<ul>
+  <li>사이드프로젝트에 공공데이터포털 API를 이용하여 프론트엔드 라이브러리인 리액트에서 데이터를 가져와서 화면에
+출력하는 시도를 하였으나 CORS이슈로 빈화면에 콘솔창에 에러메세지를 뿜음</li>
+</ul>
+
+<h3 id="원인">원인</h3>
+
+<ul>
+  <li>CORS 이슈</li>
+</ul>
+
+<p><img src="https://yoonucho.github.io/post_img/code7.gif" alt="error_msg" title="안녕 CORS 이슈 월드에 온 것을 환영해" /></p>
+
+<h4 id="cors-이슈란">CORS 이슈란</h4>
+
+<ul>
+  <li>
+    <p>Cross-Origin Resource Sharing의 약자로 기존 도메인에서 다른 도메인 요청이 들어 왔을때 요청된 웹페이지 자원에 대하여 사용을 허가하는 메커니즘이다.</p>
+  </li>
+  <li>
+    <p>웹 브라우저가 사용하는 정보를 읽을 수 있도록 허가된 출처 집합을 서버에게 알려주도록 허용하는 HTTP 헤더를 추가함으로써 동작한다.</p>
+  </li>
+</ul>
+
+<h3 id="과정">과정</h3>
+
+<h4 id="방법-모색-1">방법 모색 1</h4>
+<ul>
+  <li>
+    <p>Cors이슈를 해결하기 위해서 서버 세팅을 해야 하는게 처음에는 납득이 가지 않았다. 그래서 프론트에서만 해결할 수 방법들을 모색하였다. 대략 4가지 방법이 확인되었다.</p>
+
+    <ol>
+      <li>
+        <p>구글확장 프로그램 설치 - [Allow-Control-Allow-Origin: *] (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon)</p>
+      </li>
+      <li>크롬에서 –disable-web-security 옵션을 추가하여 크롬 실행</li>
+      <li>JSONOP 방식으로 요청</li>
+      <li>API 요청서버에서 cors 설정을 지원하는지 확인</li>
+    </ol>
+  </li>
+  <li>
+    <p>이 중에 3번은 우회방법이라 내키지 않아서 보류, 4번은 공공데이터포털이 지원을 안하는거 같아서 보류, 1번과 2번을 시도해 보았다.</p>
+  </li>
+</ul>
+
+<h4 id="결과">결과</h4>
+
+<ol>
+  <li>
+    <p>Allow-Control-Allow-Origin: * 설치 - 이상하게 나는 해결이 되지 않고 오히려 기존 유투브와 AWS사이트에서 에러를 발생하는 문제가 발생하였다. 실패</p>
+  </li>
+  <li>
+    <p>–disable-web-security - 역시나 실패</p>
+  </li>
+</ol>
+
+<h4 id="방법모색-2">방법모색 2</h4>
+
+<ul>
+  <li>결국 이런저런 삽질끝에 서버세팅을 하여야 해결할 수 있겠구나 깨닫게 됨 😢</li>
+  <li>그럼 서버를 세팅해보자.</li>
+</ul>
+
+<h4 id="고민">고민</h4>
+
+<ol>
+  <li>백알못 (백엔드를 알지 못함)의 무지의 답답함 - 서버는 node.js로 세팅을 했는데 이걸 API서버와 어떻게 연결해야 할까</li>
+  <li>서버와 프론트는 어떻게 연결해야 할까 DBMS가 있어야 하나 당장 DB는 필요없는데 같은 엉뚱하고 바보같은 고민에 휩싸임</li>
+</ol>
+
+<h4 id="해결">해결</h4>
+
+<ol>
+  <li>
+    <p>API서버와 어떻게 연결해야 할까</p>
+
+    <ul>
+      <li>node-fetch를 설치하여 내 로컬 서버에서 fetch로 공공데이터 API를 요청하였다.</li>
+    </ul>
+
+ 	  * npm install node-fetch –save
+  </li>
+</ol>
+
+<p>server.js (서버 http://localhost:8080)</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">node-fetch</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// 중략</span>
+
+<span class="nx">router</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="nx">fetch</span><span class="p">(</span>
+		<span class="dl">"</span><span class="s2">http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/abandonmentPublic?serviceKey=</span><span class="dl">"</span><span class="err">발급받은</span> <span class="err">서비스키</span><span class="dl">"</span><span class="s2">
+	)
+		.then(response =&gt; response.json())
+		.then(json =&gt; {
+			res.send(json);
+		})
+		.catch(() =&gt; {
+			res.send(JSON.stringify({ message: </span><span class="dl">"</span><span class="nx">System</span> <span class="nb">Error</span><span class="dl">"</span><span class="s2"> }));
+		});
+});
+
+// 중략
+
+</span></code></pre></div></div>
+
+<ol>
+  <li>
+    <p>서버와 프론트는 어떻게 연결해야 할까</p>
+
+    <ul>
+      <li>프론트 에서 fetch로 http://localhost:8080을 요청하였다.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>App.js (프론트 http://localhost:8080)</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// 중략</span>
+
+	<span class="nx">callApi</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:8080</span><span class="dl">"</span><span class="p">)</span>
+			<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+			<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span> <span class="o">=&gt;</span> <span class="nx">json</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">item</span><span class="p">)</span>
+			<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+	<span class="p">};</span>
+
+<span class="c1">// 중략</span>
+
+</code></pre></div></div>
+
+<h3 id="삽질-이유를-정리해보자면">삽질 이유를 정리해보자면</h3>
+
+<ol>
+  <li>
+    <p>어짜피 있어야 할 서버인데 서버를 만들고 싶지 않은 이상한 고집때문에 며칠을 몸고생 맘고생을 하였다. 😔</p>
+  </li>
+  <li>
+    <p>전체적인 흐름을 이해하지 못하였다.</p>
+  </li>
+</ol>
+
+</div>
+
+  <!-- To enable Disqus comments, comment out this code and insert your Disqus shortname -->
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "yoonucho"; // required: replace example with your forum shortname
+    var disqus_developer = 1; // Comment out when the site is live
+    var disqus_identifier = "/issue_note/2019/05/03/cors.html";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+  
+</article>
+</div>
+
+	<div class="sidebar menu">
+		<div
+			id="picture"
+			style="background-image: url(https://yoonucho.github.io/post_img/yoonu.png)"
+		></div>
+		<!-- <p>One sentence introducing yourself or what you do</p> -->
+
+		<hr />
+
+		<p>윤우 블로그</p>
+
+		<hr />
+
+		<div id="social-icons">
+			<ul>
+				<li>
+					<a href="https://github.com/yoonucho" title="깃헙" target="_blank"><i
+							class="fa fa-github"></i></a>
+				</li>
+				<li>
+					<a href="https://t.me/tomorrowcho" title="텔레그램" target="_blank"><i
+							class="fa fa-telegram"></i></a>
+				</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				   
+				<li>
+					<a href="/about/">About</a>
+				</li>
+				  
+				<li>
+					<a href="/">Blog</a>
+				</li>
+				                           
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				
+				<li>
+					<a
+						href="/categories/issue_note"
+						>issue_note</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/git"
+						>git</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/review"
+						>review</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/book_list"
+						>book_list</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/side_project"
+						>side_project</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/1stHomecomingday"
+						>1stHomecomingday</a
+					>
+				</li>
+				
+			</ul>
+		</div>
+
+		<hr />
+
+		<p>yoonu blog</p>
+		<p></p>
+		<p>Powered by Jekyll</p>
+		<p></p>
+	</div>
+</div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- <script src="/js/index.js"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 상단사각 -->
+	<ins class="adsbygoogle"
+		style="display:block;text-align: center;"
+		data-ad-client="ca-pub-1871373979449169"
+		data-ad-slot="5339836252"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+  </body>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#page-content-wrapper").fadeIn();
+    });
+  </script>
+</html>

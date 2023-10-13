@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>URL copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.6848485,5.18181818 L12.6848485,19 L6.61818182,19 L6.61818182,5.18181818 L0.551515152,5.18181818 L0.551515152,0 L12.6848485,0 L12.6848485,5.18181818 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3-Copy" transform="translate(-916.000000, 0.000000)">
+            <g id="URL-copy" transform="translate(916.000000, 0.000000)">
+                <g id="Rectangle" transform="translate(5.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <rect stroke="#222222" stroke-width="1.4" mask="url(#mask-2)" x="1.56666667" y="0.7" width="10.4181818" height="13.5173554" rx="3"></rect>
+                </g>
+                <rect id="Rectangle-Copy-2" stroke="#222222" stroke-width="1.4" x="0.7" y="5.7" width="10.6" height="13.6" rx="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

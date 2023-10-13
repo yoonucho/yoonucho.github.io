@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="121" height="121" viewBox="0 0 121 121">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-127 -484) translate(0 435) translate(130 52)">
+                    <circle cx="57.5" cy="57.555" r="57.5" stroke="#3789DC" stroke-width="5"/>
+                    <text fill="#3789DC" font-family="OneShinhan-Medium, OneShinhan" font-size="30" font-weight="400">
+                        <tspan x="29" y="61">모집</tspan> <tspan x="29" y="93">마감</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

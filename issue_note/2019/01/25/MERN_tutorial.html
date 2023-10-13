@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="yoonucho" />
+	<meta name="description" content="조윤우의 블로그입니다." />
+	<meta name="keywords" content="조윤우 블로그" />
+	<meta property="og:title" content="조윤우의 블로그입니다." />
+	<meta property="og:description" content="조윤우의 블로그입니다." />
+	<meta property="og:image" content="https://yoonucho.github.io/renewal/img/og_yoonu.jpg" />
+	<title>
+		이슈노트 7
+	</title>
+	<!-- favicon & icon -->
+	<link rel="shortcut icon" href="/ico/favicon.ico" />
+	<link rel="icon" href="/ico/icon_16.png" sizes="16x16" />
+	<link rel="icon" href="/ico/icon_32.png" sizes="32x32" />
+	<link rel="icon" href="/ico/icon_64.png" sizes="64x64" />
+	<link rel="icon" href="/ico/icon_144.png" sizes="144x144" />
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="canonical" href="https://yoonucho.github.io/issue_note/2019/01/25/MERN_tutorial.html" />
+	<link rel="alternate" type="application/rss+xml" title="윤우블로그"
+		href="https://yoonucho.github.io/feed.xml" />
+
+	<!-- syntax.css -->
+	<link rel="stylesheet" href="/syntax.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-130856644-1");
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ53YR7BPP"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EZ53YR7BPP');
+	</script>
+
+	<!-- Google AdSense -->
+	<script data-ad-client="ca-pub-1871373979449169" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper">
+	<input data-function="swipe" id="swipe" type="checkbox" />
+	<label data-function="swipe" for="swipe" class="btn btn-default"
+		>Menu</label
+	>
+
+	<div class="content"><article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <h2>이슈노트 7</h2>
+    <p class="post-meta">
+      <time
+        datetime="2019-01-25T00:00:00+00:00"
+        itemprop="datePublished"
+        >Jan 25, 2019</time
+      >
+    </p>
+    <hr />
+  </header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1871373979449169"
+     data-ad-slot="3248859537"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <div class="post-content" itemprop="articleBody"><h2 id="이슈-내용">이슈 내용</h2>
+
+<p>사이드프로젝트에 백엔드서버를 Express와 Mongoose를 이용해 만들 계획을 하고 구글링을 통해 유투브 채널 CodingTheSmartWay.com의 The MERN Stack Tutorial을 알게 되었었는데 드디어 마지막 컨텐츠가 업데이트가 되어서 <a href="https://www.youtube.com/watch?v=GIITXvYD7pc">The MERN Stack Tutorial - Building A React CRUD Application From Start To Finish - Part 4</a>를 통해 튜토리얼을 진행중 개발자도구 콘솔창에 워닝코드가 발생함.</p>
+
+<h3 id="원인">원인</h3>
+
+<p>todos-list.component에 라이프사이클 메서드중 componentDidMount에서  axios를 통하여  데이터를 요청했는데 componentWillUnMount를 써서 수정을 하거나 취소를 해줘야 메모리 누수가 없다는 거 같다.</p>
+
+<p><img src="https://yoonucho.github.io/post_img/code5.jpg" alt="waring_msg" title="componentWillUnMount Warning" /></p>
+
+<h3 id="과정">과정</h3>
+
+<ol>
+  <li>
+    <p>워닝 코드 확인</p>
+  </li>
+  <li>
+    <p>구글링</p>
+  </li>
+</ol>
+
+<h3 id="방법">방법</h3>
+
+<ol>
+  <li>
+    <p>(https://github.com/material-components/material-components-web-react/issues/434)</p>
+  </li>
+  <li>
+    <p>기존에는 isMounted()를 지원하였으나 현재는 안티 패턴이라고 한다.</p>
+
+    <ul>
+      <li><a href="https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html">리액트 공식사이트 블로그</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="해결">해결</h3>
+
+<ul>
+  <li>나는 1번으로 해결하였다.</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">TodosList</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+	<span class="nx">_isMounted</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// 추가코드</span>
+
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="na">todos</span><span class="p">:</span> <span class="p">[]</span> <span class="p">};</span>
+	<span class="p">}</span>
+
+	<span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_isMounted</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// 추가코드</span>
+		<span class="nx">axios</span>
+			<span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:4000/todos/</span><span class="dl">"</span><span class="p">)</span>
+			<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_isMounted</span><span class="p">)</span> <span class="p">{</span>
+					<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">todos</span><span class="p">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span> <span class="p">});</span>
+				<span class="p">}</span>
+			<span class="p">})</span>
+			<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+				<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+			<span class="p">});</span>
+	<span class="p">}</span>
+	<span class="c1">// 중략</span>
+
+	<span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_isMounted</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// 추가코드</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">componentWillUnmount</span><span class="dl">"</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="c1">// 중략</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="이유">이유</h3>
+
+<p>방법 2번대로 Promise로 구현해보고 싶었으나 내가 느끼기에는 코드가 너무 길어보여서
+비효율적이라는 생각이 들었다.  또한 내생각대로 제대로 되는거 같지도 않아 (Promise를 잘 몰라서 그런걸지도) 좀 더 글을 검색해보다가 
+<a href="https://www.facebook.com/groups/react.ko/permalink/1676709252589240">리액트 코리아</a> 
+이 글의 이재호님의 댓글을 보고 결정하게 되었다.</p>
+
+<h3 id="최종-과정과-해결">최종 과정과 해결</h3>
+
+<p>우선 멘토님이 내 포스팅을 보시고 코드리뷰 후 async/await로 비동기를 동기식코드처럼
+작성하는 코드를 알려 주셨고 그때의 문제의 원인은 setState가 비동기안에 있어서 발생한 문제라 생각했었다.
+그래서 이 코드면  _isMounted는 필요가 없겠구나 생각했다.</p>
+
+<p>다음날 나는  멘토님이 알려주신대로 코드를 바꿔보았다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">getTodos</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nx">getTodos</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:4000/todos/</span><span class="dl">"</span><span class="p">);</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">todos</span><span class="p">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span> <span class="p">});</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="nx">componentDidUpdate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">getTodos</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">componentWillUnmount</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>사실 맨 처음 코드에서 생략한 부분이 있었는데 튜토리얼시 componentDidMount()와 componentDidUpdate()코드가 똑같았었다.그걸 이번엔 중복을 줄여보려고 getTodos라는 함수를 만들어서 각각 넣어주었다.
+  그런데 결과는 처음 마주했던 워닝 코드가 또 뜨는 것이다. 😢</p>
+
+<p>또  _isMounted를 넣어주니 워닝 코드는 사라졌으나 찜찜한 마음으로 멘토님께 메일을 보냈고 멘토님께서 내가 놓친 부분을 피드백으로 알려주셨다.
+  문제의 원인은 component DidUpdate()에 setState였다!</p>
+
+<p>워낙 리액트 초보(공부한지 1Mㅋ)에 한동안 리액트코드를 안봐서 그런지 라이프사이클도 다 까먹어서 결국 난 또 삽질을 하고 말았다.😐</p>
+
+<p>멘토님의 피드백을 토대로 코드를 수정하니 이제 _isMounted와 componentWillUnmount()를 제거할 수 있었다! 😁</p>
+
+<p><strong>[최종코드]</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">TodosList</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="na">todos</span><span class="p">:</span> <span class="p">[]</span> <span class="p">};</span>
+	<span class="p">}</span>
+
+	<span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">getTodos</span><span class="p">();</span>
+	<span class="p">}</span>
+
+	<span class="nx">getTodos</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="k">try</span> <span class="p">{</span>
+			<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:4000/todos/</span><span class="dl">"</span><span class="p">);</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">todos</span><span class="p">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span> <span class="p">});</span>
+		<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+
+	<span class="nx">componentDidUpdate</span><span class="p">(</span><span class="nx">prevProps</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">todos</span> <span class="o">!==</span> <span class="nx">prevProps</span><span class="p">.</span><span class="nx">todos</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="nx">todoList</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// 중략</span>
+	<span class="p">}</span>
+	<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// 중략</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="삽질-이유를-정리해보자면">삽질 이유를 정리해보자면</h3>
+
+<ol>
+  <li>워닝코드에서 update에 대한 메시지가 있었는데 내가 보고싶은 것만 보고 그부분에 대해서만 해결하려고 했다. (영알못이라 더 그런거 같음)</li>
+  <li>유투브채널 강의자를 너무 믿었다. (?)
+    <ul>
+      <li>componentDidMount()와 componentDidUpdate()코드가 같은게 계속 마음에 걸리긴 했었다. 하지만 코딩 관련아카데미도 운영하는데 코드가 잘못 될리 없다고 생각하기도 했다 “<strong>세바스찬</strong>아재 이러깁니까” 😠</li>
+    </ul>
+  </li>
+  <li>제일 결정적인건 내가 리알못이라는거 라이프사이클을 이해못한 내가 제일 잘못했다 ㅋ;</li>
+</ol>
+
+</div>
+
+  <!-- To enable Disqus comments, comment out this code and insert your Disqus shortname -->
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "yoonucho"; // required: replace example with your forum shortname
+    var disqus_developer = 1; // Comment out when the site is live
+    var disqus_identifier = "/issue_note/2019/01/25/MERN_tutorial.html";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+  
+</article>
+</div>
+
+	<div class="sidebar menu">
+		<div
+			id="picture"
+			style="background-image: url(https://yoonucho.github.io/post_img/yoonu.png)"
+		></div>
+		<!-- <p>One sentence introducing yourself or what you do</p> -->
+
+		<hr />
+
+		<p>윤우 블로그</p>
+
+		<hr />
+
+		<div id="social-icons">
+			<ul>
+				<li>
+					<a href="https://github.com/yoonucho" title="깃헙" target="_blank"><i
+							class="fa fa-github"></i></a>
+				</li>
+				<li>
+					<a href="https://t.me/tomorrowcho" title="텔레그램" target="_blank"><i
+							class="fa fa-telegram"></i></a>
+				</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				   
+				<li>
+					<a href="/about/">About</a>
+				</li>
+				  
+				<li>
+					<a href="/">Blog</a>
+				</li>
+				                           
+			</ul>
+		</div>
+
+		<hr />
+
+		<div class="navigation">
+			<ul>
+				
+				<li>
+					<a
+						href="/categories/issue_note"
+						>issue_note</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/git"
+						>git</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/review"
+						>review</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/book_list"
+						>book_list</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/side_project"
+						>side_project</a
+					>
+				</li>
+				
+				<li>
+					<a
+						href="/categories/1stHomecomingday"
+						>1stHomecomingday</a
+					>
+				</li>
+				
+			</ul>
+		</div>
+
+		<hr />
+
+		<p>yoonu blog</p>
+		<p></p>
+		<p>Powered by Jekyll</p>
+		<p></p>
+	</div>
+</div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- <script src="/js/index.js"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 상단사각 -->
+	<ins class="adsbygoogle"
+		style="display:block;text-align: center;"
+		data-ad-client="ca-pub-1871373979449169"
+		data-ad-slot="5339836252"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+  </body>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#page-content-wrapper").fadeIn();
+    });
+  </script>
+</html>

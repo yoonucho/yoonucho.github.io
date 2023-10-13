@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible">
+<title>HTML Publishing List</title>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style type="text/css">
+@charset "utf-8";
+*{margin:0;padding:0}
+body{font-size:.75em}
+hr{border:0;border-bottom:solid 1px #ddd !important}
+.skip{display:block;overflow:hidden;position:absolute;top:0;left:0;height:1px;width:1px;margin:0 -1px -1px 0;padding:0;font-size:0;line-height:0;text-align:center}
+.skip:hover, .skip:active, .skip:focus{position:static;width:100%;height:auto;margin:0;padding:5px 0;text-indent:10px;font-weight:bold;font-size:12px;color: #333;font-family:Tahoma, Sans-serif;line-height:1;text-decoration:none !important}
+#header{overflow:hidden;height:100px;background-color:#000}
+#header h1{float:left;padding:37px 20px;font:bold 15pt/100% Arial, Sans-serif;color:#fff}
+#header h2{float:right;padding:33px 10px 0 0;font:60pt/100% Arial, Sans-serif;color:#fff}
+#wrap {padding:0 20px}
+#wrap h3{padding:20px 0;font:bold 16pt/130% "나눔고딕",NanumGothic,"맑은 고딕","Malgun gothic","Segoe UI",AppleGothic,Arial,Sans-serif;color:#333}
+#wrap h4{margin:0 0 5px 0;font:bold 11pt/130% "나눔고딕",NanumGothic,"맑은 고딕","Malgun gothic","Segoe UI",AppleGothic, Arial,Sans-serif;color:#333}
+#wrap h4.h4_first{margin-top:20px}
+table{width:100%;margin:0 0 20px 0;border-spacing:0;border-collapse:collapse;border:1px solid #ddd;font-family:"돋움", Dotum, Arial, Sans-serif;font-size:.95em;color:#555}
+caption{padding:0 0 5px 0;font-family:"돋움",Dotum,"굴림",Gulim,Sans-serif;text-align:right}
+.col1{width:15%}
+.col2{width:18%}
+.col3{width:26%}
+.col4{}
+.col5{width:11%}
+.col6{width:8%}
+thead{background-color: #f9f9f9}
+th, td{padding:5px;border-top:1px solid #ddd;border-right:1px solid #ddd}
+td a{color:#125fae;text-decoration:none}
+td a:hover{color:#444;text-decoration:underline}
+.align-center{text-align:center}
+.state{font-size:.95em;color:#fff}
+.state span{padding:3px}
+.state .undecided{border-radius:30px;background-color:#9b9a4b}
+.state .inProgress{border-radius:30px;background-color:#1f4d87}
+.state .complete{border-radius:30px;background-color:#82cf54}
+.state .edit{border-radius:30px;background-color:#c3122f}
+footer{zoom:1}
+footer:after{display:block;content:"";clear:both}
+footer h3{float:left}
+footer dl{float:left;margin:27px 0 0 50px}
+dl{overflow:auto;font-family:"나눔고딕",NanumGothic,"맑은 고딕","Malgun gothic","Segoe UI",AppleGothic,Arial,Sans-serif}
+dt{float:left;font-weight:bold;color:#444}
+dd{float:left;padding:0 30px 0 20px;color:#888}
+.listBtnArea{position:absolute;top:-40px;left:150px;z-index:3}
+.listBtnArea a{margin:0 5px 0 0;padding:3px 5px;border-radius:5px;background-color:#ccc;font-weight:bold;color:#fff;text-decoration:none}
+.listBtnArea a.on{background-color:#333}
+/* 임시구분 */
+td{display:none}
+.dowork td{display:table-cell;border-bottom:1px solid #ddd}
+</style>
+</head>
+<body>
+<a href="#wrap" class="skip">≫ &nbsp; 메뉴 건너 뛰기</a>
+<header>
+	<div id="header">
+		<hgroup>
+			<h1>HTML Markup List</h1>
+			<h2>Markup</h2>
+		</hgroup>
+	</div>
+</header>
+<hr>
+<div id="wrap">
+	<section>
+		<h3>진행사항</h3>
+		<!-- div style="position:relative;z-index:2">
+         <p class="listBtnArea"><a href="../admin/front_listmap.html">Admin List</a> <a href="front_listmap.html" class="on">PC List</a> <a href="../mobile/front_listmap.html">Mobile List</a></p>
+      </div --> 
+	</section>
+	<hr>
+	<section>
+		<article>
+			<h4 class="h4_first">Guide</h4>
+			<table class="dowork">
+				<caption>
+				진행상태 &nbsp; <span class="state"><span class="undecided">미</span></span> 미정, <span class="state"><span class="inProgress">중</span></span> 진행중, <span class="state"><span class="complete">완</span></span> 완료 <span class="state"><span class="edit">수</span></span> 수정
+				</caption>
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">서브 레이아웃 가이드</td>
+						<td></td>
+						<td></td>
+						<td><a href="./guide/guide_layout.html" target="_blank">guide/guide_layout.html</a> - 개발파트 사용 레이아웃<br>
+							<a href="./guide/guide_layout_include.html" target="_blank">guide/guide_layout_include.html</a> - 마크업파트 사용 인클루드 </td>
+						<td class="align-center">2018 . 02 . 05</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+						</tr>
+					
+					<tr>
+						<td class="align-center">BTN</td>
+						<td></td>
+						<td></td>
+						<td><a href="./guide/guide_btn.html" target="_blank">guide/guide_btn.html</a></td>
+						<td class="align-center">2016 . 05 . 19</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">TAB</td>
+						<td></td>
+						<td></td>
+						<td><a href="./guide/guide_tab.html" target="_blank">guide/guide_tab.html</a></td>
+						<td class="align-center">2016 . 05 . 19</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">Table</td>
+						<td></td>
+						<td></td>
+						<td><a href="./guide/guide_table.html" target="_blank">guide/guide_table.html</a></td>
+						<td class="align-center">2016 . 05 . 19</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">Layer Popup</td>
+						<td></td>
+						<td></td>
+						<td><a href="./guide/guide_layerpop.html" target="_blank">guide/guide_layerpop.html</a></td>
+						<td class="align-center">2016 . 05 . 19</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">메인</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">로그인 전</td>
+						<td></td>
+						<td></td>
+						<td><a href="index.html" target="_blank">index.html</a></td>
+						<td class="align-center">2018 . 02 . 04</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">로그인 후</td>
+						<td></td>
+						<td></td>
+						<td><a href="index_logout.html" target="_blank">index_logout.html</a></td>
+						<td class="align-center">2018 . 02 . 04</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">전체이벤트</td>
+						<td></td>
+						<td></td>
+						<td><a href="event_more.html" target="_blank">event_more.html</a></td>
+						<td class="align-center">2018 . 02 . 20</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">신사고 도서</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center" rowspan="4">고등 참고서</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="book/high_book_list.html" target="_blank">book/high_book_list.html</a></td>
+						<td class="align-center">2018 . 02 . 09</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>학습자료</td>
+						<td><a href="book/high_book_view_tab1.html" target="_blank">book/high_book_view_tab1.html</a></td>
+						<td class="align-center">2018 . 02 . 09</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>책소개</td>
+						<td><a href="book/high_book_view_tab2.html" target="_blank">book/high_book_view_tab2.html</a></td>
+						<td class="align-center">2018 . 02 . 09</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>독자서평</td>
+						<td><a href="book/high_book_view_tab3.html" target="_blank">book/high_book_view_tab3.html</a></td>
+						<td class="align-center">2018 . 02 . 09</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="4">중등 참고서</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="book/middle_book_list.html" target="_blank">book/middle_book_list.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>학습자료</td>
+						<td><a href="book/middle_book_view_tab1.html" target="_blank">book/middle_book_view_tab1.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>책소개</td>
+						<td><a href="book/middle_book_view_tab2.html" target="_blank">book/middle_book_view_tab2.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>독자서평</td>
+						<td><a href="book/middle_book_view_tab3.html" target="_blank">book/middle_book_view_tab3.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="4">초등 참고서</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="book/elementary_book_list.html" target="_blank">book/elementary_book_list.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>학습자료</td>
+						<td><a href="book/elementary_book_view_tab1.html" target="_blank">book/elementary_book_view_tab1.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>책소개</td>
+						<td><a href="book/elementary_book_view_tab2.html" target="_blank">book/elementary_book_view_tab2.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td>독자서평</td>
+						<td><a href="book/elementary_book_view_tab3.html" target="_blank">book/elementary_book_view_tab3.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">학습자료실</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">고등 자료실</td>
+						<td></td>
+						<td></td>
+						<td><a href="studyroom/high_reference_room.html" target="_blank">studyroom/high_reference_room.html</a></td>
+						<td class="align-center">2018 . 02 . 14</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">중등 자료실</td>
+						<td></td>
+						<td></td>
+						<td><a href="studyroom/middle_reference_room.html" target="_blank">studyroom/middle_reference_room.html</a></td>
+						<td class="align-center">2018 . 02 . 14</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">초등 자료실</td>
+						<td></td>
+						<td></td>
+						<td><a href="studyroom/elementary_reference_room.html" target="_blank">studyroom/elementary_reference_room.html</a></td>
+						<td class="align-center">2018 . 02 . 14</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">교과서 자료실</td>
+						<td></td>
+						<td></td>
+						<td><a href="studyroom/textbook_reference_room.html" target="_blank">studyroom/textbook_reference_room.html</a></td>
+						<td class="align-center">2018 . 02 . 14</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">도서학습자료</td>
+						<td></td>
+						<td></td>
+						<td><a href="studyroom/reference_library.html" target="_blank">reference_library.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">스노우공모전</td>
+						<td></td>
+						<td></td>
+						<td><a href="studyroom/snow_contest.html" target="_blank">snow_contest.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">나.바.힘</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">나.바.힘</td>
+						<td></td>
+						<td></td>
+						<td><a href="nabahim/main.html" target="_blank">nabahim/main.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="10">나를 바꾸는 힘</td>
+						<td rowspan="2">카툰Feel</td>
+						<td>목록</td>
+						<td><a href="nabahim/cartoon_feel_list.html" target="_blank">nabahim/cartoon_feel_list.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td><a href="nabahim/cartoon_feel_view.html" target="_blank">nabahim/cartoon_feel_view.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td rowspan="2">선물상자</td>
+						<td>목록</td>
+						<td><a href="nabahim/giftbox_list.html" target="_blank">nabahim/giftbox_list.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td><a href="nabahim/giftbox_view.html" target="_blank">nabahim/giftbox_view.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>희망나침반</td>
+						<td></td>
+						<td><a href="nabahim/hope_compass.html" target="_blank">nabahim/hope_compass.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td rowspan="3">희망우체통</td>
+						<td>목록</td>
+						<td><a href="nabahim/hope_postbox_list.html" target="_blank">nabahim/hope_postbox_list.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>쓰기</td>
+						<td><a href="nabahim/hope_postbox_write.html" target="_blank">nabahim/hope_postbox_write.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>당첨자</td>
+						<td><a href="nabahim/hope_postbox_winner.html" target="_blank">nabahim/hope_postbox_winner.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td rowspan="2">내가 쓰는 나바힘</td>
+						<td>목록</td>
+						<td><a href="nabahim/nabahim_list.html" target="_blank">nabahim/nabahim_list.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>쓰기</td>
+						<td><a href="nabahim/nabahim_write.html" target="_blank">nabahim/nabahim_write.html</a></td>
+						<td class="align-center">2018 . 03 . 02</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="4">신사고 멘토링</td>
+						<td></td>
+						<td></td>
+						<td><a href="nabahim/sinsago_mentoring.html" target="_blank">sinsago_mentoring.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>쓰기</td>
+						<td></td>
+						<td><a href="nabahim/sinsago_mentoring_write.html" target="_blank">sinsago_mentoring_write.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>답변</td>
+						<td></td>
+						<td><a href="nabahim/sinsago_mentoring_answer.html" target="_blank">sinsago_mentoring_answer.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>칼럼 상세</td>
+						<td></td>
+						<td><a href="nabahim/sinsago_mentoring_column.html" target="_blank">sinsago_mentoring_column.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="3">스터디 노하우 공모전</td>
+						<td></td>
+						<td></td>
+						<td><a href="nabahim/study_knowhow_contest.html" target="_blank">study_knowhow_contest.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td></td>
+						<td><a href="nabahim/study_knowhow_contest_view.html" target="_blank">study_knowhow_contest_view.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>쓰기</td>
+						<td></td>
+						<td><a href="nabahim/study_knowhow_contest_write.html" target="_blank">study_knowhow_contest_write.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">씽라운지</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">씽안내</td>
+						<td></td>
+						<td></td>
+						<td><a href="lounge/ssing_info.html" target="_blank">ssing_info.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">씽등록</td>
+						<td></td>
+						<td></td>
+						<td><a href="lounge/ssing_registration.html" target="_blank">ssing_registration.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="6">씽몰</td>
+						<td></td>
+						<td></td>
+						<td><a href="lounge/ssing_mall.html" target="_blank">ssing_mall.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>신사고 도서</td>
+						<td></td>
+						<td><a href="lounge/sinsago_book.html" target="_blank">sinsago_book.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td rowspan="2">학습문구</td>
+						<td></td>
+						<td><a href="lounge/studymaterials.html" target="_blank">studymaterials.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td><a href="lounge/studymaterials_view.html" target="_blank">studymaterials_view.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td rowspan="2">해피씽콘</td>
+						<td></td>
+						<td><a href="lounge/happy_ssingcon.html" target="_blank">happy_ssingcon.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>상세</td>
+						<td><a href="lounge/happy_ssingcon_view.html" target="_blank">happy_ssingcon_view.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">사랑의 씽나누기</td>
+						<td></td>
+						<td></td>
+						<td><a href="lounge/ssing_Sharing.html" target="_blank">ssing_Sharing.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">이벤트</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">진행중 이벤트</td>
+						<td></td>
+						<td></td>
+						<td><a href="event/event.html" target="_blank">event.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">마이페이지</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center">HOME</td>
+						<td></td>
+						<td></td>
+						<td><a href="mypage/mypage.html" target="_blank">mypage/mypage.html</a></td>
+						<td class="align-center">2018 . 02 . 12</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">마이씽</td>
+						<td></td>
+						<td></td>
+						<td><a href="mypage/my_ssing.html" target="_blank">mypage/my_ssing.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">마이쿠폰</td>
+						<td></td>
+						<td></td>
+						<td><a href="mypage/my_coupon.html" target="_blank">mypage/my_coupon.html</a></td>
+						<td class="align-center">2018 . 02 . 10</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="3">마이신사고 도서</td>
+						<td>씽 등록 도서</td>
+						<td></td>
+						<td><a href="mypage/my_sinsago_book_tab1.html" target="_blank">mypage/my_sinsago_book_tab1.html</a></td>
+						<td class="align-center">2018 . 02 . 11</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+						<td>씽몰 구매 도서</td>
+						<td></td>
+						<td><a href="mypage/my_sinsago_book_tab2.html" target="_blank">mypage/my_sinsago_book_tab2.html</a></td>
+						<td class="align-center">2018 . 02 . 12</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					</tr>
+						<td>관심 도서</td>
+						<td></td>
+						<td><a href="mypage/my_sinsago_book_tab3.html" target="_blank">mypage/my_sinsago_book_tab3.html</a></td>
+						<td class="align-center">2018 . 02 . 12</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">장바구니</td>
+						<td></td>
+						<td></td>
+						<td><a href="mypage/shopping_basket.html" target="_blank">mypage/shopping_basket.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">결제하기</td>
+						<td></td>
+						<td></td>
+						<td><a href="mypage/payment.html" target="_blank">mypage/payment.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center" rowspan="4">주문/배송조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="mypage/order_check.html" target="_blank">mypage/order_check.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세(입금대기)</td>
+						<td></td>
+						<td><a href="mypage/order_check_view.html" target="_blank">mypage/order_check_view.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세(배송중)</td>
+						<td></td>
+						<td><a href="mypage/order_check_view2.html" target="_blank">mypage/order_check_view2.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td>상세(반품신청, 교환신청)</td>
+						<td></td>
+						<td><a href="mypage/order_check_view3.html" target="_blank">mypage/order_check_view3.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+					<tr>
+						<td class="align-center">1:1문의내역</td>
+						<td></td>
+						<td></td>
+						<td><a href="mypage/inquiry.html" target="_blank">mypage/inquiry.html</a></td>
+						<td class="align-center">2018 . 02 . 22</td>
+						<td class="align-center"><span class="state"><span class="complete">완</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4_first">고객센터</h4>
+			<table class="dowork">
+				<colgroup>
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">Tab</th>
+						<th scope="col">URL</th>
+						<th scope="col">완료일</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="align-center" rowspan="5">고객센터</td>
+						<td></td>
+						<td></td>
+						<td><a href="customer/customer_center.html" target="_blank">customer_center.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>공지사항</td>
+						<td></td>
+						<td><a href="customer/notice.html" target="_blank">notice.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>FAQ</td>
+						<td></td>
+						<td><a href="customer/faq.html" target="_blank">faq.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>1:1문의</td>
+						<td></td>
+						<td><a href="customer/inquiry.html" target="_blank">inquiry.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+					<tr>
+						<td>총판안내</td>
+						<td></td>
+						<td><a href="customer/distributor_info.html" target="_blank">distributor_info.html</a></td>
+						<td class="align-center">2018 . 02 . 00</td>
+						<td class="align-center"><span class="state"><span class="undecided">미</span></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+	</section>
+	<hr>
+	<footer>
+		<h3>마크업 개발자</h3>
+		<dl>
+			<dt>이름</dt>
+			<dd>김광성, 임선주</dd>
+		</dl>
+	</footer>
+</div>
+</body>
+</html>
