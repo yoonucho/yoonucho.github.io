@@ -1,5 +1,5 @@
-![deploy](https://github.com/yoonucho/yoonucho.github.io/workflows/deploy/badge.svg?branch=master)
 
+[![deploy](https://github.com/yoonucho/yoonucho.github.io/actions/workflows/deploy-workflow.yml/badge.svg)](https://github.com/yoonucho/yoonucho.github.io/actions/workflows/deploy-workflow.yml)
 
 <details>
    <summary>콤보 버튼 테스트 </summary>
